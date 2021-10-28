@@ -1,3 +1,1 @@
-const initStates = {
-
-}
+const initStates = {}
