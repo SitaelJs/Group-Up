@@ -3,6 +3,7 @@ const cors = require('cors')
 const path = require('path');
 require('dotenv').config()
 const PORT = process.env.PORT || 3001
+const http = require('http')
 
 
 //session
@@ -34,6 +35,8 @@ app.use(
 )
 
 //routes
+const server = http.createServer(app);
+
 
 
 //server start
