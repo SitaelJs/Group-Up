@@ -1,5 +1,3 @@
-const initStates = {
-
-}
+const initStates = {}
 
 export default initStates

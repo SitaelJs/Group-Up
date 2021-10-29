@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 
 import Chat from "./componets/Chat/Chat";
 import FormAuth from "./componets/FormAuth/FormAuth";
@@ -52,4 +52,4 @@ function App() {
 
 }
 
-export default App;
+export default App
