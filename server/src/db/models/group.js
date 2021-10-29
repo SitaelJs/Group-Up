@@ -9,13 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ User, Game, ContentGroup }) {
       this.belongsToMany(User, { through: 'UserGroup', foreignKey: 'groupId' });
-      this.belongsTo(Game, { through: 'GroupGames', foreignKey: 'groupId' });
+      this.belongsTo(Game, { foreignKey: 'gameId' });
       this.hasMany(ContentGroup, { through: 'ChatGroups', foreignKey: 'groupId' });
     }
   }
   Group.init(
     {
       name: DataTypes.STRING,
+      gameId: { type: DataTypes.INTEGER, allowNull: false },
     },
     {
       sequelize,
