@@ -1,32 +1,50 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import './App.css'
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Chat from './componets/Chat/Chat'
+import FormAuth from './componets/FormAuth/FormAuth'
+import GameSettings from './componets/GameSettings/GameSettings'
+import Group from './componets/Group/Group'
+import GroupDetail from './componets/GroupDetail/GroupDetail'
+import GroupList from './componets/GroupList/GroupList'
+import GameList from './componets/GameList/GameList'
+import ChatGroup from './componets/ChatGroup/ChatGroup'
+import ChatPrivate from './componets/ChatPrivate/ChatPrivate'
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
-import Profile from './components/Profile/Profile';
-import Footer from './components/Footer/Footer';
+import Profile from './components/Profile/Profile'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <div className="App">
-    <Router>
-    <Navbar />
-    <Switch>
-    <Route exact path='/signin'> 
-    </Route>
-    <Route exact path='/signup'>
-    </Route>
-    <Route exact path="/">
-      <Main />
-      <Footer />
-    </Route>
-    <Route exact path="/profile">
-      <Profile />
-    </Route>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/signin" />
+          <Route exact path="/signup" />
+          <Route exact path="/">
+            <Main />
+            <Footer />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
 
-    </Switch>
-    </Router>
+          <FormAuth />
+          <GameList />
+          <GameSettings />
+          <Group />
+          <GroupDetail />
+          <GroupList />
+          <Chat />
+          <ChatGroup />
+          <ChatPrivate />
+
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App
