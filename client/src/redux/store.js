@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import createSagaMiddleware from 'redux-saga'
 import rootReducer from './reducers/rootReducer'
 import rootSaga from './sagas/rootSaga'
+import initStates from './initStates'
 
 const sagaMiddleware = createSagaMiddleware()
 
