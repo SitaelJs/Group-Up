@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate({ Mode, Position, Group }) {
       this.belongsToMany(Mode, { through: 'GameModes', foreignKey: 'gameId' });
       this.belongsToMany(Position, { through: 'GamePositions', foreignKey: 'gameId' });
-      this.hasMany(Group, { through: 'GroupGames', foreignKey: 'gameId' });
+      this.hasMany(Group, { foreignKey: 'gameId' });
     }
   }
   Game.init(
