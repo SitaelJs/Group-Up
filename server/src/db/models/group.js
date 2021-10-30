@@ -7,15 +7,17 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ User, Game, ContentGroup }) {
+    static associate({ User, Game, ChatGroup }) {
       this.belongsToMany(User, { through: 'UserGroup', foreignKey: 'groupId' });
-      this.belongsTo(Game, { through: 'GroupGames', foreignKey: 'groupId' });
-      this.hasMany(ContentGroup, { through: 'ChatGroups', foreignKey: 'groupId' });
+      this.belongsTo(Game, { foreignKey: 'gameId' });
+      this.hasMany(ChatGroup, { foreignKey: 'groupId' });
     }
   }
   Group.init(
     {
       name: DataTypes.STRING,
+      gameId: { type: DataTypes.INTEGER, allowNull: false },
+      userId: { type: DataTypes.INTEGER, allowNull: false },
     },
     {
       sequelize,

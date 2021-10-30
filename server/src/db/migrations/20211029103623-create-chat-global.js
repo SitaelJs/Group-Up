@@ -7,19 +7,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      fromUserId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users',
           key: 'id',
         },
       },
-      contentGlobalId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'ContentGlobals',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

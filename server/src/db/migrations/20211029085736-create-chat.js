@@ -10,19 +10,15 @@ module.exports = {
       toUserId: {
         type: Sequelize.INTEGER,
       },
-      fromUserId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users',
           key: 'id',
         },
       },
-      contentId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Contents',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

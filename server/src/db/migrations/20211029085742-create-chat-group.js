@@ -7,26 +7,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      toGroupId: {
+      groupId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Groups',
           key: 'id',
         },
       },
-      fromUserId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users',
           key: 'id',
         },
       },
-      contentGroupId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'ContentGroups',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,
