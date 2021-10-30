@@ -14,12 +14,8 @@ module.exports = {
           key: 'id',
         },
       },
-      contentGlobalId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'ContentGlobals',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

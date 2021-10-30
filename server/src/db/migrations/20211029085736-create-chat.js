@@ -17,12 +17,8 @@ module.exports = {
           key: 'id',
         },
       },
-      contentId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Contents',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

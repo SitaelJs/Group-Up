@@ -8,7 +8,7 @@ const Profile = () => (
       <li>Email:</li>
       <li>User Information</li>
       <li>User Stats:</li>
-      <ul>
+      <ul className="characteristics">
         <li>Toxic</li>
         <li>Friendly</li>
         <li>Team Player</li>
