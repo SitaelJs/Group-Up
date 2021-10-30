@@ -1,28 +1,27 @@
 
-
 .footer {
-  display: flex;
-  justify-content: space-around;
- 
-  
-  padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+
+    padding-top: 10px;
 }
 
 .footerIcons {
-  align-items: flex-end;
-  /* display: inline-block; */
-  justify-content: space-around;
-  margin-right: 20px;
-  
+    align-items: flex-end;
+    /* display: inline-block; */
+    justify-content: space-around;
+    margin-right: 20px;
+
 }
 
 .footerH3 {
-  margin-right: auto;
-  margin-left: 30px;
-  padding: 10px;
+    margin-right: auto;
+    margin-left: 30px;
+    padding: 10px;
 }
 
 .footerFontAwesome {
 
-  margin-left: 20px;
+    margin-left: 20px;
 }

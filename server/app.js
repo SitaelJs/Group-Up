@@ -11,11 +11,12 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
 const redisClient = redis.createClient();
+const morgan = require('morgan');
+const gamesRouter = require('./src/routes/games.router');
 
 const app = express();
 
 // dev
-const morgan = require('morgan');
 
 // middleware
 app.use(morgan('dev'));
@@ -35,6 +36,7 @@ app.use(
 );
 
 // routes
+app.use('/games', gamesRouter);
 
 // server start
 app.listen(PORT, () => {

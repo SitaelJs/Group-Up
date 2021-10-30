@@ -1,3 +1,5 @@
-const initStates = {}
+const initStates = {
+  games: [],
+}
 
 export default initStates
