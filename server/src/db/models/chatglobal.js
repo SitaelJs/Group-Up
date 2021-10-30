@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   ChatGlobal.init(
     {
-      fromUserId: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER,
       content: DataTypes.TEXT,
     },
     {

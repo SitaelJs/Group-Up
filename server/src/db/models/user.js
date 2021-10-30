@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate({ Service, Role, Chat, ChatGroups, Group, Characteristic, ChatGlobal }) {
       this.belongsToMany(Service, { through: 'UserServices', foreignKey: 'userId' });
       this.belongsToMany(Group, { through: 'UserGroups', foreignKey: 'userId' });
-      this.hasMany(Chat, { foreignKey: 'fromUserId' });
-      this.hasMany(ChatGroups, { foreignKey: 'fromUserId' });
-      this.hasMany(ChatGlobal, { foreignKey: 'fromUserId' });
+      this.hasMany(Chat, { foreignKey: 'userId' });
+      this.hasMany(ChatGroups, { foreignKey: 'userId' });
+      this.hasMany(ChatGlobal, { foreignKey: 'userId' });
       this.hasMany(Characteristic, { foreignKey: 'userId' });
       this.belongsTo(Role, { foreignKey: 'roleId' });
     }

@@ -1,6 +1,6 @@
-const accountRouter = require('express').Router();
-const { indexRender } = require('../controllers/index.controller');
+// const accountRouter = require('express').Router();
+// const { accountRender } = require('../controllers/account.controller');
 
-accountRouter.get('/account', indexRender);
+// accountRouter.get('/account', accountRender);
 
-module.exports = accountRouter;
+// module.exports = accountRouter;

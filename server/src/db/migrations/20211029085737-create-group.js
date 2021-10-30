@@ -12,7 +12,7 @@ module.exports = {
       },
       gameId: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,

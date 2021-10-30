@@ -1,5 +1,4 @@
 const express = require('express');
-const passport = require('passport');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
@@ -14,15 +13,11 @@ const RedisStore = require('connect-redis')(session);
 const redisClient = redis.createClient();
 
 const app = express();
-// dbbdbd
+
 // dev
 const morgan = require('morgan');
 
 // middleware
-app.use(passport.initialize());
-app.use(passport.session());
-require('./passport')(passport);
-
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
