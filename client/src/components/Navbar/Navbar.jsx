@@ -9,6 +9,7 @@ const Navbar = () => (
         <li className={styles.li}><Link className={styles.navLinksForEntry} to="/signin">Вход</Link></li>
         <li className={styles.li}><Link className={styles.navLinksForEntry} to="/signup">Регистрация</Link></li>
         {/* logout when user is auth */}
+        <li className={styles.li}><Link className={styles.navLinksForEntry} to="/games">Игра</Link></li>
       </ul>
     </nav>
   </header>

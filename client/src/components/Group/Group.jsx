@@ -6,7 +6,10 @@ function Group({ group }) {
       <Link to={`/group/${group.id}`}>
         <h1>{group.name}</h1>
       </Link>
-      <h2>Игра для группы</h2>
+      <h2>
+        game
+
+      </h2>
 
       <div>
         {/* // eslint-disable-next-line react/no-unescaped-entities */}

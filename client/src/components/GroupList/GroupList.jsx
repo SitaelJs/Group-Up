@@ -6,6 +6,7 @@ import { getAllGroups } from '../../redux/AC/groupsAc'
 
 function GroupList() {
   const groups = useSelector((state) => state.groups)
+
   console.log(groups)
 
   const dispatch = useDispatch()
@@ -21,6 +22,7 @@ function GroupList() {
         <Group
           key={group.id}
           group={group}
+
         />
 
       ))}

@@ -17,7 +17,7 @@ const app = express();
 // dev
 // eslint-disable-next-line import/no-extraneous-dependencies
 const morgan = require('morgan');
-const { Group } = require('./src/db/models');
+const { Group, Game } = require('./src/db/models');
 
 // const groupRouter = require('./routes/groupRouter');
 
@@ -42,7 +42,7 @@ app.use(
 
 // app.use('/group', groupRouter);
 app.get('/group', async (req, res) => {
-  const group = await Group.findAll({ order: [['createdAt', 'DESC']] });
+  const group = await Group.findAll({ include: [{ model: Game }] });
   console.log(group);
   res.json(group);
 });

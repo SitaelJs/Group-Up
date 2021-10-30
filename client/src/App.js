@@ -43,6 +43,9 @@ function App() {
           <Route exact path="/group">
             <Group />
           </Route>
+          <Route exact path="/games">
+            <Game />
+          </Route>
           <FormAuth />
 
           <GameSettings />
