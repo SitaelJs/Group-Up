@@ -13,6 +13,10 @@ module.exports = {
       gameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'Groups',
+          key: 'id',
+        },
       },
       userId: {
         type: Sequelize.INTEGER,
