@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       toGroupId: DataTypes.INTEGER,
       fromUserId: DataTypes.INTEGER,
-      contentGroupId: DataTypes.INTEGER,
+      content: DataTypes.TEXT,
     },
     {
       sequelize,

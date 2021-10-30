@@ -21,12 +21,8 @@ module.exports = {
           key: 'id',
         },
       },
-      contentGroupId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'ContentGroups',
-          key: 'id',
-        },
+      content: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

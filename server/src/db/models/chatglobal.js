@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   ChatGlobal.init(
     {
       fromUserId: DataTypes.INTEGER,
-      contentGlobalId: DataTypes.INTEGER,
+      content: DataTypes.TEXT,
     },
     {
       sequelize,

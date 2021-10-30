@@ -20,6 +20,13 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      roleId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Roles',
+          key: 'id',
+        },
+      },
       searchStatus: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
@@ -32,21 +39,6 @@ module.exports = {
       },
       photo: {
         type: Sequelize.TEXT,
-      },
-      toxic: {
-        type: Sequelize.INTEGER,
-      },
-      friendly: {
-        type: Sequelize.INTEGER,
-      },
-      teamPlayer: {
-        type: Sequelize.INTEGER,
-      },
-      leader: {
-        type: Sequelize.INTEGER,
-      },
-      strategy: {
-        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
