@@ -1,21 +1,19 @@
+import styles from './styles.module.css'
+
 const Profile = () => (
-  <div>
-    <h1>Profile</h1>
-    <img src="" alt="user pic" />
+  <div className={styles.card}>
 
-    <ul>
-      <li>Nick name:</li>
-      <li>Email:</li>
-      <li>User Information</li>
-      <li>User Stats:</li>
-      <ul className="characteristics">
-        <li>Toxic</li>
-        <li>Friendly</li>
-        <li>Team Player</li>
-        <li>Leader</li>
-        <li>Strategist</li>
-      </ul>
-
+    <img className={styles.profImg} src="https://www.w3schools.com/w3images/team2.jpg" alt="userpic" />
+    <h3>Nick name:</h3>
+    <h4>Email:</h4>
+    <h4>User information:</h4>
+    <h4>User stats:</h4>
+    <ul className={styles.characterisitics}>
+      <li>Toxic:</li>
+      <li>Friendly:</li>
+      <li>Team player:</li>
+      <li>Leader:</li>
+      <li>Strategist:</li>
     </ul>
 
   </div>

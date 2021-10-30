@@ -40,10 +40,13 @@ function App() {
           <Route exact path="/grouplist">
             <GroupList />
           </Route>
+          <Route exact path="/group">
+            <Group />
+          </Route>
           <FormAuth />
 
           <GameSettings />
-          <Group />
+
           <Game />
           <Chat />
           <ChatGroup />

@@ -7,14 +7,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      toGroupId: {
+      groupId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Groups',
           key: 'id',
         },
       },
-      fromUserId: {
+      userId: {
         type: Sequelize.INTEGER,
         references: {
           model: 'Users',

@@ -1,14 +1,14 @@
-import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+// import { useParams } from 'react-router-dom'
+// import { useSelector } from 'react-redux'
 
 function GroupDetail() {
-  const { groupId } = useParams()
-  const groups = useSelector((state) => state.groups)
-  const group = groups.find((group) => group.id === Number(groupId))
+  // const { groupId } = useParams()
+  // const groups = useSelector((state) => state.groups)
+  // const group = groups.find((group) => group.id === Number(groupId))
 
   return (
     <div>
-      <h1>{group.name}</h1>
+      {/* <h1>{group.name}</h1> */}
       <h4>LOGO GAME</h4>
 
       <ul>

@@ -6,12 +6,15 @@ import { getAllGroups } from '../../redux/AC/groupsAc'
 
 function GroupList() {
   const groups = useSelector((state) => state.groups)
+  console.log(groups)
 
   const dispatch = useDispatch()
   useEffect(() => {
-    axios('http://localhost:3002/api/v1/groups')
-      .then((dataFromBack) => dispatch(getAllGroups(dataFromBack)))
+    axios('http://localhost:3001/group')
+      .then((dataFromBack) => dispatch(getAllGroups(dataFromBack.data)))
   }, [])
+
+  console.log(groups)
   return (
     <div>
       {groups.map((group) => (
