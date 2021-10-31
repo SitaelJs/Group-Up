@@ -1,7 +1,10 @@
+/* eslint-disable react/style-prop-object */
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './profile.css'
 
-const Profile = () => (
+import './test.css'
+
+const Testprof = () => (
   <div className="container">
 
     <div className="wrapper">
@@ -22,7 +25,7 @@ const Profile = () => (
             </div>
             <span className="percent">30%</span>
           </div>
-          <div className="progress" />
+          <div className="progress"></div>
         </label>
         <label htmlFor="">
           <div className="row">
@@ -31,7 +34,7 @@ const Profile = () => (
             </div>
             <span className="percent">60%</span>
           </div>
-          <div className="progress" />
+          <div className="progress"></div>
         </label>
         <label htmlFor="">
           <div className="row">
@@ -40,7 +43,7 @@ const Profile = () => (
             </div>
             <span className="percent">10%</span>
           </div>
-          <div className="progress" />
+          <div className="progress"></div>
         </label>
         <label htmlFor="">
           <div className="row">
@@ -49,7 +52,7 @@ const Profile = () => (
             </div>
             <span className="percent">80%</span>
           </div>
-          <div className="progress" />
+          <div className="progress"></div>
         </label>
         <label htmlFor="">
           <div className="row">
@@ -58,11 +61,11 @@ const Profile = () => (
             </div>
             <span className="percent">50%</span>
           </div>
-          <div className="progress" />
+          <div className="progress"></div>
         </label>
       </div>
     </div>
   </div>
 )
 
-export default Profile
+export default Testprof
