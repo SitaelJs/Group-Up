@@ -15,7 +15,6 @@ import Main from './components/Main/Main'
 import Profile from './components/Profile/Profile'
 import Footer from './components/Footer/Footer'
 import Game from './components/Game/Game'
-import Testprof from './components/Testprof/Testprof'
 
 function App() {
   return (
@@ -47,9 +46,7 @@ function App() {
           <Route exact path="/games">
             <Game />
           </Route>
-          <Route exact path="/test">
-            <Testprof />
-          </Route>
+
           <FormAuth />
 
           <GameSettings />
