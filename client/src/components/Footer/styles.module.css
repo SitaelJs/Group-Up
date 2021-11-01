@@ -1,19 +1,18 @@
-
-
 .footer {
   display: flex;
   justify-content: space-around;
- 
-  
+  position: absolute;
+  width: 100%;
+  height: 60px;
   padding-top: 10px;
 }
+
 
 .footerIcons {
   align-items: flex-end;
   /* display: inline-block; */
   justify-content: space-around;
   margin-right: 20px;
-  
 }
 
 .footerH3 {
@@ -23,6 +22,5 @@
 }
 
 .footerFontAwesome {
-
   margin-left: 20px;
 }

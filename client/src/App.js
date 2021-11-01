@@ -21,12 +21,13 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+
         <Switch>
           <Route exact path="/signin" />
           <Route exact path="/signup" />
           <Route exact path="/">
             <Main />
-            <Footer />
+
           </Route>
           <Route exact path="/profile">
             <Profile />
@@ -57,6 +58,7 @@ function App() {
           <ChatPrivate />
 
         </Switch>
+        <Footer />
       </Router>
     </div>
   )
