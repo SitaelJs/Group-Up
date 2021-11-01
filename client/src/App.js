@@ -1,21 +1,20 @@
 import './App.css'
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import GameSettings from './components/GameSettings/GameSettings'
-import GroupDetail from './components/GroupDetail/GroupDetail'
-import GroupList from './components/GroupList/GroupList'
 import GameList from './components/GameList/GameList'
-import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Navbar from './components/Navbar/Navbar'
-import FormAuth from './components/FormAuth/FormAuth'
 import Main from './components/Main/Main'
+import FormAuth from './components/FormAuth/FormAuth'
 import Profile from './components/Profile/Profile'
+import GameSettings from './components/GameSettings/GameSettings'
+import GroupList from './components/GroupList/GroupList'
+import GroupDetail from './components/GroupDetail/GroupDetail'
+import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -52,8 +51,8 @@ function App() {
         </Switch>
         <ChatPrivate />
         <Footer />
-      </Router>
-    </div>
+      </div>
+    </Router>
   )
 }
 

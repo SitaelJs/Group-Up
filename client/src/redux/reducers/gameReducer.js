@@ -1,6 +1,6 @@
-import GET_ALL_GAMES from '../types/gamesTypes'
+import { GET_ALL_GAMES } from '../types/gamesTypes'
 
-const gameReducer = (state = [], action) => {
+export default function gameReducer(state = [], action) {
   switch (action.type) {
     case GET_ALL_GAMES:
       return action.payload
@@ -9,5 +9,3 @@ const gameReducer = (state = [], action) => {
       return state
   }
 }
-
-export default gameReducer

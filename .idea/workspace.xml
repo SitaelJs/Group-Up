@@ -5,50 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Chat/Chat.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ChatGroup/ChatGroup.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ChatPrivate/ChatPrivate.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Game/Game.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/gameReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/types/gamesTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/routes/games.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicGeneral/gameId=1General.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GameSettings/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/gamemodeReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/groupsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/types/gamemodeTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/types/groupsTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/groups.router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/gamesImgs/gameId=1_DotaImgGeneral.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Footer/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Main/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Main/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Game/Game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Game/Game.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Navbar/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/Chat/Chat.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/ChatGroup/ChatGroup.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/ChatPrivate/ChatPrivate.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/FormAuth/FormAuth.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/FormAuth/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FormAuth/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/Game/Game.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/GameList/GameList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/GameSettings/GameSettings.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/Group/Group.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/GroupDetail/GroupDetail.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/componets/GroupList/GroupList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/initStates.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/initStates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/gameReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/gameReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/types/gamesTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/gamesTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085737-create-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085737-create-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085739-create-game.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085740-create-mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-mode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085741-create-position.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-position.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/mode.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/mode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/position.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/position.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/games.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/games.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/routes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -91,7 +81,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src/routes" />
+      <recent name="$PROJECT_DIR$/client/src/redux/AC" />
+      <recent name="$PROJECT_DIR$/client/src/redux/reducers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/public/media" />
       <recent name="$PROJECT_DIR$/client/src/components" />
     </key>
   </component>
@@ -108,7 +104,8 @@
       <updated>1635437217990</updated>
       <workItem from="1635437222065" duration="19209000" />
       <workItem from="1635518725247" duration="9100000" />
-      <workItem from="1635595944817" duration="3511000" />
+      <workItem from="1635595944817" duration="7480000" />
+      <workItem from="1635605932913" duration="32195000" />
     </task>
     <servers />
   </component>

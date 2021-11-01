@@ -1,20 +1,16 @@
 import { Link } from 'react-router-dom'
-import GameSettings from '../GameSettings/GameSettings'
 
 function Game({ game }) {
+  const gamePicUrl = `${process.env.PUBLIC_URL}/media/gamesPicGeneral/gameId=${game.id}General.jpeg`
   return (
-    <Link to={`/games/:${game.id}`} component={<GameSettings test="test" />}>
-      <div>
-        <p>
-          <span>{game.title}</span>
-        </p>
-        <img
-          alt=""
-          style={{ width: 400 }}
-          src={`../../../public/gamesImgs/gameId=${game.id}General.jpeg`}
-        />
-      </div>
-    </Link>
+    <div>
+      <p>
+        <span>{game.title}</span>
+      </p>
+      <Link to={`/games/${game.id}`}>
+        <img alt="" style={{ width: 400 }} src={gamePicUrl} />
+      </Link>
+    </div>
   )
 }
 

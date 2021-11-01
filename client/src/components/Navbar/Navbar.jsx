@@ -11,6 +11,11 @@ const Navbar = () => (
     <nav>
       <ul className={styles.navLinks}>
         <li className={styles.li}>
+          <Link className={styles.navLinksForEntry} to="/games">
+            Games
+          </Link>
+        </li>
+        <li className={styles.li}>
           <Link className={styles.navLinksForEntry} to="/signin">
             Вход
           </Link>
