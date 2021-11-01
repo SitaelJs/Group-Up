@@ -21,12 +21,12 @@ function App() {
             <Main />
           </Route>
 
-          <Route exact path="auth/signin">
+          <Route exact path="/auth/signin">
             <FormAuth />
           </Route>
 
-
-          <Route exact path="users/:userId/profile">
+          {/* <Route exact path="users/:userId/profile"> */}
+          <Route exact path="/profile">
             <Profile />
           </Route>
 

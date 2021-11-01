@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import getAllGames from '../../redux/AC/gamesAC'
 import style from './style.module.css'
 import getGameMode from '../../redux/AC/gamemodeAC'
-import addNewGroup from '../../redux/AC/groupsAC'
+import { addNewGroup } from '../../redux/AC/groupsAC'
 
 function GameSettings() {
   const { gamesId } = useParams()

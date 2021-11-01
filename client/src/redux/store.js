@@ -1,8 +1,8 @@
-import {applyMiddleware, createStore} from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk'
-import createSagaMiddleware from 'redux-saga'
+// import createSagaMiddleware from 'redux-saga'
 import rootReducer from './reducers/rootReducer'
-import rootSaga from './sagas/rootSaga'
+// import rootSaga from './sagas/rootSaga'
 
 const initStates = {
   games: [],
