@@ -1,0 +1,2 @@
+export const GET_CURRANT_MODE = 'GET_CURRANT_GAME'
+export const GET_GAME_MODE = 'GET_GAME_MODE'

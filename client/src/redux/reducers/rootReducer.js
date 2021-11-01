@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux'
-import groupReducer from './groupReducer'
+import gameReducer from './gameReducer'
+import gamemodeReducer from './gamemodeReducer'
+import groupsReducer from './groupsReducer'
 
 const rootReducer = combineReducers({
-  groups: groupReducer,
+  games: gameReducer,
+  gameMode: gamemodeReducer,
+  groups: groupsReducer,
 })
 
 export default rootReducer

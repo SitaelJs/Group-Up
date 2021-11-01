@@ -1,14 +1,12 @@
 // import { useParams } from 'react-router-dom'
 // import { useSelector } from 'react-redux'
 
-function GroupDetail() {
-  // const { groupId } = useParams()
-  // const groups = useSelector((state) => state.groups)
-  // const group = groups.find((group) => group.id === Number(groupId))
+import ChatGroup from '../ChatGroup/ChatGroup'
 
+function GroupDetail() {
   return (
     <div>
-      {/* <h1>{group.name}</h1> */}
+      <h1>Название группы</h1>
       <h4>LOGO GAME</h4>
 
       <ul>
@@ -42,10 +40,10 @@ function GroupDetail() {
           <p>Рейтинг игрока</p>
           <p>Статистика игрока</p>
         </li>
-
       </ul>
 
       <hr />
+      <ChatGroup />
     </div>
   )
 }

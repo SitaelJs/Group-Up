@@ -11,15 +11,13 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
 const redisClient = redis.createClient();
+const morgan = require('morgan');
+const gamesRouter = require('./src/routes/games.router');
+const groupsRouter = require('./src/routes/groups.router');
 
 const app = express();
 
 // dev
-// eslint-disable-next-line import/no-extraneous-dependencies
-const morgan = require('morgan');
-const { Group, Game } = require('./src/db/models');
-
-// const groupRouter = require('./routes/groupRouter');
 
 // middleware
 app.use(morgan('dev'));
@@ -39,15 +37,10 @@ app.use(
 );
 
 // routes
+app.use('/games', gamesRouter);
+app.use('/groups', groupsRouter);
 
-// app.use('/group', groupRouter);
-app.get('/group', async (req, res) => {
-  const group = await Group.findAll({ include: [{ model: Game }] });
-  console.log(group);
-  res.json(group);
-});
 // server start
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log('Server start on port ', PORT);
 });

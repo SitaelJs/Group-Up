@@ -13,6 +13,26 @@ module.exports = {
       gameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'Games',
+          key: 'id',
+        },
+      },
+      modeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Modes',
+          key: 'id',
+        },
+      },
+      positionId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Positions',
+          key: 'id',
+        },
       },
       userId: {
         type: Sequelize.INTEGER,

@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'prettier'],
   rules: {
     'react/jsx-filename-extension': [
       'warn',
@@ -31,5 +31,6 @@ module.exports = {
     'react/jsx-uses-react': 0,
     'react/prop-types': 0,
     'comma-dangle': ['error', 'only-multiline'],
+    // 'jsx-a11y/alt-text': 0
   },
 }

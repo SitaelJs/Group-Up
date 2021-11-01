@@ -1,32 +1,22 @@
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
 import Game from '../Game/Game'
+import getAllGames from '../../redux/AC/gamesAC'
 
-function GameList() {
+export default function GameList() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getAllGames())
+  }, [])
+
+  const allGames = useSelector((state) => state.games)
+
   return (
     <div>
-      <h1>ВСЕ ИГРЫ(ВЫБОР ИГРЫ)</h1>
-
-      <div>
-        <p><span>CS: GO</span></p>
-        <img
-          style={{ width: 400 }}
-          src="https://csgodb.ru/img.php?id=278438"
-          alt="pic"
-        />
-      </div>
-
-      <Game />
-
-      <div>
-        <p><span>OVERWATCH</span></p>
-        <img
-          style={{ width: 400 }}
-          src="https://gameguru.ru/media/f/wallpapers/3/1/45/2/1920.jpg"
-          alt="pic"
-        />
-      </div>
-      <hr />
+      {allGames?.map((game) => (
+        <Game key={game.id} game={game} />
+      ))}
     </div>
   )
 }
-
-export default GameList
