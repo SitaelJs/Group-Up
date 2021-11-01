@@ -79,7 +79,7 @@ function setupWebSocket(server) {
         });
 
         // sent a message that we're good to proceed
-        ctx.send("connection established.");
+        // ctx.send("connection established.");
     });
 }
 
