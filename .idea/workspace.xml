@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="226a3bb6-b8cc-4cb9-9228-efdf7a48210c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicDetail/gameId=1Detail.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicDetail/gameId=2Detail.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicDetail/gameId=3Detail.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicGeneral/gameId=1General.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicGeneral/gameId=2General.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/media/gamesPicGeneral/gameId=3General.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Chat/Chat.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ChatGroup/ChatGroup.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ChatPrivate/ChatPrivate.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Footer/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/FormAuth/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Game/Game.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GameSettings/style.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Main/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Navbar/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/gameReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/gamemodeReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/groupsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/types/gamemodeTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/types/gamesTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/types/groupsTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.sequelizerc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/env.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/account.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/config/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085730-create-role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085731-create-user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085732-create-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085734-create-user-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-mode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085736-create-position.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085737-create-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085738-create-user-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085742-create-chat-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029090012-create-game-mode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029090012-create-game-position.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029095438-create-characteristic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029103623-create-chat-global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/characteristic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/chat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/chatglobal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/chatgroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/gamemode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/gameposition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/mode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/position.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/usergroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/db/models/userservice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/account.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/games.router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/routes/groups.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TagTeam.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/initStates.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/initStates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/sagas/rootSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/sagas/rootSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/client/package.json" />
+  </component>
+  <component name="ProjectId" id="208Cdrg2YmSRmrQyxYNRrDShapI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="226a3bb6-b8cc-4cb9-9228-efdf7a48210c" name="Changes" comment="" />
+      <created>1635416919774</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635416919774</updated>
+      <workItem from="1635416923021" duration="18336000" />
+      <workItem from="1635592194784" duration="2765000" />
+      <workItem from="1635672733177" duration="2148000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

@@ -1,0 +1,199 @@
+.sign-up-text-forms {
+    height: 370px;
+    position: relative;
+    width: 648px;
+}
+
+.cta {
+    background-color: var(--te-papa-green);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 326px;
+    width: 111px;
+}
+
+.sign-up {
+    color: var(--white);
+    font-family: var(--font-family-lato);
+    font-size: var(--font-size-l2);
+    left: 22px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    white-space: nowrap;
+    width: 68px;
+}
+
+.text-form-confi-password-tablet {
+    border-radius: 5px;
+    height: 44px;
+    left: 344px;
+    position: absolute;
+    top: 222px;
+    width: 304px;
+}
+
+.text-confirm-password {
+    background-color: transparent;
+    border: 0;
+    font-weight: 300;
+    height: 30px;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0;
+    position: relative;
+    top: 7px;
+    width: 266px;
+}
+
+.text-confirm-password::placeholder {
+    color: #00000099;
+}
+
+.confirm-password {
+    left: 344px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 188px;
+    white-space: nowrap;
+}
+
+.text-form-password-tablet {
+    border-radius: 5px;
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 222px;
+    width: 304px;
+}
+
+.text-password {
+    background-color: transparent;
+    border: 0;
+    font-weight: 300;
+    height: 30px;
+    left: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0;
+    position: relative;
+    top: 7px;
+    width: 273px;
+}
+
+.text-password::placeholder {
+    color: #00000099;
+}
+
+.password {
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 188px;
+    white-space: nowrap;
+}
+
+.text-form-email-tablet {
+    border-radius: 5px;
+    height: 44px;
+    left: 344px;
+    position: absolute;
+    top: 114px;
+    width: 304px;
+}
+
+.text-andrea-bakergmailcom {
+    background-color: transparent;
+    border: 0;
+    font-weight: 300;
+    height: 30px;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0;
+    position: relative;
+    top: 7px;
+    width: 271px;
+}
+
+.text-andrea-bakergmailcom::placeholder {
+    color: #00000099;
+}
+
+.email-address {
+    left: 344px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 80px;
+    white-space: nowrap;
+}
+
+.text-form-name-tablet {
+    border-radius: 5px;
+    height: 44px;
+    left: 0;
+    position: absolute;
+    top: 114px;
+    width: 304px;
+}
+
+.text-andrea-baker {
+    background-color: transparent;
+    border: 0;
+    font-weight: 300;
+    height: 30px;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0;
+    position: relative;
+    top: 7px;
+    width: 275px;
+}
+
+.text-andrea-baker::placeholder {
+    color: #00000099;
+}
+
+.place {
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 80px;
+    white-space: nowrap;
+}
+
+.text-1 {
+    color: var(--black);
+    font-family: var(--font-family-castoro);
+    font-size: var(--font-size-xxxxl2);
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Caveat:400|Lato:400,300|Castoro:400|Mulish:400");
+
+input:focus {
+    outline: none;
+}
+
+* {
+    box-sizing: border-box;
+}
