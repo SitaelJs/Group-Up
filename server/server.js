@@ -14,6 +14,7 @@ const redisClient = redis.createClient();
 const morgan = require('morgan');
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
+const modesRouter = require('./src/routes/modes.router');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use(
 // routes
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
+app.use('/modes', modesRouter);
 
 // server start
 app.listen(PORT, () => {

@@ -3,7 +3,6 @@ const { v4 } = require('uuid');
 const { Group } = require('../db/models');
 
 router.post('/', async (req, res, next) => {
-  // const newGroup = req.body;
   const newGroup = await Group.create({
     name: v4(),
     gameId: req.body.gameId,
@@ -11,8 +10,13 @@ router.post('/', async (req, res, next) => {
     positionId: req.body.positionId,
     userId: 2,
   });
-  // console.log(newGroup);
+  console.log(newGroup.dataValues);
   res.json(newGroup);
+});
+
+router.get('/', async (req, res, next) => {
+  const allGroups = await Group.findAll();
+  res.json(allGroups);
 });
 
 module.exports = router;
