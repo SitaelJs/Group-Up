@@ -2,7 +2,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import getAllGames from '../../redux/AC/gamesAC'
-import style from './style.module.css'
+import styles from './style.module.css'
 import getGameMode from '../../redux/AC/gamemodeAC'
 import { addNewGroup } from '../../redux/AC/groupsAC'
 
@@ -45,9 +45,9 @@ function GameSettings() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <img
-        className={style.personPhoto}
+        className={styles.personPhoto}
         alt=""
         // style={{ width: 200 }}
         src={gamePic}
@@ -87,7 +87,7 @@ function GameSettings() {
           </form>
         </p>
       </div>
-      <hr />
+      {/* <hr /> */}
     </div>
   )
 }

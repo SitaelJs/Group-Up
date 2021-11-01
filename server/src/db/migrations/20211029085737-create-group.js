@@ -14,6 +14,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
+<<<<<<< HEAD
           model: 'Games',
           key: 'id',
         },
@@ -31,6 +32,9 @@ module.exports = {
         allowNull: false,
         references: {
           model: 'Positions',
+=======
+          model: 'Groups',
+>>>>>>> dc374a106a867a5d024effaa9c56667ddb4c8a33
           key: 'id',
         },
       },
