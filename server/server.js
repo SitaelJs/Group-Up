@@ -18,6 +18,7 @@ const groupsRouter = require('./src/routes/groups.router');
 const app = express();
 
 // dev
+const morgan = require('morgan');
 
 // middleware
 app.use(morgan('dev'));

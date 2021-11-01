@@ -25,9 +25,6 @@ function App() {
             <FormAuth />
           </Route>
 
-          <Route exact path="auth/signup">
-            <FormAuth />
-          </Route>
 
           <Route exact path="users/:userId/profile">
             <Profile />

@@ -18,9 +18,7 @@ function FormAuth() {
         <span>Повторите пароль</span>
         <input />
       </div>
-      <button type="submit" value="">
-        Отправить
-      </button>
+      <button type="submit" value="">Отправить</button>
       <hr />
     </div>
   )
