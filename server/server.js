@@ -8,9 +8,11 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
-// require('./src/auth/passport');
 
 const redisClient = redis.createClient();
+const gamesRouter = require('./src/routes/games.router');
+const groupsRouter = require('./src/routes/groups.router');
+const modesRouter = require('./src/routes/modes.router');
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,11 +30,11 @@ app.use(
     credentials: true,
   })
 );
-
 app.use(cookieParser());
+
 app.use(
   session({
-    name: 'google-session-id',
+    name: 'sessionId',
     store: new RedisStore({ client: redisClient }),
     secret: process.env.SECRET,
     resave: false,
@@ -46,10 +48,12 @@ app.use(
   })
 );
 app.use(passport.initialize());
-
 app.use(passport.session());
 
 app.use('/auth', authRouter);
+app.use('/games', gamesRouter);
+app.use('/groups', groupsRouter);
+app.use('/modes', modesRouter);
 
 app.listen(PORT, () => {
   console.log('Server start on port ', PORT);

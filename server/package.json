@@ -1,15 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "main": "server.js",
   "scripts": {
     "start": "killall -9 node; clear; node server.js",
     "dev": "killall -9 node; clear; nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-redis": "^6.0.0",
