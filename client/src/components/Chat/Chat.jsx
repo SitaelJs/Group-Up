@@ -1,3 +1,8 @@
+// import styles from 'chatStyle.module.css'
+
+
+
+
 function Chat() {
   return (
     <div>
@@ -16,8 +21,10 @@ function Chat() {
               className="chat-form__input"
               placeholder="Введите сообщение"
             />
-            <button type="submit" value="">
-              Отправить
+            <button className="cybr-btn">
+              Buttons<span aria-hidden>_</span>
+              <span aria-hidden className="cybr-btn__glitch">Buttons_</span>
+              <span aria-hidden className="cybr-btn__tag">R25</span>
             </button>
           </form>
         </div>

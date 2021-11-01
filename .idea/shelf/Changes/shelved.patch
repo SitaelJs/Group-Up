@@ -1,0 +1,12 @@
+Index: client/.env
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/client/.env b/client/.env
+new file mode 100644
+--- /dev/null	(date 1635748443078)
++++ b/client/.env	(date 1635748443078)
+@@ -0,0 +1,1 @@
++SKIP_PREFLIGHT_CHECK=true 
+\ No newline at end of file

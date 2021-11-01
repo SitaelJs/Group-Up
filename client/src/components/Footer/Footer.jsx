@@ -7,10 +7,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import styles from './styles.module.css'
 
-const Footer = () => (
-  <footer className={styles.footer}>
+
+const Footer = () => {
+  return (
+  <footer className={styles.wrapper}>
     <h3 className={styles.footerH3}>TagTeam 2021</h3>
-    <div className={styles.footerIcons}>
+    <div className={`${styles.content}`}>
       <FontAwesomeIcon
         className={styles.footerFontAwesome}
         icon={faInstagram}
@@ -33,6 +35,6 @@ const Footer = () => (
       />
     </div>
   </footer>
-)
+)}
 
 export default Footer

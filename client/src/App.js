@@ -15,6 +15,8 @@ import TestWebSocket from "./components/TestWebSocket/TestWebSocket";
 
 import React from "react";
 import WebSock from "./components/TestWebSocket/Test";
+import GlitchTest from "./components/Main/GlitchTest";
+import Chat from "./components/Chat/Chat";
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <Main />
+            {/*<Main />*/}
+            <GlitchTest/>
           </Route>
 
           <Route exact path="auth/signin">
@@ -54,14 +57,15 @@ function App() {
             <GroupDetail />
           </Route>
         </Switch>
-        <ChatPrivate />
+        <Chat />
         <Footer />
       </div>
+      {/*<WebSock/>*/}
     </Router>
-  )
-      <>
-      <WebSock/>
-      </>
+
+
+
+
   );
 }
 
