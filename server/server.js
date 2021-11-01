@@ -1,42 +1,56 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
-
-const PORT = process.env.PORT || 3001;
-
-// session
+const passport = require('passport');
 const redis = require('redis');
 const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
+const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
+// require('./src/auth/passport');
 
 const redisClient = redis.createClient();
 
+const PORT = process.env.PORT || 3001;
+
 const app = express();
 
-// dev
-const morgan = require('morgan');
+const authRouter = require('./src/routes/auth.router');
 
-// middleware
 app.use(morgan('dev'));
-app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 app.use(
-  session({
-    name: 'sId',
-    store: new RedisStore({ client: redisClient }),
-    saveUninitialized: false,
-    secret: 'mlkfdamfdskjnfsgnjk',
-    resave: false,
+  cors({
+    origin: true,
+    credentials: true,
   })
 );
 
-// routes
+app.use(cookieParser());
+app.use(
+  session({
+    name: 'google-session-id',
+    store: new RedisStore({ client: redisClient }),
+    secret: process.env.SECRET,
+    resave: false,
+    rolling: true,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 10 * 60 * 1000,
+      httpOnly: false,
+      secure: false,
+    },
+  })
+);
+app.use(passport.initialize());
 
-// server start
+app.use(passport.session());
+
+app.use('/auth', authRouter);
+
 app.listen(PORT, () => {
   console.log('Server start on port ', PORT);
 });
