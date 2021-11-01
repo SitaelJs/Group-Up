@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -12,8 +13,10 @@ const RedisStore = require('connect-redis')(session);
 
 const redisClient = redis.createClient();
 const morgan = require('morgan');
+
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
+const userRouter = require('./src/routes/user.router');
 
 const app = express();
 
@@ -39,6 +42,8 @@ app.use(
 // routes
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
+app.use('/', userRouter);
+app.use('/users', userRouter)
 
 // server start
 app.listen(PORT, () => {

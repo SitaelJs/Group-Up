@@ -10,6 +10,7 @@ import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
 import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
+import Profilelist from './components/Profilelist/Profilelist'
 
 function App() {
   return (
@@ -27,10 +28,12 @@ function App() {
           </Route>
 
           {/* <Route exact path="users/:userId/profile"> */}
-          <Route exact path="/profile">
+          <Route exact path="/users/:userId">
             <Profile />
           </Route>
-
+          <Route exact path="/users">
+            <Profilelist />
+          </Route>
           <Route exact path="/games">
             <GameList />
           </Route>

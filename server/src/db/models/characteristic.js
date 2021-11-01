@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Characteristic.init(
     {
-      fromUserId: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER,
       toUserId: DataTypes.INTEGER,
       toxic: DataTypes.INTEGER,
       friendly: DataTypes.INTEGER,

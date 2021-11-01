@@ -24,7 +24,7 @@ function FormAuth() {
             <label htmlFor="password">Повторите пароль</label>
             <input type="password" name="password" id="password" />
           </div>
-          <input type="submit" value="Отправить" />
+          <button type="submit" value="Отправить">Отправить</button>
         </div>
       </form>
     </div>
