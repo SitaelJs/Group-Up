@@ -3,29 +3,37 @@ import './profile.css'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { getCharacter } from '../../redux/AC/userAC'
+
+import { getCharacter } from '../../redux/AC/characterAC'
 
 function Profile() {
   const { userId } = useParams()
   const users = useSelector((state) => state.users)
   const user = users?.find((el) => el.id === Number(userId))
   console.log(userId)
+  console.log(user)
   const character = useSelector((state) => state.characterisitics)
-  console.log(character)
+  const charac = character?.find((el) => el.id === Number(userId))
+  console.log('----->', charac)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getCharacter())
   }, [])
+
+  // useEffect(() => {
+  //   axios('http://localhost:3001/users/characterisitics')
+  //     .then((dataFromServer) => dispatch(getCharacter(dataFromServer.data)))
+  // }, [])
   // console.log(users)
 
-  const increment = () => {
+  // const increment = () => {
 
-  }
+  // }
 
-  const decrement = () => {
+  // const decrement = () => {
 
-  }
+  // }
 
   return (
     <Link to="/user/:userId">
@@ -35,13 +43,19 @@ function Profile() {
           <div className="img-wrapper">
             <img className="profImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qI-Sj1lQI3HVbdlSGtLNryKwc2iN8lkogw&usqp=CAU" alt="userpic" />
           </div>
+          {/* {user && charac} */}
           <div className="userInfo">
-            <h4 className="text">{user.nickname}</h4>
-            <h4 className="text">{user.email}</h4>
-            <h4 className="text">{user.info}</h4>
+            <h4 className="text">{user?.nickname}</h4>
+            <h4 className="text">{user?.email}</h4>
+            <h4 className="text">{user?.info}</h4>
+            <h4 className="text">{user?.age}</h4>
           </div>
           <ul>User Stats</ul>
-          <div className="stat-area">
+          <h4>{charac?.toxic}</h4>
+          <h4>{charac?.friendly}</h4>
+          <h4>{charac?.teamPlayer}</h4>
+          <h4>{charac?.strategy}</h4>
+          {/* <div className="stat-area">
             <label htmlFor="">
               <div className="row">
                 <div className="column">
@@ -90,7 +104,7 @@ function Profile() {
               </div>
               <div className="progress" />
             </label>
-          </div>
+          </div> */}
         </div>
 
       </div>
