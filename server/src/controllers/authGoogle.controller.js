@@ -2,14 +2,14 @@ require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const passport = require('passport');
 
-const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
+const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, URL_BACK_SERVER, URL_FRONT_SERVER } = process.env;
 
 passport.use(
   new GoogleStrategy(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3001/auth/google/callback',
+      callbackURL: `${URL_BACK_SERVER}/auth/google/callback`,
       passReqToCallback: true,
     },
 
@@ -31,8 +31,8 @@ const authGoogle = passport.authenticate('google', {
 });
 
 const authGoogleCallback = passport.authenticate('google', {
-  successRedirect: 'http://localhost:3001/auth/google/success',
-  failureRedirect: 'http://localhost:3001/auth/google/failed',
+  successRedirect: `${URL_BACK_SERVER}/auth/google/success`,
+  failureRedirect: `${URL_BACK_SERVER}/auth/google/failed`,
 });
 
 const ifFailed = (req, res) => {
@@ -40,7 +40,7 @@ const ifFailed = (req, res) => {
 };
 
 const ifSuccess = (req, res) => {
-  res.redirect('http://localhost:3000');
+  res.redirect(`${URL_FRONT_SERVER}`);
 };
 
 const authGoogleLogout = (req, res) => {

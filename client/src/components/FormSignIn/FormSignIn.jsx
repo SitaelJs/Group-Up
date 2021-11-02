@@ -3,7 +3,7 @@ import { GoogleLoginButton } from 'react-social-login-buttons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
-import { signUpUser } from '../../redux/AC/userAC'
+import { signInUser } from '../../redux/AC/userAC'
 
 const { URL_BACK_SERVER } = process.env
 
@@ -13,7 +13,6 @@ function FormAuth() {
   }
 
   const dispatch = useDispatch()
-
   const [form, setForm] = useState({})
   const history = useHistory()
   const user = useSelector((state) => state.user)
@@ -24,7 +23,7 @@ function FormAuth() {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(signUpUser(form))
+    dispatch(signInUser(form))
   }
 
   useEffect(() => {
@@ -36,7 +35,7 @@ function FormAuth() {
   return (
     <>
       <form onSubmit={submitHandler}>
-        <h1>РЕГИСТРАЦИЯ</h1>
+        <h1>АВТОРИЗАЦИЯ</h1>
         <div>
           <span>Логин</span>
           <input name="nickname" onChange={changeHandler} />
@@ -48,10 +47,6 @@ function FormAuth() {
         <div>
           <span>Пароль</span>
           <input name="password" onChange={changeHandler} />
-        </div>
-        <div>
-          <span>Повторите пароль</span>
-          <input />
         </div>
         <button type="submit" value="">
           Отправить

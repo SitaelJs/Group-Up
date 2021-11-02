@@ -1,5 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 import GameList from './components/GameList/GameList'
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
@@ -10,8 +12,16 @@ import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
 import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
+import FormSignIn from './components/FormSignIn/FormSignIn'
+import { checkAuthUser } from './redux/AC/userAC'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(checkAuthUser())
+  }, [])
+
   return (
     <Router>
       <div className="App">
@@ -22,7 +32,7 @@ function App() {
           </Route>
 
           <Route exact path="/auth/signin">
-            <FormAuth />
+            <FormSignIn />
           </Route>
 
           <Route exact path="/auth/signup">
