@@ -10,10 +10,12 @@ import Profile from './components/Profile/Profile'
 import GameSettings from './components/GameSettings/GameSettings'
 import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
-import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
 import FormSignIn from './components/FormSignIn/FormSignIn'
-import { checkAuthUser } from './redux/AC/userAC'
+import { checkAuthUser } from './redux/AC/usersAC'
+import Profilelist from './components/Profilelist/Profilelist'
+import GlitchTest from './components/Main/GlitchTest'
+import Chat from './components/Chat/Chat'
 
 function App() {
   const dispatch = useDispatch()
@@ -29,6 +31,11 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main />
+            <GlitchTest />
+          </Route>
+
+          <Route exact path="auth/signin">
+            <FormAuth />
           </Route>
 
           <Route exact path="/auth/signin">
@@ -39,9 +46,12 @@ function App() {
             <FormAuth />
           </Route>
 
-          {/* <Route exact path="users/:userId/profile"> */}
           <Route exact path="/profile">
             <Profile />
+          </Route>
+
+          <Route exact path="/users">
+            <Profilelist />
           </Route>
 
           <Route exact path="/games">
@@ -60,7 +70,7 @@ function App() {
             <GroupDetail />
           </Route>
         </Switch>
-        <ChatPrivate />
+        <Chat />
         <Footer />
       </div>
     </Router>

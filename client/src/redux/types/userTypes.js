@@ -1,2 +1,6 @@
 export const SET_USER = 'SET_USER'
 export const GET_USER = 'GET_USER'
+export const GET_ALL_USERS = 'GET_ALL_USERS'
+export const GET_USER_FOR_GROUP = 'GET_USER_FOR_GROUP'
+export const CHANGE_GROUP = 'CHANGE_GROUP'
+export const GET_USER_CHARACTERISITCS = 'GET_USER_CHARACTERISITICS'

@@ -3,7 +3,7 @@ import { GoogleLoginButton } from 'react-social-login-buttons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router'
-import { signUpUser } from '../../redux/AC/userAC'
+import { signUpUser } from '../../redux/AC/usersAC'
 
 const { URL_BACK_SERVER } = process.env
 

@@ -9,7 +9,8 @@ const initStates = {
   gameMode: {},
   groups: [],
   modes: [],
-  positions: [],
+  users: [],
+  characterisitics: [],
 }
 // const sagaMiddleware = createSagaMiddleware()
 
