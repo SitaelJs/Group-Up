@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { v4 } = require('uuid');
-const { Group, User, userGroup } = require('../db/models');
+const { Group } = require('../db/models');
 
 router.post('/', async (req, res, next) => {
   const newGroup = await Group.create({
@@ -10,7 +10,6 @@ router.post('/', async (req, res, next) => {
     positionId: req.body.positionId,
     userId: 2,
   });
-  console.log(newGroup.dataValues);
   res.json(newGroup);
 });
 

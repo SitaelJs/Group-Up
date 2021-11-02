@@ -30,12 +30,10 @@ function FormAuth() {
         </button>
         <hr />
       </div>
-      {/* <a href="http://localhost:3001/auth/google/"> */}
       <GoogleLoginButton
         className="social-button"
         onClick={googleSignInClick}
       />
-      {/* </a> */}
     </>
   )
 }

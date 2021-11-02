@@ -8,8 +8,10 @@ import Profile from './components/Profile/Profile'
 import GameSettings from './components/GameSettings/GameSettings'
 import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
-import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
+
+import GlitchTest from './components/Main/GlitchTest'
+import Chat from './components/Chat/Chat'
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main />
+            <GlitchTest />
+          </Route>
+
+          <Route exact path="auth/signin">
+            <FormAuth />
           </Route>
 
           <Route exact path="/auth/signin">
@@ -29,7 +36,6 @@ function App() {
             <FormAuth />
           </Route>
 
-          {/* <Route exact path="users/:userId/profile"> */}
           <Route exact path="/profile">
             <Profile />
           </Route>
@@ -50,7 +56,7 @@ function App() {
             <GroupDetail />
           </Route>
         </Switch>
-        <ChatPrivate />
+        <Chat />
         <Footer />
       </div>
     </Router>
