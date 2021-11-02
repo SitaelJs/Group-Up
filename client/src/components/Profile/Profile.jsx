@@ -3,10 +3,13 @@ import './profile.css'
 
 const Profile = () => (
   <div className="container">
-
     <div className="wrapper">
       <div className="img-wrapper">
-        <img className="profImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qI-Sj1lQI3HVbdlSGtLNryKwc2iN8lkogw&usqp=CAU" alt="userpic" />
+        <img
+          className="profImg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qI-Sj1lQI3HVbdlSGtLNryKwc2iN8lkogw&usqp=CAU"
+          alt="userpic"
+        />
       </div>
       <div className="userInfo">
         <h4 className="text">Nick name</h4>

@@ -16,12 +16,12 @@ const Navbar = () => (
           </Link>
         </li>
         <li className={styles.li}>
-          <Link className={styles.navLinksForEntry} to="/signin">
+          <Link className={styles.navLinksForEntry} to="/auth/signin">
             Вход
           </Link>
         </li>
         <li className={styles.li}>
-          <Link className={styles.navLinksForEntry} to="/signup">
+          <Link className={styles.navLinksForEntry} to="/auth/signup">
             Регистрация
           </Link>
         </li>
