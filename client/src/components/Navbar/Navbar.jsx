@@ -25,7 +25,6 @@ const Navbar = () => (
             Регистрация
           </Link>
         </li>
-        {/* logout when user is auth */}
       </ul>
     </nav>
   </header>

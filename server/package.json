@@ -1,7 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "killall -9 node; clear; node server.js",
+    "dev": "killall -9 node; clear; nodemon server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,10 +28,7 @@
     "pg-hstore": "^2.3.4",
     "redis": "^3.1.2",
     "sequelize": "^6.8.0",
-    "sequelize-cli": "^6.2.0",
-    "websocket": "^1.0.34",
-    "ws": "^8.2.3",
-    "uuid": "^8.3.2"
+    "websocket": "^1.0.34"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

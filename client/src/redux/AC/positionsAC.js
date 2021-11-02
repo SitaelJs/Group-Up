@@ -1,0 +1,1 @@
+const getAllPositions = () => async (dispatch) => {}

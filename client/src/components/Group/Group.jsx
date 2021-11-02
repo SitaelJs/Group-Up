@@ -1,12 +1,17 @@
-function Group() {
+import { Link } from 'react-router-dom'
+
+function Group({ group }) {
   return (
     <div>
-      <h1>Название группы</h1>
-      <h2>Игра для группы</h2>
+      <Link to={`/groups/${group?.id}`}>
+        <h1>{group.name}</h1>
+      </Link>
+      <h2>game</h2>
 
       <div>
         <h3>
-          Клеточки по кол-ву игроков в режиме(в пустых - свободные места с +)
+          Клеточки по кол-ву игроков в режиме(в пустых - свободные места с
+          `&quot;`)
         </h3>
       </div>
       <hr />

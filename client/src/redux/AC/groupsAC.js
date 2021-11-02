@@ -1,10 +1,9 @@
 import axios from 'axios'
-import { ADD_NEW_GROUP } from '../types/groupsTypes'
+import { ADD_NEW_GROUP, GET_ALL_GROUPS } from '../types/groupsTypes'
 
-const addNewGroup = (newGroup) => async (dispatch) => {
+export const addNewGroup = (newGroup) => async (dispatch) => {
   const group = (await axios.post('http://localhost:3001/groups', newGroup))
     .data
-  // console.log(group)
 
   dispatch({
     type: ADD_NEW_GROUP,
@@ -12,4 +11,11 @@ const addNewGroup = (newGroup) => async (dispatch) => {
   })
 }
 
-export default addNewGroup
+export const getAllGroups = () => async (dispatch) => {
+  const allGroups = (await axios('http://localhost:3001/groups')).data
+
+  dispatch({
+    type: GET_ALL_GROUPS,
+    payload: allGroups,
+  })
+}

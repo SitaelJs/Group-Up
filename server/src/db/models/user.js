@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(Role, { foreignKey: 'roleId' });
     }
   }
+
   User.init(
     {
       nickname: { type: DataTypes.STRING, allowNull: false },
