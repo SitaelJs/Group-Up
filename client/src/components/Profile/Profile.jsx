@@ -46,6 +46,7 @@ function Profile() {
               <div className="row">
                 <div className="column">
                   <span className="text">Toxic</span>
+
                 </div>
                 <button onClick={increment} type="submit">+</button>
                 <button onClick={decrement} type="submit">-</button>

@@ -43,7 +43,7 @@ app.use(
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
 app.use('/', userRouter);
-app.use('/users', userRouter)
+app.use('/users', userRouter);
 
 // server start
 app.listen(PORT, () => {

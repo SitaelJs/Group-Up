@@ -12,6 +12,7 @@ export const getAllUser = () => async (dispatch) => {
 
 export const getCharacter = () => async (dispatch) => {
   const response = (await axios.get('http://localhost:3001/users/characterisitics')).data
+
   dispatch({
     type: GET_USER_CHARACTERISITCS,
     payload: response
