@@ -9,6 +9,7 @@ import GameSettings from './components/GameSettings/GameSettings'
 import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
 import Footer from './components/Footer/Footer'
+import Profilelist from './components/Profilelist/Profilelist'
 
 import GlitchTest from './components/Main/GlitchTest'
 import Chat from './components/Chat/Chat'
@@ -38,6 +39,10 @@ function App() {
 
           <Route exact path="/profile">
             <Profile />
+          </Route>
+
+          <Route exact path="/users">
+            <Profilelist />
           </Route>
 
           <Route exact path="/games">

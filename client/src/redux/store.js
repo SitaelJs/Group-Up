@@ -10,6 +10,7 @@ const initStates = {
   groups: [],
   modes: [],
   users: [],
+  characterisitics: [],
 }
 // const sagaMiddleware = createSagaMiddleware()
 

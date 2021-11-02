@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { v4 } = require('uuid');
-const { Group } = require('../db/models');
+const { Group, User } = require('../db/models');
 
 router.post('/', async (req, res, next) => {
   const newGroup = await Group.create({
