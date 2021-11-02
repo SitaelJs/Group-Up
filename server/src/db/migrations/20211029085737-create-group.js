@@ -14,7 +14,23 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Groups',
+          model: 'Games',
+          key: 'id',
+        },
+      },
+      modeId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Modes',
+          key: 'id',
+        },
+      },
+      positionId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Positions',
           key: 'id',
         },
       },

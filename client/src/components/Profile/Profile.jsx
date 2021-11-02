@@ -1,10 +1,13 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './profile.css'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 
-import { getCharacter } from '../../redux/AC/characterAC'
+import {
+  getCharacter, addToxic, minusToxic, addFriendly, minusFriendly, addTeamPlay, minusTeamPlay, addStrategy, minusStrategy, addLeader, minusLeader
+} from '../../redux/AC/characterAC'
 
 function Profile() {
   const { userId } = useParams()
@@ -12,14 +15,15 @@ function Profile() {
   const user = users?.find((el) => el.id === Number(userId))
   console.log(userId)
   console.log(user)
+  // const { userId } = useParams()
   const character = useSelector((state) => state.characterisitics)
-  const charac = character?.find((el) => el.id === Number(userId))
+  const charac = character?.find((el) => el.toUserId === Number(userId))
   console.log('----->', charac)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getCharacter())
-  }, [])
+  }, [user])
 
   // useEffect(() => {
   //   axios('http://localhost:3001/users/characterisitics')
@@ -27,13 +31,54 @@ function Profile() {
   // }, [])
   // console.log(users)
 
-  // const increment = () => {
+  const incrementTox = (e) => {
+    e.preventDefault()
+    console.log('in', userId)
+    dispatch(addToxic(userId))
+  }
 
-  // }
+  const incrementFriendly = (e) => {
+    e.preventDefault()
+    dispatch(addFriendly(userId))
+  }
 
-  // const decrement = () => {
+  const incrementTeamPlay = (e) => {
+    e.preventDefault()
+    dispatch(addTeamPlay(userId))
+  }
 
-  // }
+  const incrementStrategy = (e) => {
+    e.preventDefault()
+    dispatch(addStrategy(userId))
+  }
+
+  const incrementLeader = (e) => {
+    e.preventDefault()
+    dispatch(addLeader(userId))
+  }
+
+  const decrementTox = (e) => {
+    e.preventDefault()
+    dispatch(minusToxic(userId))
+  }
+
+  const decrementFriendly = (e) => {
+    e.preventDefault()
+    dispatch(minusFriendly(userId))
+  }
+
+  const decrementTeamPlay = (e) => {
+    e.preventDefault()
+    dispatch(minusTeamPlay(userId))
+  }
+  const decrementStrategy = (e) => {
+    e.preventDefault()
+    dispatch(minusStrategy(userId))
+  }
+  const decrementLeader = (e) => {
+    e.preventDefault()
+    dispatch(minusLeader(userId))
+  }
 
   return (
     <Link to="/user/:userId">
@@ -51,10 +96,24 @@ function Profile() {
             <h4 className="text">{user?.age}</h4>
           </div>
           <ul>User Stats</ul>
-          <h4>{charac?.toxic}</h4>
+          <div>
+            <h4>{charac?.toxic}</h4>
+            <button value="toxicPlus" onClick={(e) => incrementTox(e)} type="button">Add</button>
+            <button name="toxicMinus" onClick={(e) => decrementTox(e)} type="button">Minus</button>
+          </div>
+
           <h4>{charac?.friendly}</h4>
+          <button onClick={(e) => incrementFriendly(e)} type="button">Add</button>
+          <button onClick={(e) => decrementFriendly(e)} type="button">Minus</button>
           <h4>{charac?.teamPlayer}</h4>
+          <button onClick={(e) => incrementTeamPlay(e)} type="button">Add</button>
+          <button onClick={(e) => decrementTeamPlay(e)} type="button">Minus</button>
           <h4>{charac?.strategy}</h4>
+          <button onClick={(e) => incrementStrategy(e)} type="button">Add</button>
+          <button onClick={(e) => decrementStrategy(e)} type="button">Minus</button>
+          <h4>{charac?.leader}</h4>
+          <button onClick={(e) => incrementLeader(e)} type="button">Add</button>
+          <button onClick={(e) => decrementLeader(e)} type="button">Minus</button>
           {/* <div className="stat-area">
             <label htmlFor="">
               <div className="row">

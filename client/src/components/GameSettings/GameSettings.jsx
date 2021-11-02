@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import getAllGames from '../../redux/AC/gamesAC'
 import styles from './style.module.css'
 import getGameMode from '../../redux/AC/gamemodeAC'
-import { addNewGroup } from '../../redux/AC/groupsAC'
+import { addNewGroup, getAllGroups } from '../../redux/AC/groupsAC'
 
 function GameSettings() {
   const { gamesId } = useParams()
@@ -14,12 +14,14 @@ function GameSettings() {
 
   const allGames = useSelector((state) => state.games)
   const gameSettings = useSelector((state) => state.gameMode)
+  const allGroups = useSelector((state) => state.groups)
 
-  const game = allGames.find((el) => el.id === +gamesId)
+  const game = allGames.find((el) => el.id === Number(gamesId))
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicDetail/gameId=${game?.id}Detail.jpeg`
 
   useEffect(() => {
     dispatch(getAllGames())
+    dispatch(getAllGroups())
 
     if (game) {
       dispatch(getGameMode(game.id))
@@ -39,8 +41,10 @@ function GameSettings() {
         modeId: +e.target.modeId.value,
         positionId: +e.target.positionId.value,
       }
-      // console.log('1', newGroup)
       dispatch(addNewGroup(newGroup))
+      const params = allGroups[allGroups.length - 1].id
+      const paramsForCurGame = params + 1
+      history.push(`/groups/${paramsForCurGame}`)
     }
   }
 

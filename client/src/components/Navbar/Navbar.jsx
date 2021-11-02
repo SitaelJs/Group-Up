@@ -22,7 +22,7 @@ const Navbar = () => (
           </Link>
         </li>
         <li className={styles.li}>
-          <Link className={styles.navLinksForEntry} to="/signup">
+          <Link className={styles.navLinksForEntry} to="/auth/signup">
             Регистрация
           </Link>
         </li>

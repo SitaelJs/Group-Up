@@ -8,32 +8,43 @@ import Profile from './components/Profile/Profile'
 import GameSettings from './components/GameSettings/GameSettings'
 import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
-import ChatPrivate from './components/ChatPrivate/ChatPrivate'
 import Footer from './components/Footer/Footer'
 import Profilelist from './components/Profilelist/Profilelist'
+
+import GlitchTest from './components/Main/GlitchTest'
+import Chat from './components/Chat/Chat'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-
         <Switch>
           <Route exact path="/">
             <Main />
+            <GlitchTest />
+          </Route>
+
+          <Route exact path="auth/signin">
+            <FormAuth />
           </Route>
 
           <Route exact path="/auth/signin">
             <FormAuth />
           </Route>
 
-          {/* <Route exact path="users/:userId/profile"> */}
-          <Route exact path="/users/:userId">
+          <Route exact path="/auth/signup">
+            <FormAuth />
+          </Route>
+
+          <Route exact path="/profile">
             <Profile />
           </Route>
+
           <Route exact path="/users">
             <Profilelist />
           </Route>
+
           <Route exact path="/games">
             <GameList />
           </Route>
@@ -45,16 +56,17 @@ function App() {
           <Route exact path="/groups">
             <GroupList />
           </Route>
-
+          <Route exact path="/users/:userId">
+            <Profile />
+          </Route>
           <Route exact path="/groups/:groupsId">
             <GroupDetail />
           </Route>
         </Switch>
-        <ChatPrivate />
+        <Chat />
         <Footer />
       </div>
     </Router>
-
   )
 }
 

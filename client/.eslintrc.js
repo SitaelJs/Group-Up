@@ -31,6 +31,9 @@ module.exports = {
     'react/jsx-uses-react': 0,
     'react/prop-types': 0,
     'comma-dangle': ['error', 'only-multiline'],
+    // 'no-confusing-arrow': ['error', { allowParens: true }],
+    // 'implicit-arrow-linebreak': ['error', 'below'],
+    // 'function-paren-newline': ['error', 'never'],
     // 'jsx-a11y/alt-text': 0
   },
 }
