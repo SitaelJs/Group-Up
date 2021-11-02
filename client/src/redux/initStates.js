@@ -1,1 +1,5 @@
-const initStates = {}
+const initState = {
+  user: null,
+}
+
+export default initState
