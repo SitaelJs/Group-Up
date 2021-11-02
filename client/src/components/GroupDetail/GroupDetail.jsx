@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import ChatGroup from '../ChatGroup/ChatGroup'
 import { getAllGroups } from '../../redux/AC/groupsAC'
 import getAllGames from '../../redux/AC/gamesAC'
 import getAllModes from '../../redux/AC/modesAC'
+import { getUsersForGroup } from '../../redux/AC/usersAC'
+import Player from '../Player/Player'
 
 function GroupDetail() {
   const { groupsId } = useParams()
@@ -22,8 +23,13 @@ function GroupDetail() {
   const group = allGroups?.find((el) => el.id === +groupsId)
   const game = allGames?.find((el) => el.id === group?.gameId)
   const curModes = allModes?.find((el) => el.id === group?.modeId)
+  const users = useSelector((state) => state.users)
 
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicGroups/gameId=${group?.gameId}ForGroups.png`
+
+  useEffect(() => {
+    dispatch(getUsersForGroup(groupsId))
+  }, [])
 
   return (
     <div>
@@ -34,40 +40,11 @@ function GroupDetail() {
         {curModes?.name}
       </h3>
       <ul>
-        <li>
-          Игрок 1
-          <p>Роль игрока</p>
-          <p>Рейтинг игрока</p>
-          <p>Статистика игрока</p>
-        </li>
-        <li>
-          Игрок 2
-          <p>Роль игрока</p>
-          <p>Рейтинг игрока</p>
-          <p>Статистика игрока</p>
-        </li>
-        <li>
-          Игрок 3
-          <p>Роль игрока</p>
-          <p>Рейтинг игрока</p>
-          <p>Статистика игрока</p>
-        </li>
-        <li>
-          Игрок 4
-          <p>Роль игрока</p>
-          <p>Рейтинг игрока</p>
-          <p>Статистика игрока</p>
-        </li>
-        <li>
-          Игрок 5
-          <p>Роль игрока</p>
-          <p>Рейтинг игрока</p>
-          <p>Статистика игрока</p>
-        </li>
+        {users?.map((user) => (
+          <Player key={user.id} user={user} groupId={groupsId} />
+        ))}
       </ul>
-
       <hr />
-      <ChatGroup />
     </div>
   )
 }

@@ -15,6 +15,7 @@ const morgan = require('morgan');
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
 const modesRouter = require('./src/routes/modes.router');
+const userRouter = require('./src/routes/users.router');
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use(
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
 app.use('/modes', modesRouter);
+app.use('/users', userRouter);
 
 // server start
 app.listen(PORT, () => {

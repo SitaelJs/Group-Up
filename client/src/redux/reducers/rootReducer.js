@@ -3,14 +3,14 @@ import gameReducer from './gameReducer'
 import gamemodeReducer from './gamemodeReducer'
 import groupsReducer from './groupsReducer'
 import modesReducer from './modesReducer'
-import positionsReducer from './positionsReducer'
+import usersReducer from './usersReducer'
 
 const rootReducer = combineReducers({
   games: gameReducer,
   gameMode: gamemodeReducer,
   groups: groupsReducer,
   modes: modesReducer,
-  positions: positionsReducer,
+  users: usersReducer,
 })
 
 export default rootReducer
