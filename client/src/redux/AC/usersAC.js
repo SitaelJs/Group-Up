@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import axios from 'axios'
 import {
   CHANGE_GROUP,
@@ -7,12 +8,14 @@ import {
 } from '../types/userTypes'
 
 export const getAllUsers = () => async (dispatch) => {
-  const allUsers = (await axios('http://localhost:3001/users')).data
-  dispatch({
-    type: GET_ALL_USERS,
-    payload: allUsers,
-  })
+  const allUsers = (await axios('http://localhost:3001/users'))
+  const data = await allUsers.data
+  dispatch(setUser(data))
 }
+export const setUser = (data) => ({
+  type: GET_ALL_USERS,
+  payload: data
+})
 
 export const getUsersForGroup = (groupId) => async (dispatch) => {
   const usersForGroup = (await axios(`http://localhost:3001/groups/${groupId}`))

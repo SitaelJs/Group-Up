@@ -16,7 +16,6 @@
   justify-content: center;
   min-height: 120vh;
   background: #01012b;
- 
 }
 
 .wrapper {
@@ -25,18 +24,18 @@
   max-width: 380px;
   width: 100%;
   padding: 25px;
- 
 }
 
 .wrapper ul {
   font-size: 22px;
   font-weight: 600;
-  color: #05d9e8;
+  color: black;
 }
 .wrapper h4 {
   font-size: 22px;
   font-weight: 600;
-  color: #05d9e8;
+  color: black;
+  text-decoration: none;
 }
 
 .wrapper .stat-area {
@@ -51,7 +50,6 @@
   padding: 8px 15px;
   border: 2px solid #d1f7ff;
 }
-
 
 label .row {
   display: flex;
@@ -71,15 +69,14 @@ label .row span {
 label .progress {
   height: 7px;
   position: relative;
-  width:100%;
+  width: 100%;
   margin: 8px 0 3px 0;
   background: #f0f0f0;
   border-radius: 30px;
-  
 }
 
 label .progress::after {
-  content: "";
+  content: '';
   position: absolute;
   height: 100%;
   width: 30%;
@@ -90,7 +87,7 @@ label .progress::after {
 .profImg {
   width: 100%;
   border-radius: 10%;
-} 
+}
 
 button {
   border: 1px solid blue;

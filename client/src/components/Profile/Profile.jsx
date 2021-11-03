@@ -1,29 +1,35 @@
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './profile.css'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 
 import {
   getCharacter, postDecrement, postIncrement
 } from '../../redux/AC/characterAC'
+import { getAllUsers } from '../../redux/AC/usersAC'
 
 function Profile() {
   const { userId } = useParams()
   const users = useSelector((state) => state.users)
   const user = users?.find((el) => el.id === Number(userId))
   console.log(userId)
-  console.log(user)
+  // console.log(user)
   // const { userId } = useParams()
   const character = useSelector((state) => state.characterisitics)
+  console.log('charachter ---->', character)
   const charac = character?.find((el) => el.toUserId === Number(userId))
-  console.log('----->', charac)
+  console.log('charac----->', charac)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getCharacter())
-  }, [user])
+  }, [])
+
+  useEffect(() => {
+    dispatch(getAllUsers())
+  }, [])
 
   const incrementValue = (e, char) => {
     e.preventDefault()
@@ -38,40 +44,40 @@ function Profile() {
   }
 
   return (
-    <Link to="/user/:userId">
-      <div className="container">
 
-        <div className="wrapper">
-          <div className="img-wrapper">
-            <img className="profImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qI-Sj1lQI3HVbdlSGtLNryKwc2iN8lkogw&usqp=CAU" alt="userpic" />
-          </div>
-          {/* {user && charac} */}
-          <div className="userInfo">
-            <h4 className="text">{user?.nickname}</h4>
-            <h4 className="text">{user?.email}</h4>
-            <h4 className="text">{user?.info}</h4>
-            <h4 className="text">{user?.age}</h4>
-          </div>
-          <ul>User Stats</ul>
-          <div>
-            <h4>{charac?.toxic}</h4>
-            <button value="toxic" onClick={(e) => incrementValue(e, 'toxic')} type="button">Add</button>
-            <button name="toxic" onClick={(e) => decrementValue(e, 'toxic')} type="button">Minus</button>
-          </div>
+    <div className="container">
 
-          <h4>{charac?.friendly}</h4>
-          <button onClick={(e) => incrementValue(e, 'friendly')} type="button">Add</button>
-          <button onClick={(e) => decrementValue(e, 'friendly')} type="button">Minus</button>
-          <h4>{charac?.teamPlayer}</h4>
-          <button onClick={(e) => incrementValue(e, 'teamPlayer')} type="button">Add</button>
-          <button onClick={(e) => decrementValue(e, 'teamPlayer')} type="button">Minus</button>
-          <h4>{charac?.strategy}</h4>
-          <button onClick={(e) => incrementValue(e, 'strategy')} type="button">Add</button>
-          <button onClick={(e) => decrementValue(e, 'strategy')} type="button">Minus</button>
-          <h4>{charac?.leader}</h4>
-          <button onClick={(e) => incrementValue(e, 'leader')} type="button">Add</button>
-          <button onClick={(e) => decrementValue(e, 'leader')} type="button">Minus</button>
-          {/* <div className="stat-area">
+      <div className="wrapper">
+        <div className="img-wrapper">
+          <img className="profImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qI-Sj1lQI3HVbdlSGtLNryKwc2iN8lkogw&usqp=CAU" alt="userpic" />
+        </div>
+        {/* {user && charac} */}
+        <div className="userInfo">
+          <h4 className="text">{user?.nickname}</h4>
+          <h4 className="text">{user?.email}</h4>
+          <h4 className="text">{user?.info}</h4>
+          <h4 className="text">{user?.age}</h4>
+        </div>
+        <ul>User Stats</ul>
+        <div>
+          <h4>{charac?.toxic}</h4>
+          <button value="toxic" onClick={(e) => incrementValue(e, 'toxic')} type="button">Add</button>
+          <button name="toxic" onClick={(e) => decrementValue(e, 'toxic')} type="button">Minus</button>
+        </div>
+
+        <h4>{charac?.friendly}</h4>
+        <button onClick={(e) => incrementValue(e, 'friendly')} type="button">Add</button>
+        <button onClick={(e) => decrementValue(e, 'friendly')} type="button">Minus</button>
+        <h4>{charac?.teamPlayer}</h4>
+        <button onClick={(e) => incrementValue(e, 'teamPlayer')} type="button">Add</button>
+        <button onClick={(e) => decrementValue(e, 'teamPlayer')} type="button">Minus</button>
+        <h4>{charac?.strategy}</h4>
+        <button onClick={(e) => incrementValue(e, 'strategy')} type="button">Add</button>
+        <button onClick={(e) => decrementValue(e, 'strategy')} type="button">Minus</button>
+        <h4>{charac?.leader}</h4>
+        <button onClick={(e) => incrementValue(e, 'leader')} type="button">Add</button>
+        <button onClick={(e) => decrementValue(e, 'leader')} type="button">Minus</button>
+        {/* <div className="stat-area">
             <label htmlFor="">
               <div className="row">
                 <div className="column">
@@ -121,10 +127,10 @@ function Profile() {
               <div className="progress" />
             </label>
           </div> */}
-        </div>
-
       </div>
-    </Link>
+
+    </div>
+
   )
 }
 

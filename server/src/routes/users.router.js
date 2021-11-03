@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 const router = require('express').Router();
 const { User, Characteristic } = require('../db/models');
 
@@ -20,6 +22,7 @@ router.post('/users/characterisitics/inc', async (req, res) => {
   const character = await Characteristic.findOne({
     where: { userId: id, toUserId: charac.toUserId },
   });
+  console.log('------>12345', character);
   // console.log(character);
   if (!character) {
     console.log('in if');
@@ -86,7 +89,7 @@ router.post('/users/characterisitics/dec', async (req, res) => {
 
     // console.log('---->', kajsfg);
     await Characteristic.create({
-      userId: id,
+      userId: charac.id,
       toUserId: charac.toUserId,
       toxic: charac.toxic,
       friendly: charac.friendly,
