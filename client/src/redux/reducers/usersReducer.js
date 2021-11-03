@@ -13,23 +13,7 @@ export default function usersReducer(state = [], action) {
       return action.payload
 
     case CHANGE_GROUP:
-      return state.map((el) => {
-        if (
-          el.id === action.payload.userId
-          && el.groupId === action.payload.groupId
-        ) {
-          return {
-            ...el,
-            groupId: null,
-          }
-        } if (el.id === action.payload.userId) {
-          return {
-            ...el,
-            groupId: action.payload.groupId,
-          }
-        }
-        return el
-      })
+      return action.payload.userForGroup
 
     default:
       return state

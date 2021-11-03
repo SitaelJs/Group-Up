@@ -4,7 +4,7 @@ function Group({ group }) {
   return (
     <div>
       <Link to={`/groups/${group?.id}`}>
-        <h1>{group.name}</h1>
+        <h1>{group.id}</h1>
       </Link>
       <h2>game</h2>
 

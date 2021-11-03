@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { v4 } = require('uuid');
-const { Group, User } = require('../db/models');
+const axios = require('axios');
+const { Group, User, UserGroup } = require('../db/models');
+
+// axios.defaults.withCredentials = true
 
 router.post('/', async (req, res, next) => {
   const newGroup = await Group.create({
@@ -14,8 +17,15 @@ router.post('/', async (req, res, next) => {
 });
 
 router.get('/', async (req, res, next) => {
+  const { _search: search } = req.query;
   const allGroups = await Group.findAll();
-  res.json(allGroups);
+  let result = allGroups;
+  if (search) {
+    const regExp = new RegExp(search, 'i');
+    result = result.filter((group) => regExp.test(group.name));
+  }
+
+  res.json(result);
 });
 router.get('/:groupId', async (req, res, next) => {
   const { groupId } = req.params;
@@ -24,19 +34,29 @@ router.get('/:groupId', async (req, res, next) => {
   });
   res.json(userForGroup);
 });
-router.post('/:groupId', async (req, res, next) => {
-  // console.log(req.params);
-  // console.log(req.body);
+router.get('/change/:groupId', async (req, res, next) => {
   const { groupId } = req.params;
-  const { userId } = req.body.userId;
-  const curUser = await userGroup.findOne({ where: { userId } });
-  if (curUser.groupId === groupId) {
-    await userGroup.update({ groupId: null }, { where: { userId } });
-    res.sendStatus(200);
+  const { email } = req.user;
+  const currentUser = await User.findOne({ where: { email } });
+  const curGroup = await UserGroup.findOne({ where: { userId: currentUser.id, groupId } });
+  if (curGroup) {
+    await UserGroup.destroy({ where: { userId: currentUser.id, groupId } });
   } else {
-    await userGroup.update({ groupId }, { where: { userId } });
-    res.sendStatus(200);
+    await UserGroup.create({ groupId: req.params.groupId, userId: currentUser.id });
   }
+  const userForGroup = await User.findAll({
+    include: [{ model: Group, as: 'Groups', where: { id: groupId } }],
+  });
+  res.json(userForGroup);
+});
+
+router.delete('/delete/:groupId', async (req, res) => {
+  const { email } = req.user;
+  console.log(email);
+  const currentUser = await User.findOne({ where: { email } });
+  console.log(currentUser);
+  await UserGroup.destroy({ where: { userId: currentUser.id } });
+  await Group.destroy({ where: { userId: currentUser.id } });
 });
 
 module.exports = router;
