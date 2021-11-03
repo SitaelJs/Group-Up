@@ -2,17 +2,13 @@ import {
   CHANGE_GROUP,
   GET_ALL_USERS,
   GET_USER_FOR_GROUP,
-  SET_USER,
   GET_USER_CHARACTERISITCS,
 } from '../types/userTypes'
 
-export default function usersReducer(state = [], action) {
+const usersReducer = (state = [], action) => {
   const { type, payload } = action
 
   switch (type) {
-    case SET_USER:
-      return payload
-
     case GET_ALL_USERS:
       return payload
 
@@ -43,3 +39,5 @@ export default function usersReducer(state = [], action) {
       return state
   }
 }
+
+export default usersReducer

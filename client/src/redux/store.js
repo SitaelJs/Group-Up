@@ -1,25 +1,13 @@
 import { applyMiddleware, createStore } from 'redux'
-import thunk from 'redux-thunk' // import createSagaMiddleware from 'redux-saga'
+import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './reducers/rootReducer' // import rootSaga from './sagas/rootSaga'
-// import rootSaga from './sagas/rootSaga'
-
-const initStates = {
-  games: [],
-  gameMode: {},
-  groups: [],
-  modes: [],
-  users: [],
-  characterisitics: [],
-}
-// const sagaMiddleware = createSagaMiddleware()
+import rootReducer from './reducers/rootReducer'
+import initStates from './initState'
 
 const store = createStore(
   rootReducer,
   initStates,
   composeWithDevTools(applyMiddleware(thunk))
 )
-
-// sagaMiddleware.run(rootSaga)
 
 export default store

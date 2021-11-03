@@ -9,43 +9,56 @@ router.route('/').get(async (req, res) => {
 const localSignin = async (req, res) => {
   const { email, password } = req.body;
   if ((email, password)) {
-    const user = await User.findOne({ where: { email } });
-    if (user && (await bycrypt.compare(password, user.password))) {
-      req.session.user = { nickname: user.nickname, id: user.id };
-      return res.json({ nickname: user.nickname, id: user.id });
+    try {
+      const user = await User.findOne({ where: { email } });
+      if (user && (await bycrypt.compare(password, user.password))) {
+        req.session.user = { nickname: user.nickname, id: user.id };
+        return res.json({ nickname: user.nickname, id: user.id });
+      }
+      return res.sendStatus(401);
+    } catch (error) {
+      return res.sendStatus(500);
     }
-    return res.sendStatus(401);
   }
-  return res.sendStatus(401);
+  return res.sendStatus(400);
 };
 
 const localSignup = async (req, res) => {
   const { nickname, email, password } = req.body;
   if (nickname && email && password) {
-    const pass = await bycrypt.hash(password, 10);
-    const newUser = await User.create({
-      nickname,
-      email,
-      password: pass,
-      roleId: 1,
-      searchStatus: false,
-    });
-    req.session.user = { nickname: newUser.nickname, id: newUser.id };
-    return res.json({ nickname: newUser.nickname, id: newUser.id });
+    try {
+      const pass = await bycrypt.hash(password, 10);
+      const newUser = await User.create({
+        nickname,
+        email,
+        password: pass,
+        roleId: 1,
+        searchStatus: false,
+      });
+      req.session.user = { nickname: newUser.nickname, id: newUser.id };
+      return res.json({ nickname: newUser.nickname, id: newUser.id });
+    } catch (error) {
+      return res.sendStatus(500);
+    }
   }
-  return res.sendStatus(401);
+  return res.sendStatus(400);
 };
 
-const localCheck = (req, res) => {
-  if (req.session.user) {
-    return res.json(req.session.user);
+const localCheck = async (req, res) => {
+  try {
+    const user = await User.findOne({ where: { id: req.session.user.id } });
+    return res.json(user);
+  } catch (error) {
+    return res.sendStatus(500);
   }
-  return res.sendStatus(401);
 };
 
 const localLogout = (req, res) => {
-  req.session.destroy();
-  res.clearCookie('sid').sendStatus(200);
+  req.session.destroy((err) => {
+    if (err) return res.sendStatus(500);
+    res.clearCookie(req.app.get('sid'));
+    return res.sendStatus(200);
+  });
 };
 
 module.exports = { localSignin, localSignup, localCheck, localLogout };

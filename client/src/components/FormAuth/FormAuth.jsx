@@ -1,22 +1,23 @@
 import './style.css'
 import { GoogleLoginButton } from 'react-social-login-buttons'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useState } from 'react'
 import { useHistory } from 'react-router'
-import { signUpUser } from '../../redux/AC/usersAC'
+import { getUserFromGoogle, signUpUser } from '../../redux/AC/usersAC'
 
-const { URL_BACK_SERVER } = process.env
+const { REACT_APP_URL_BACK_SERVER } = process.env
 
 function FormAuth() {
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const [form, setForm] = useState({ email: '', password: '', nickname: '' })
+
   const googleSignInClick = () => {
-    window.open(`${URL_BACK_SERVER}/auth/google`, '_self')
+    window.open(`${REACT_APP_URL_BACK_SERVER}/auth/google`, '_self')
+    dispatch(getUserFromGoogle(history))
   }
 
-  const dispatch = useDispatch()
-
-  const [form, setForm] = useState({})
-  const history = useHistory()
-  const user = useSelector((state) => state.user)
+  // const user = useSelector((state) => state.user)
 
   const changeHandler = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -24,14 +25,14 @@ function FormAuth() {
 
   const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(signUpUser(form))
-  }
+    let payload = Object.entries(form).filter((el) => (el[1] ? el[1].trim() : el[1]))
+    console.log(payload)
 
-  useEffect(() => {
-    if (user) {
-      history.push('/')
+    if (payload.length) {
+      payload = Object.fromEntries(payload)
+      dispatch(signUpUser(payload, history))
     }
-  }, [user])
+  }
 
   return (
     <>
@@ -39,19 +40,23 @@ function FormAuth() {
         <h1>РЕГИСТРАЦИЯ</h1>
         <div>
           <span>Логин</span>
-          <input name="nickname" onChange={changeHandler} />
+          <input
+            name="nickname"
+            onChange={changeHandler}
+            value={form.nickname}
+          />
         </div>
         <div>
           <span>E-mail</span>
-          <input name="email" onChange={changeHandler} />
+          <input name="email" onChange={changeHandler} value={form.email} />
         </div>
         <div>
           <span>Пароль</span>
-          <input name="password" onChange={changeHandler} />
-        </div>
-        <div>
-          <span>Повторите пароль</span>
-          <input />
+          <input
+            name="password"
+            onChange={changeHandler}
+            value={form.password}
+          />
         </div>
         <button type="submit" value="">
           Отправить

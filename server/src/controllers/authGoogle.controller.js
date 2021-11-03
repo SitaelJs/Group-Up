@@ -13,18 +13,18 @@ passport.use(
       passReqToCallback: true,
     },
 
-    (request, accessToken, refreshToken, profile, done) => {
-      // console.log(profile);
-      done(null, profile);
-    }
+    async (request, accessToken, refreshToken, profile, done) => done(null, profile)
   )
 );
+
 passport.serializeUser((user, done) => {
   done(null, user);
 });
 passport.deserializeUser((user, done) => {
   done(null, user);
 });
+
+const authGoogleResponse = (req, res) => res.json();
 
 const authGoogle = passport.authenticate('google', {
   scope: ['profile', 'email'],
@@ -55,4 +55,5 @@ module.exports = {
   authGoogleLogout,
   ifSuccess,
   ifFailed,
+  authGoogleResponse,
 };

@@ -1,52 +1,60 @@
 import './style.css'
 import { GoogleLoginButton } from 'react-social-login-buttons'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
-import { useHistory } from 'react-router'
-import { signInUser } from '../../redux/AC/userAC'
+import { useDispatch } from 'react-redux'
+import { useState } from 'react'
+import { useHistory, useLocation } from 'react-router'
+import { getUserFromGoogle, signInUser } from '../../redux/AC/usersAC'
 
-const { URL_BACK_SERVER } = process.env
+const { REACT_APP_URL_BACK_SERVER } = process.env
 
 function FormAuth() {
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const location = useLocation()
+  const { from } = location.state || { from: { pathname: '/' } }
+  const [userSignIn, setUserSignIn] = useState({
+    email: '',
+    password: '',
+  })
+
   const googleSignInClick = () => {
-    window.open(`${URL_BACK_SERVER}/auth/google`, '_self')
+    window.open(`${REACT_APP_URL_BACK_SERVER}/auth/google`, '_self')
+    dispatch(getUserFromGoogle(history))
   }
 
-  const dispatch = useDispatch()
-  const [form, setForm] = useState({})
-  const history = useHistory()
-  const user = useSelector((state) => state.user)
-
   const changeHandler = (e) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    setUserSignIn((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
   const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(signInUser(form))
-  }
+    let payload = Object.entries(userSignIn).filter((el) => (el[1] ? el[1].trim() : el[1]))
 
-  useEffect(() => {
-    if (user) {
-      history.push('/')
+    if (payload.length) {
+      payload = Object.fromEntries(payload)
+      dispatch(signInUser(payload, history, from))
     }
-  }, [user])
+  }
 
   return (
     <>
       <form onSubmit={submitHandler}>
         <h1>АВТОРИЗАЦИЯ</h1>
         <div>
-          <span>Логин</span>
-          <input name="nickname" onChange={changeHandler} />
-        </div>
-        <div>
           <span>E-mail</span>
-          <input name="email" onChange={changeHandler} />
+          <input
+            name="email"
+            onChange={changeHandler}
+            value={userSignIn.email}
+          />
         </div>
         <div>
           <span>Пароль</span>
-          <input name="password" onChange={changeHandler} />
+          <input
+            name="password"
+            onChange={changeHandler}
+            value={userSignIn.password}
+          />
         </div>
         <button type="submit" value="">
           Отправить

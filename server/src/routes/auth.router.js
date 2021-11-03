@@ -5,6 +5,7 @@ const {
   authGoogleLogout,
   ifSuccess,
   ifFailed,
+  authGoogleResponse,
 } = require('../controllers/authGoogle.controller');
 
 const {
@@ -22,6 +23,7 @@ authRouter.get('/google/callback', authGoogleCallback);
 authRouter.get('/google/logout', authGoogleLogout);
 authRouter.get('/google/success', initUser, ifSuccess);
 authRouter.get('/google/failed', ifFailed);
+authRouter.get('/google/find', authGoogleResponse);
 
 // Local
 authRouter.post('/signin', localSignin);

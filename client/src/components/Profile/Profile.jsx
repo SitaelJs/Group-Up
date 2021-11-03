@@ -3,7 +3,7 @@ import './profile.css'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { getCharacter } from '../../redux/AC/userAC'
+import { getCharacter } from '../../redux/AC/usersAC'
 
 function Profile() {
   const { userId } = useParams()
