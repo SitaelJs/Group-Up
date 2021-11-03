@@ -1,4 +1,5 @@
 export const SET_USER = 'SET_USER'
+export const CLEAR_USER = 'CLEAR_USER'
 export const GET_USER = 'GET_USER'
 export const GET_ALL_USERS = 'GET_ALL_USERS'
 export const GET_USER_FOR_GROUP = 'GET_USER_FOR_GROUP'

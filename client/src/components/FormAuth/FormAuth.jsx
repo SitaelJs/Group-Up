@@ -1,9 +1,9 @@
 import './style.css'
 import { GoogleLoginButton } from 'react-social-login-buttons'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 import { useHistory } from 'react-router'
-import { getUserFromGoogle, signUpUser } from '../../redux/AC/usersAC'
+import { signUpUser } from '../../redux/AC/usersAC'
 
 const { REACT_APP_URL_BACK_SERVER } = process.env
 
@@ -14,10 +14,10 @@ function FormAuth() {
 
   const googleSignInClick = () => {
     window.open(`${REACT_APP_URL_BACK_SERVER}/auth/google`, '_self')
-    dispatch(getUserFromGoogle(history))
   }
 
-  // const user = useSelector((state) => state.user)
+  const user = useSelector((state) => state.auth)
+  console.log('ЭТО ЮЗЕР =====>', user)
 
   const changeHandler = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))

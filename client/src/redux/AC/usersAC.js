@@ -5,14 +5,35 @@ import {
   SET_USER,
   GET_ALL_USERS,
   GET_USER_CHARACTERISITCS,
+  CLEAR_USER,
 } from '../types/userTypes'
 
 const serverPuth = process.env.REACT_APP_URL_BACK_SERVER
+const clientPuth = process.env.REACT_APP_URL_FRONT_SERVER
 
 export const setUser = (user) => ({
   type: SET_USER,
   payload: user,
 })
+
+export const clearUser = () => ({
+  type: CLEAR_USER,
+  payload: null,
+})
+
+export const destroyCookie = () => async (dispatch) => {
+  const response = await axios(`${serverPuth}/auth/google/logout`, {
+    withCredentials: true,
+  })
+  if (response.status === 200) {
+    try {
+      dispatch(clearUser())
+      window.open(`${clientPuth}/`, '_self')
+    } catch {
+      window.open(`${clientPuth}/`, '_self')
+    }
+  }
+}
 
 export const getUserFromGoogle = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/find`, {
@@ -21,7 +42,7 @@ export const getUserFromGoogle = () => async (dispatch) => {
   if (response.status === 200) {
     try {
       const googleUser = await response.data
-      console.log('googleUser=====>', googleUser)
+      console.log(googleUser)
       dispatch(setUser(googleUser))
     } catch {
       window.open(`${serverPuth}/auth/google`)
