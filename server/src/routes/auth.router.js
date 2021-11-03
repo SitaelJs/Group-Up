@@ -7,7 +7,7 @@ const {
   ifFailed,
 } = require('../controllers/authGoogle.controller');
 
-const { initUser, checkAuth } = require('../middleware/checkAuth');
+const { initUser } = require('../middleware/checkAuth');
 
 // Google
 authRouter.get('/google', authGoogle);

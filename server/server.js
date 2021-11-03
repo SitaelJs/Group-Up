@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -57,6 +58,7 @@ app.use('/auth', authRouter);
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
 app.use('/modes', modesRouter);
+app.use('/', userRouter);
 app.use('/users', userRouter);
 
 app.listen(PORT, () => {

@@ -52,7 +52,9 @@ function App() {
           <Route exact path="/groups">
             <GroupList />
           </Route>
-
+          <Route exact path="/users/:userId">
+            <Profile />
+          </Route>
           <Route exact path="/groups/:groupsId">
             <GroupDetail />
           </Route>

@@ -16,7 +16,25 @@
 /*    max-width: 380px;*/
 /*    width: 100%;*/
 /*    padding: 25px;*/
+.container {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120vh;
+  background: #01012b;
+}
 
+.wrapper {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 380px;
+  width: 100%;
+  padding: 25px;
+}
 /*}*/
 
 /*.wrapper ul {*/
@@ -25,6 +43,17 @@
 /*    color: #05d9e8;*/
 /*}*/
 
+.wrapper ul {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+}
+.wrapper h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
 /*.wrapper h4 {*/
 /*    font-size: 22px;*/
 /*    font-weight: 600;*/
@@ -44,11 +73,10 @@
 /*    border: 2px solid #d1f7ff;*/
 /*}*/
 
-
-/*label .row {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*}*/
+label .row {
+  display: flex;
+  justify-content: space-between;
+}
 
 /*label .row .column {*/
 /*    display: flex;*/
@@ -60,6 +88,14 @@
 /*    font-weight: 500;*/
 /*}*/
 
+label .progress {
+  height: 7px;
+  position: relative;
+  width: 100%;
+  margin: 8px 0 3px 0;
+  background: #f0f0f0;
+  border-radius: 30px;
+}
 /*label .progress {*/
 /*    height: 7px;*/
 /*    position: relative;*/
@@ -70,6 +106,14 @@
 
 /*}*/
 
+label .progress::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background: #ff2a6d;
+  border-radius: inherit;
+}
 /*label .progress::after {*/
 /*    content: "";*/
 /*    position: absolute;*/
@@ -79,10 +123,31 @@
 /*    border-radius: inherit;*/
 /*}*/
 
+.profImg {
+  width: 100%;
+  border-radius: 10%;
+}
 /*.profImg {*/
 /*    width: 100%;*/
 /*    border-radius: 10%;*/
 /*}*/
+
+button {
+  border: 1px solid blue;
+  padding: 5px;
+  cursor: pointer;
+}
+/* .img-wrapper {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 380px;
+  width: 100%;
+  padding: 25px;
+}
+
+
+
+/* calc(1% * var(--w)); */
 
 /*button {*/
 /*    border: 1px solid blue;*/
