@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 
 import {
-  getCharacter, addToxic, minusToxic, addFriendly, minusFriendly, addTeamPlay, minusTeamPlay, addStrategy, minusStrategy, addLeader, minusLeader
+  getCharacter, postDecrement, postIncrement
 } from '../../redux/AC/characterAC'
 
 function Profile() {
@@ -25,59 +25,16 @@ function Profile() {
     dispatch(getCharacter())
   }, [user])
 
-  // useEffect(() => {
-  //   axios('http://localhost:3001/users/characterisitics')
-  //     .then((dataFromServer) => dispatch(getCharacter(dataFromServer.data)))
-  // }, [])
-  // console.log(users)
-
-  const incrementTox = (e) => {
+  const incrementValue = (e, char) => {
     e.preventDefault()
-    console.log('in', userId)
-    dispatch(addToxic(userId))
+    console.log(char)
+    dispatch(postIncrement(userId, char, charac))
   }
 
-  const incrementFriendly = (e) => {
+  const decrementValue = (e, char) => {
     e.preventDefault()
-    dispatch(addFriendly(userId))
-  }
-
-  const incrementTeamPlay = (e) => {
-    e.preventDefault()
-    dispatch(addTeamPlay(userId))
-  }
-
-  const incrementStrategy = (e) => {
-    e.preventDefault()
-    dispatch(addStrategy(userId))
-  }
-
-  const incrementLeader = (e) => {
-    e.preventDefault()
-    dispatch(addLeader(userId))
-  }
-
-  const decrementTox = (e) => {
-    e.preventDefault()
-    dispatch(minusToxic(userId))
-  }
-
-  const decrementFriendly = (e) => {
-    e.preventDefault()
-    dispatch(minusFriendly(userId))
-  }
-
-  const decrementTeamPlay = (e) => {
-    e.preventDefault()
-    dispatch(minusTeamPlay(userId))
-  }
-  const decrementStrategy = (e) => {
-    e.preventDefault()
-    dispatch(minusStrategy(userId))
-  }
-  const decrementLeader = (e) => {
-    e.preventDefault()
-    dispatch(minusLeader(userId))
+    console.log(char)
+    dispatch(postDecrement(userId, char, charac))
   }
 
   return (
@@ -98,22 +55,22 @@ function Profile() {
           <ul>User Stats</ul>
           <div>
             <h4>{charac?.toxic}</h4>
-            <button value="toxicPlus" onClick={(e) => incrementTox(e)} type="button">Add</button>
-            <button name="toxicMinus" onClick={(e) => decrementTox(e)} type="button">Minus</button>
+            <button value="toxic" onClick={(e) => incrementValue(e, 'toxic')} type="button">Add</button>
+            <button name="toxic" onClick={(e) => decrementValue(e, 'toxic')} type="button">Minus</button>
           </div>
 
           <h4>{charac?.friendly}</h4>
-          <button onClick={(e) => incrementFriendly(e)} type="button">Add</button>
-          <button onClick={(e) => decrementFriendly(e)} type="button">Minus</button>
+          <button onClick={(e) => incrementValue(e, 'friendly')} type="button">Add</button>
+          <button onClick={(e) => decrementValue(e, 'friendly')} type="button">Minus</button>
           <h4>{charac?.teamPlayer}</h4>
-          <button onClick={(e) => incrementTeamPlay(e)} type="button">Add</button>
-          <button onClick={(e) => decrementTeamPlay(e)} type="button">Minus</button>
+          <button onClick={(e) => incrementValue(e, 'teamPlayer')} type="button">Add</button>
+          <button onClick={(e) => decrementValue(e, 'teamPlayer')} type="button">Minus</button>
           <h4>{charac?.strategy}</h4>
-          <button onClick={(e) => incrementStrategy(e)} type="button">Add</button>
-          <button onClick={(e) => decrementStrategy(e)} type="button">Minus</button>
+          <button onClick={(e) => incrementValue(e, 'strategy')} type="button">Add</button>
+          <button onClick={(e) => decrementValue(e, 'strategy')} type="button">Minus</button>
           <h4>{charac?.leader}</h4>
-          <button onClick={(e) => incrementLeader(e)} type="button">Add</button>
-          <button onClick={(e) => decrementLeader(e)} type="button">Minus</button>
+          <button onClick={(e) => incrementValue(e, 'leader')} type="button">Add</button>
+          <button onClick={(e) => decrementValue(e, 'leader')} type="button">Minus</button>
           {/* <div className="stat-area">
             <label htmlFor="">
               <div className="row">
