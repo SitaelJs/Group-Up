@@ -1,12 +1,8 @@
-import { useDispatch } from 'react-redux'
 import styles from './stylesPlayers.module.css'
 import { Link } from 'react-router-dom'
 
-function Player({ user, groupId }) {
-  const dispatch = useDispatch()
-  // const onClickJoinGroup = () => {
-  //   dispatch(changeGroupForUser(user.id, groupId))
-  // }
+function Player({ user}) {
+
   return (
     <div className={styles.playerItem}>
       <p>{user.nickname}</p>

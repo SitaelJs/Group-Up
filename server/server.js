@@ -22,16 +22,10 @@ const authRouter = require('./src/routes/auth.router');
 
 // middleware
 app.use(morgan('dev'));
-app.use(cors());
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(
-  cors({
-    origin: true,
-    credentials: true,
-  })
-);
 app.use(cookieParser());
 
 app.use(
@@ -43,12 +37,19 @@ app.use(
     rolling: true,
     saveUninitialized: false,
     cookie: {
-      maxAge: 10 * 60 * 1000,
+      maxAge: 5 * 60 * 100000,
       httpOnly: false,
       secure: false,
     },
   })
 );
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
+
 app.use(passport.initialize());
 app.use(passport.session());
 

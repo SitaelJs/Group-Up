@@ -12,7 +12,7 @@ module.exports = {
       },
       gameId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: 'Games',
           key: 'id',
@@ -20,7 +20,7 @@ module.exports = {
       },
       modeId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: 'Modes',
           key: 'id',
@@ -28,7 +28,7 @@ module.exports = {
       },
       positionId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: 'Positions',
           key: 'id',
@@ -36,11 +36,12 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: 'Users',
           key: 'id',
         },
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,
