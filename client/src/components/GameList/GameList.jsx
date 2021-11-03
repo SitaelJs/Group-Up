@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Game from '../Game/Game'
 import getAllGames from '../../redux/AC/gamesAC'
-import styles from './styles.module.css'
+import styles from './stylesGameList.module.css'
 
 export default function GameList() {
   const dispatch = useDispatch()

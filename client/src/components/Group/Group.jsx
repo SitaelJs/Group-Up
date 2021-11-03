@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom'
+import styles from './stylesGroup.module.css'
 
 function Group({ group }) {
   return (
-    <div>
+    <div className={styles.groupItem}>
       <Link to={`/groups/${group?.id}`}>
-        <h1>{group.name}</h1>
-      </Link>
-      <h2>game</h2>
+        <h1 className={styles.groupName}>{group.name}</h1>
+        <p>game</p>
 
-      <div>
-        <h3>
+        <p>
           Клеточки по кол-ву игроков в режиме(в пустых - свободные места с
           `&quot;`)
-        </h3>
-      </div>
-      <hr />
+        </p>
+      </Link>
     </div>
   )
 }

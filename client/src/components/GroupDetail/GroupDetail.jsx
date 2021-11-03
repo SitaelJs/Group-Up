@@ -5,7 +5,8 @@ import { getAllGroups } from '../../redux/AC/groupsAC'
 import getAllGames from '../../redux/AC/gamesAC'
 import getAllModes from '../../redux/AC/modesAC'
 import { getUsersForGroup } from '../../redux/AC/usersAC'
-import Player from '../Player/Player'
+import Player from '../Player/Player.jsx'
+import styles from './detailedGroupStyle.module.css'
 
 function GroupDetail() {
   const { groupsId } = useParams()
@@ -32,19 +33,25 @@ function GroupDetail() {
   }, [])
 
   return (
-    <div>
-      <h1>{game?.title}</h1>
-      <img alt="" style={{ width: 200 }} src={gamePic} />
-      <h3>
-        Режим игры:
-        {curModes?.name}
-      </h3>
-      <ul>
+    <div className={styles.containerGroupDet}>
+      <div className={styles.headGroup}>
+        <img
+          className={styles.imgGameGroup}
+          alt=""
+          style={{ width: 200 }}
+          src={gamePic}
+        />
+        <div className={styles.gameSet}>
+          <h1>{game?.title}</h1>
+          <h3>Режим игры: {curModes?.name}</h3>
+        </div>
+      </div>
+
+      <div className={styles.usersInGroups}>
         {users?.map((user) => (
           <Player key={user.id} user={user} groupId={groupsId} />
         ))}
-      </ul>
-      <hr />
+      </div>
     </div>
   )
 }

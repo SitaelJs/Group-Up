@@ -11,18 +11,14 @@ import GroupDetail from './components/GroupDetail/GroupDetail'
 import Footer from './components/Footer/Footer'
 import Profilelist from './components/Profilelist/Profilelist'
 
-import GlitchTest from './components/Main/GlitchTest'
-import Chat from './components/Chat/Chat'
-
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Navbar />
         <Switch>
           <Route exact path="/">
             <Main />
-            <GlitchTest />
           </Route>
 
           <Route exact path="auth/signin">
@@ -61,7 +57,6 @@ function App() {
             <GroupDetail />
           </Route>
         </Switch>
-        <Chat />
         <Footer />
       </div>
     </Router>

@@ -1,0 +1,86 @@
+.header {
+    position: fixed;
+    height: 80px;
+    top: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    box-shadow: 0px 0px 25px rgba(46, 208, 255, 0.20);
+}
+
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    margin: auto 35px auto;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    margin: auto;
+    align-items: center;
+}
+
+
+.header a {
+    text-decoration: none;
+}
+
+.mainPages {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    font-size: x-large;
+}
+
+.authPages {
+    width: 16%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto 0 auto;
+    font-size: x-large;
+}
+
+.logo span {
+    height: 35px;
+    margin: auto;
+    font-size: xxx-large;
+    color: #fff;
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #38ffe8,
+        0 0 100px #34ffe8,
+        0 0 150px #00ffea;
+
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
