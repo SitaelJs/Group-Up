@@ -5,7 +5,7 @@
 //   modes: [],
 //   users: [],
 //   characterisitics: [],
-//   auth: null,
+//   auth: {},
 // }
 //
 // export default initStates

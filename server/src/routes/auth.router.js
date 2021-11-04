@@ -8,7 +8,12 @@ const {
   authGoogleResponse,
 } = require('../controllers/authGoogle.controller');
 
-const { localSignin, localSignup, localCheck } = require('../controllers/authLocal.controller');
+const {
+  localSignin,
+  localSignup,
+  localCheck,
+  localLogout,
+} = require('../controllers/authLocal.controller');
 
 const { initUser } = require('../middleware/checkAuth');
 
@@ -19,8 +24,10 @@ authRouter.get('/google/logout', authGoogleLogout);
 authRouter.get('/google/success', initUser, ifSuccess);
 authRouter.get('/google/failed', ifFailed);
 authRouter.get('/google/find', authGoogleResponse);
+
+// Local
 authRouter.post('/signin', localSignin);
 authRouter.post('/signup', localSignup);
-authRouter.post('/check', localCheck);
+authRouter.get('/check', localCheck);
 
 module.exports = authRouter;

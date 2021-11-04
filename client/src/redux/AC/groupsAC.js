@@ -8,7 +8,9 @@ import {
 import { CHANGE_GROUP } from '../types/userTypes'
 
 export const getAllGroups = () => async (dispatch) => {
-  const response = await axios.get('http://localhost:3001/groups')
+  const response = await axios.get('http://localhost:3001/groups', {
+    withCredentials: true,
+  })
   const allGroups = await response.data
   dispatch({
     type: GET_ALL_GROUPS,
@@ -34,7 +36,10 @@ export const setFilterGroup = (filtred) => ({
 
 export const filterGroups = (text) => async (dispatch) => {
   const response = await axios.get(
-    `http://localhost:3001/groups/?_search=${text}`
+    `http://localhost:3001/groups/?_search=${text}`,
+    {
+      withCredentials: true,
+    }
   )
   const filtred = await response.data
   dispatch(setFilterGroup(filtred))

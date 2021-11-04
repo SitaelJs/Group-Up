@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { destroyCookie, getUserFromGoogle } from '../../redux/AC/usersAC'
+import { destroyCookie } from '../../redux/AC/usersAC'
 import styles from './stylesHeader.module.css'
 
 function Navbar() {
   const user = useSelector((state) => state.auth)
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getUserFromGoogle())
-  }, [])
+  // useEffect(() => {
+  //   dispatch(getUserFromGoogle())
+  // }, [])
 
   return (
     <header className={styles.header}>
@@ -28,7 +28,7 @@ function Navbar() {
                 <NavLink to="/games">Выбрать игру</NavLink>
               </div>
               <div>
-                <button onClick={(e) => dispatch(destroyCookie())}>
+                <button type="button" onClick={() => dispatch(destroyCookie())}>
                   Выйти
                 </button>
               </div>

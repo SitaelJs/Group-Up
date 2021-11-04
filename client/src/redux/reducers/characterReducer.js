@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { DECREMENT_VALUE, INCREMENT_VALUE } from '../types/characterTypes'
 
 export default function characterReducer(state = [], action) {

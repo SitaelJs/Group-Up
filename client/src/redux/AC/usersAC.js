@@ -16,16 +16,19 @@ export const setUser = (user) => ({
   payload: user,
 })
 
-export const clearUser = () => ({
-  type: CLEAR_USER,
-  payload: null,
-})
+export const clearUser = () => (
+  {
+    type: CLEAR_USER,
+    payload: null,
+  }
+)
 
 export const destroyCookie = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/logout`, {
     withCredentials: true,
   })
   if (response.status === 200) {
+    localStorage.removeItem('user')
     try {
       window.open(`${clientPuth}/`, '_self')
       dispatch(clearUser())
@@ -41,7 +44,9 @@ export const getUserFromGoogle = () => async (dispatch) => {
   })
   if (response.status === 200) {
     try {
+      console.log(response.data)
       const googleUser = await response.data
+      localStorage.setItem('user', JSON.stringify(response.data))
       dispatch(setUser(googleUser))
     } catch {
       window.open(`${serverPuth}/auth/google`)
@@ -50,11 +55,10 @@ export const getUserFromGoogle = () => async (dispatch) => {
 }
 
 export const getAllUsers = () => async (dispatch) => {
-  const allUsers = (
-    await axios(`${serverPuth}/users`, {
-      withCredentials: true,
-    })
-  ).data
+  const response = await axios(`${serverPuth}/users`, {
+    withCredentials: true,
+  })
+  const allUsers = await response.data
   dispatch({
     type: GET_ALL_USERS,
     payload: allUsers,
@@ -102,6 +106,7 @@ export const signUpUser = (payload, history) => async (dispatch) => {
   })
   if (response.status === 200) {
     const user = await response.data
+    localStorage.setItem('user', JSON.stringify(response.data))
     dispatch(setUser(user))
     history.replace('/')
   } else {
@@ -115,7 +120,7 @@ export const signInUser = (payload, history, from) => async (dispatch) => {
   })
   if (response.status === 200) {
     const user = await response.data
-    console.log(user)
+    localStorage.setItem('user', JSON.stringify(response.data))
     dispatch(setUser(user))
     history.replace(from)
   } else {
@@ -125,11 +130,12 @@ export const signInUser = (payload, history, from) => async (dispatch) => {
 
 export const checkAuthUser = () => async (dispatch) => {
   try {
-    const response = await axios.post(`${serverPuth}/auth/check`, {
+    const response = await axios.get(`${serverPuth}/auth/check`, {
       withCredentials: true,
     })
     if (response.status === 200) {
       const user = await response.data
+      console.log(user)
       dispatch(setUser(user))
     }
   } catch (err) {
