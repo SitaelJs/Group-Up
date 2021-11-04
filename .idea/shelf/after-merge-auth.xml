@@ -1,9 +1,0 @@
-<changelist name="after-merge-auth" date="1635774746121" recycled="false">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/after-merge-auth/shelved.patch" />
-  <option name="DESCRIPTION" value="after-merge-auth" />
-  <binary>
-    <option name="BEFORE_PATH" />
-    <option name="AFTER_PATH" value="client/public/media/gamesPicGroups/gameId=1ForGroups.png" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/after-merge-auth/gameId=1ForGroups.png" />
-  </binary>
-</changelist>

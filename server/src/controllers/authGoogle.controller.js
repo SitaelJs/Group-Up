@@ -1,24 +1,23 @@
 require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const passport = require('passport');
+const { User } = require('../db/models');
 
-const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
+const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, URL_BACK_SERVER, URL_FRONT_SERVER } = process.env;
 
 passport.use(
   new GoogleStrategy(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:3001/auth/google/callback',
+      callbackURL: `${URL_BACK_SERVER}/auth/google/callback`,
       passReqToCallback: true,
     },
 
-    (request, accessToken, refreshToken, profile, done) => {
-      // console.log(profile);
-      done(null, profile);
-    }
+    async (request, accessToken, refreshToken, profile, done) => done(null, profile)
   )
 );
+
 passport.serializeUser((user, done) => {
   done(null, user);
 });
@@ -26,13 +25,23 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
+const authGoogleResponse = async (req, res) => {
+  try {
+    const user = await User.findOne({ where: { email: req.user.email } });
+    const { id, nickname, email } = user;
+    res.json({ id, nickname, email });
+  } catch (error) {
+    res.sendStatus(500);
+  }
+};
+
 const authGoogle = passport.authenticate('google', {
   scope: ['profile', 'email'],
 });
 
 const authGoogleCallback = passport.authenticate('google', {
-  successRedirect: 'http://localhost:3001/auth/google/success',
-  failureRedirect: 'http://localhost:3001/auth/google/failed',
+  successRedirect: `${URL_BACK_SERVER}/auth/google/success`,
+  failureRedirect: `${URL_BACK_SERVER}/auth/google/failed`,
 });
 
 const ifFailed = (req, res) => {
@@ -40,13 +49,14 @@ const ifFailed = (req, res) => {
 };
 
 const ifSuccess = (req, res) => {
-  res.redirect('http://localhost:3000');
+  res.redirect(`${URL_FRONT_SERVER}`);
 };
 
 const authGoogleLogout = (req, res) => {
   req.session = null;
+  res.clearCookie('sessionId');
   req.logout();
-  res.redirect('/');
+  res.sendStatus(200);
 };
 
 module.exports = {
@@ -55,4 +65,5 @@ module.exports = {
   authGoogleLogout,
   ifSuccess,
   ifFailed,
+  authGoogleResponse,
 };

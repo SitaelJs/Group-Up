@@ -1,3 +1,36 @@
-p {
+.containerGroupDet {
+    margin: 120px auto 100px auto;
+    height: 550px;
+    width: 1200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+}
+
+.headGroup {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: x-large;
+}
+
+.imgGameGroup {
+    border-radius: 50%;
+
+    border: 5px inset rgba(255, 255, 255, 0.82);
+
+}
+
+.usersInGroups {
+    padding: 15px;
+}
+
+.containerGroupDet button {
     color: black;
 }
