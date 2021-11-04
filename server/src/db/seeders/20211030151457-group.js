@@ -8,7 +8,7 @@ const userId = () => {
   return test;
 };
 
-const group = [...Array(200)].map((user, index) => ({
+const group = [...Array(20)].map((user, index) => ({
   name: faker.internet.mac(),
   gameId: getRandomGame(1, 4),
   userId: userId(),

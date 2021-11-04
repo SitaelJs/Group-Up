@@ -18,10 +18,10 @@
     padding-bottom: 10px;
     text-align: center;
     font-size: 48px;
-    color: #50ddfd;
-    text-shadow: 0 0 7px #5fffec,
-    0 0 10px rgba(95, 255, 255, 0.45),
-    0 0 21px rgba(0, 255, 255, 0.35);
+    color: #fc39ea;
+    text-shadow: 0 0 7px #ff43c9,
+    0 0 10px rgba(255, 84, 239, 0.45),
+    0 0 21px rgba(255, 118, 231, 0.35);
 }
 
 .inputAuth {
