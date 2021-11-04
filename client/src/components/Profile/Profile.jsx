@@ -14,7 +14,7 @@ function Profile() {
   const { userId } = useParams()
   const users = useSelector((state) => state.users)
   const user = users?.find((el) => el.id === Number(userId))
-  console.log(userId)
+
   // console.log(user)
   // const { userId } = useParams()
   const character = useSelector((state) => state.characterisitics)

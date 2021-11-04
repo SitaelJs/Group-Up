@@ -5,7 +5,9 @@ const { User, Characteristic } = require('../db/models');
 
 router.get('/', async (req, res, next) => {
   const allUsers = await User.findAll();
-  res.json(allUsers);
+  setTimeout(() => {
+    res.json(allUsers);
+  }, 2e3);
 });
 
 router.get('/users/characterisitics', async (req, res) => {
