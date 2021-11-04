@@ -40,37 +40,46 @@
 
 .buttonSendAuth {
     margin: 20px;
-    width: 250px;
-    height: 32px;
+    width: 230px;
+    height: 50px;
     text-align: center;
     border-radius: 8px;
     border: 3px solid rgb(0, 40, 70);
     cursor: pointer;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttonSendAuth:hover {
     animation: border-flicker 2s linear forwards;
 }
 
-.buttonSendAuth span {
+.buttonSendAuth button {
     text-decoration: none;
     font-weight: 300;
     font-size: x-large;
     color: rgba(120, 0, 50, .5);
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
 }
 
-.buttonSendAuth span b {
+.buttonSendAuth button b {
     color: rgba(120, 0, 50, .5);
 }
 
-.buttonSendAuth:hover span {
+.buttonSendAuth:hover button {
     animation: text-flicker 2s linear forwards;
 }
 
 .buttonSendAuth:hover .first {
     animation: letter-flicker 3s linear infinite;
 }
+
+/*.formForAuth button {*/
+/*    visibility: hidden;*/
+/*}*/
 
 @keyframes text-flicker {
     2% {

@@ -1,6 +1,7 @@
 require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const passport = require('passport');
+const { User } = require('../db/models');
 
 const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, URL_BACK_SERVER, URL_FRONT_SERVER } = process.env;
 
@@ -24,7 +25,15 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
-const authGoogleResponse = (req, res) => res.json();
+const authGoogleResponse = async (req, res) => {
+  try {
+    const user = await User.findOne({ where: { email: req.user.email } });
+    const { id, nickname, email } = user;
+    res.json({ id, nickname, email });
+  } catch (error) {
+    res.sendStatus(500);
+  }
+};
 
 const authGoogle = passport.authenticate('google', {
   scope: ['profile', 'email'],
@@ -45,8 +54,9 @@ const ifSuccess = (req, res) => {
 
 const authGoogleLogout = (req, res) => {
   req.session = null;
+  res.clearCookie('sessionId');
   req.logout();
-  res.redirect('/');
+  res.sendStatus(200);
 };
 
 module.exports = {

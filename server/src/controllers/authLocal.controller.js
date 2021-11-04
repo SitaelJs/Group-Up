@@ -47,6 +47,7 @@ const localSignup = async (req, res) => {
 const localCheck = async (req, res) => {
   try {
     const user = await User.findOne({ where: { id: req.session.user.id } });
+
     return res.json(user);
   } catch (error) {
     return res.sendStatus(500);

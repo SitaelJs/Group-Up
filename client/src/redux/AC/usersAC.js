@@ -1,18 +1,39 @@
 import axios from 'axios'
 import {
   CHANGE_GROUP,
-  GET_ALL_USERS,
   GET_USER_FOR_GROUP,
   SET_USER,
+  GET_ALL_USERS,
+  CLEAR_USER,
 } from '../types/userTypes'
 import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
 const serverPuth = process.env.REACT_APP_URL_BACK_SERVER
+const clientPuth = process.env.REACT_APP_URL_FRONT_SERVER
 
 export const setUser = (user) => ({
   type: SET_USER,
   payload: user,
 })
+
+export const clearUser = () => ({
+  type: CLEAR_USER,
+  payload: null,
+})
+
+export const destroyCookie = () => async (dispatch) => {
+  const response = await axios(`${serverPuth}/auth/google/logout`, {
+    withCredentials: true,
+  })
+  if (response.status === 200) {
+    try {
+      dispatch(clearUser())
+      window.open(`${clientPuth}/`, '_self')
+    } catch {
+      window.open(`${clientPuth}/`, '_self')
+    }
+  }
+}
 
 export const getUserFromGoogle = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/find`, {
@@ -21,7 +42,6 @@ export const getUserFromGoogle = () => async (dispatch) => {
   if (response.status === 200) {
     try {
       const googleUser = await response.data
-      console.log('googleUser=====>', googleUser)
       dispatch(setUser(googleUser))
     } catch {
       window.open(`${serverPuth}/auth/google`)
@@ -30,11 +50,14 @@ export const getUserFromGoogle = () => async (dispatch) => {
 }
 
 export const getAllUsers = () => async (dispatch) => {
-  const allUsers = await axios('http://localhost:3001/users')
-  const data = await allUsers.data
+  const allUsers = (
+    await axios(`${serverPuth}/users`, {
+      withCredentials: true,
+    })
+  ).data
   dispatch({
     type: GET_ALL_USERS,
-    payload: data,
+    payload: allUsers,
   })
 }
 
@@ -66,7 +89,7 @@ export const changeGroupForUser = (userId, groupId) => async (dispatch) => {
     },
   })
   const usersForGroup = await axios.get(
-    `http://localhost:3001/groups/${groupId}`
+    `${serverPuth}/groups/${groupId}`
   )
   const data = await usersForGroup.data
   dispatch({
