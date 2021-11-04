@@ -1,4 +1,4 @@
-import { SET_USER, CLEAR_USER } from '../types/userTypes'
+import { CLEAR_USER, SET_USER } from '../types/userTypes'
 
 const authReducer = (state = null, action) => {
   const { type, payload } = action

@@ -1,48 +1,16 @@
-.formForAuth {
+.formForSignInMain {
     font-size: x-large;
     border-radius: 15px;
-    padding: 20px 10px 10px 0;
+    padding: 10px;
     width: 600px;
-    height: 580px;
+    height: 550px;
     background-color: black;
-    margin: 120px auto 120px auto;
+    margin: 150px auto 120px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
     25px -25px 60px -25px rgba(46, 208, 255, 0.3);
-}
-
-.headAuth {
-    padding-top: 35px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 48px;
-    color: #50ddfd;
-    text-shadow: 0 0 7px #5fffec,
-    0 0 10px rgba(95, 255, 255, 0.45),
-    0 0 21px rgba(0, 255, 255, 0.35);
-}
-
-.inputAuth {
-    margin-top: 15px;
-    padding-bottom: 15px;
-}
-
-.inputAuth input {
-    border-radius: 5px;
-    background-color: rgba(70, 249, 255, 0.07);
-    border: black;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    margin: 10px;
-    height: 35px;
-    width: 300px;
-}
-
-.inputAuth input::placeholder {
-    font-size: medium;
-    color: #7a7a7a;
 }
 
 .socialButton {
@@ -129,7 +97,7 @@
 
 
 .buttonSendAuth {
-    margin: 10px auto 20px auto;
+    margin: 30px auto 20px auto;
     width: 230px;
     height: 50px;
     text-align: center;
@@ -352,12 +320,48 @@
     }
 }
 
+.formForSignIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headAuth {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 44px;
+}
+
+
+.inputAuth {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.inputAuth input {
+    border-radius: 5px;
+    background-color: rgba(70, 249, 255, 0.07);
+    border: black;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    margin: 10px;
+    height: 35px;
+    width: 300px;
+}
 
 .inputString {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px;
 }
 
+.formForSignIn h1 {
+    font-size: 48px;
+    color: #50ddfd;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+    padding-bottom: 20px;
+}

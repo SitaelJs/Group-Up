@@ -1,6 +1,7 @@
 import axios from 'axios'
 import {
   ADD_NEW_GROUP,
+  FILTER_ALL_GROUPS,
   FILTER_GROUPS,
   GET_ALL_GROUPS,
 } from '../types/groupsTypes'
@@ -62,4 +63,15 @@ export const groupDelete = (groupId) => async () => {
     { withCredentials: true }
   )
   await response.data
+}
+
+export const groupFilter = (gameId, modeId, positionId) => async (dispatch) => {
+  const response = await axios.get(
+    `http://localhost:3001/group/filter/?gameId=${gameId}&modeId=${modeId}&positionId=${positionId}`
+  )
+  const groups = response.data
+  dispatch({
+    type: FILTER_ALL_GROUPS,
+    payload: groups,
+  })
 }

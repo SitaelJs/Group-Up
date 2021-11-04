@@ -1,10 +1,10 @@
 import axios from 'axios'
 import {
   CHANGE_GROUP,
+  CLEAR_USER,
+  GET_ALL_USERS,
   GET_USER_FOR_GROUP,
   SET_USER,
-  GET_ALL_USERS,
-  CLEAR_USER,
 } from '../types/userTypes'
 import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
@@ -28,8 +28,8 @@ export const destroyCookie = () => async (dispatch) => {
   if (response.status === 200) {
     localStorage.removeItem('user')
     try {
-      dispatch(clearUser())
       window.open(`${clientPuth}/`, '_self')
+      dispatch(clearUser())
     } catch {
       window.open(`${clientPuth}/`, '_self')
     }
@@ -40,6 +40,7 @@ export const getUserFromGoogle = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/find`, {
     withCredentials: true,
   })
+
   if (response.status === 200) {
     try {
       const googleUser = await response.data
@@ -56,6 +57,7 @@ export const getAllUsers = () => async (dispatch) => {
     withCredentials: true,
   })
   const allUsers = await response.data
+
   dispatch({
     type: GET_ALL_USERS,
     payload: allUsers,

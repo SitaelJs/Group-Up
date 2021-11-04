@@ -15,11 +15,16 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75b87a89a58abd4c21295f4fb67a9c8c83fcbae8
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
 const modesRouter = require('./src/routes/modes.router');
 const usersRouter = require('./src/routes/users.router');
 const authRouter = require('./src/routes/auth.router');
+const groupfilterRouter = require('./src/routes/groupsfilter.router');
 
 // middleware
 app.use(morgan('dev'));
@@ -54,6 +59,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/group/filter', groupfilterRouter);
 app.use('/auth', authRouter);
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);

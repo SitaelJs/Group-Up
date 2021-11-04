@@ -48,6 +48,13 @@ function App() {
           <PrivateRoute exact path="/users">
             <Profilelist />
           </PrivateRoute>
+          <PrivateRoute exact path="/users/:userId">
+            <Profile />
+          </PrivateRoute>
+
+          {/* <PrivateRoute exact path="/users">
+            <Profilelist />
+          </PrivateRoute> */}
 
           <PrivateRoute exact path="/games">
             <GameList />

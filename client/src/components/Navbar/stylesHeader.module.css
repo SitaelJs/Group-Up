@@ -1,67 +1,35 @@
 .header {
     position: fixed;
-    height: 80px;
+    padding: 10px 100px;
+    height: 10%;
     top: 0;
-    width: 100%;
     background: black;
     display: flex;
     box-shadow: 0px 0px 25px rgba(46, 208, 255, 0.20);
+    align-items: center;
+    flex-direction: row;
 }
-
 
 .nav {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 35px;
-    margin: auto 35px auto;
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 35px;
-    margin: auto;
     align-items: center;
 }
 
-
-.header a {
-    text-decoration: none;
-}
-
-.mainPages {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    font-size: x-large;
-}
-
-.authPages {
-    width: 16%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto 0 auto;
-    font-size: x-large;
-}
-
 .logo span {
-    height: 35px;
+    align-items: center;
     margin: auto;
     font-size: xxx-large;
     color: #fff;
     text-shadow: 0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+    0 0 42px rgba(0, 255, 170, 0.48),
+    0 0 82px rgba(0, 255, 170, 0.47);
+    /*0 0 92px #0fa,*/
+    /*0 0 102px #0fa,*/
+    /*0 0 151px #0fa;*/
     animation: flicker 1.5s infinite alternate;
 }
 
@@ -72,15 +40,36 @@
         text-shadow: 0 0 4px #fff,
         0 0 11px #fff,
         0 0 19px #fff,
-        0 0 40px #0fa,
-        0 0 80px #0fa,
+        0 0 40px rgba(114, 221, 231, 0.66),
+        0 0 80px #7fe5f3,
         0 0 90px #38ffe8,
-        0 0 100px #34ffe8,
-        0 0 150px #00ffea;
+        0 0 100px rgba(52, 255, 232, 0.68),
+        0 0 150px rgba(0, 255, 234, 0.65);
 
     }
 
     20%, 24%, 55% {
         text-shadow: none;
     }
+}
+
+.navLinkMain {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.navLinkMain a {
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.navLinkMain button {
+    margin-right: -200px;
+    font-size: large;
+    background-color: black;
+    border: black;
 }

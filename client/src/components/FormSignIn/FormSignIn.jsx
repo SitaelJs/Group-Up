@@ -1,9 +1,9 @@
-import './style.css'
 import { GoogleLoginButton } from 'react-social-login-buttons'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { useHistory, useLocation } from 'react-router'
 import { getUserFromGoogle, signInUser } from '../../redux/AC/usersAC'
+import styles from './stylesFormSignIn.module.css'
 
 const { REACT_APP_URL_BACK_SERVER } = process.env
 
@@ -37,35 +37,44 @@ function FormAuth() {
   }
 
   return (
-    <>
-      <form onSubmit={submitHandler}>
-        <h1>АВТОРИЗАЦИЯ</h1>
-        <div>
-          <span>E-mail</span>
-          <input
-            name="email"
-            onChange={changeHandler}
-            value={userSignIn.email}
-          />
+    <div className={styles.formForSignInMain}>
+      <form className={styles.formForSignIn} onSubmit={submitHandler}>
+        <h1 className={styles.headAuth}>Авторизация</h1>
+
+        <div className={styles.inputAuth}>
+          <div className={styles.inputString}>
+            <span>E-mail</span>
+            <input
+              name="email"
+              onChange={changeHandler}
+              value={userSignIn.email}
+            />
+          </div>
+          <div className={styles.inputString}>
+            <span>Пароль</span>
+            <input
+              type="password"
+              name="password"
+              onChange={changeHandler}
+              value={userSignIn.password}
+            />
+          </div>
         </div>
-        <div>
-          <span>Пароль</span>
-          <input
-            name="password"
-            onChange={changeHandler}
-            value={userSignIn.password}
-          />
-        </div>
-        <button type="submit" value="">
-          Отправить
-        </button>
-        <hr />
+
+        <p className={styles.buttonSendAuth}>
+          <button type="button" value="">
+            Отп
+            <b className={styles.first}>равит</b>
+            ь
+          </button>
+        </p>
       </form>
+
       <GoogleLoginButton
-        className="social-button"
+        className={styles.socialButton}
         onClick={googleSignInClick}
       />
-    </>
+    </div>
   )
 }
 

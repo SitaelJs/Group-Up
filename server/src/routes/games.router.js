@@ -8,6 +8,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:gameId', async (req, res, next) => {
   const { gameId } = req.params;
+  console.log(gameId);
   let gameModes = {};
   const modes = await Mode.findAll({
     include: [{ model: Game, as: 'Games', where: { id: gameId } }],

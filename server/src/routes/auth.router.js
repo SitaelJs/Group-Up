@@ -9,7 +9,10 @@ const {
 } = require('../controllers/authGoogle.controller');
 
 const { localSignin, localSignup, localCheck } = require('../controllers/authLocal.controller');
+<<<<<<< HEAD
 const { getSteam, returnSteam, steamSuccess } = require('../controllers/authSteam.controller');
+=======
+>>>>>>> 75b87a89a58abd4c21295f4fb67a9c8c83fcbae8
 
 const { initUser } = require('../middleware/checkAuth');
 
