@@ -39,6 +39,7 @@ export const getUserFromGoogle = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/find`, {
     withCredentials: true,
   })
+
   if (response.status === 200) {
     try {
       const googleUser = await response.data

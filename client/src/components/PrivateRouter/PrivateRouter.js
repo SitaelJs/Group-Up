@@ -1,11 +1,19 @@
 // import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Redirect, Route } from 'react-router'
 
 function PrivateRoute({ children, ...rest }) {
   // const [checkAuth, setCheckAuth] = useState()
+  const userInAuth = useSelector((state) => state.user)
+  const [user, setUser] = useState({})
   const auth = useSelector((state) => state.auth)
-  console.log(auth)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setUser(auth)
+    }, 1000)
+  }, [userInAuth])
 
   // const helperPrivateRouter = () => {
   //   if (auth.length) {
@@ -17,7 +25,7 @@ function PrivateRoute({ children, ...rest }) {
   return (
     <Route
       {...rest}
-      render={({ location }) => ((auth) ? (
+      render={({ location }) => ((user) ? (
         children
       ) : (
         <Redirect

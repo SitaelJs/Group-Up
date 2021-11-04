@@ -13,6 +13,7 @@ const localSignin = async (req, res) => {
       const user = await User.findOne({ where: { email } });
       if (user && (await bycrypt.compare(password, user.password))) {
         req.session.user = { nickname: user.nickname, id: user.id };
+        console.log(123456789098765432, req.session.user);
         return res.json({ nickname: user.nickname, id: user.id });
       }
       return res.sendStatus(401);
@@ -36,6 +37,7 @@ const localSignup = async (req, res) => {
         searchStatus: false,
       });
       req.session.user = { nickname: newUser.nickname, id: newUser.id };
+      console.log(req.session.user);
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);
@@ -47,9 +49,10 @@ const localSignup = async (req, res) => {
 const localCheck = async (req, res) => {
   try {
     const user = await User.findOne({ where: { id: req.session.user.id } });
-
+    console.log(user);
     return res.json(user);
   } catch (error) {
+    console.log(error); 
     return res.sendStatus(500);
   }
 };

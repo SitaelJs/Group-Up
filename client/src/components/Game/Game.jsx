@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import { Link } from 'react-router-dom'
 import styles from './stylesGame.module.css'
 

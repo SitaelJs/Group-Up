@@ -18,6 +18,7 @@ const Profilelist = () => {
         .then((dataFromBack) => {
           dispatch(getAllUsers(dataFromBack.data))
           deactivate()
+          console.log(users)
         })
     }
   }, [])

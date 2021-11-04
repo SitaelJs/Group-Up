@@ -29,6 +29,7 @@ const authGoogleResponse = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email: req.user.email } });
     const { id, nickname, email } = user;
+
     res.json({ id, nickname, email });
   } catch (error) {
     res.sendStatus(500);
