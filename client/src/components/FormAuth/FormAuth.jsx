@@ -40,32 +40,38 @@ function FormAuth() {
         <p className={styles.headAuth}>Заполните форму</p>
 
         <div className={styles.inputAuth}>
-          <p>Логин</p>
+          <div className={styles.inputString}>
+            <p>Логин</p>
 
-          <input
-            placeholder="nickname"
-            name="nickname"
-            onChange={changeHandler}
-            value={form.nickname}
-          />
+            <input
+              placeholder="nickname"
+              name="nickname"
+              onChange={changeHandler}
+              value={form.nickname}
+            />
+          </div>
 
-          <p>E-mail</p>
-          <input
-            type="email"
-            placeholder="example@mail.com"
-            name="email"
-            onChange={changeHandler}
-            value={form.email}
-          />
+          <div className={styles.inputString}>
+            <p>E-mail</p>
+            <input
+              type="email"
+              placeholder="example@mail.com"
+              name="email"
+              onChange={changeHandler}
+              value={form.email}
+            />
+          </div>
 
-          <p>Пароль</p>
-          <input
-            type="password"
-            placeholder="a-Z 0-9 !@#"
-            name="password"
-            onChange={changeHandler}
-            value={form.password}
-          />
+          <div className={styles.inputString}>
+            <p>Пароль</p>
+            <input
+              type="password"
+              placeholder="a-Z 0-9 !@#"
+              name="password"
+              onChange={changeHandler}
+              value={form.password}
+            />
+          </div>
         </div>
 
         <p className={styles.buttonSendAuth}>
@@ -75,7 +81,6 @@ function FormAuth() {
             ь
           </button>
         </p>
-
       </form>
       <GoogleLoginButton
         className={styles.socialButton}

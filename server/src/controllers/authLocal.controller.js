@@ -1,10 +1,19 @@
-const router = require('express').Router();
+// const router = require('express').Router();
 const bycrypt = require('bcrypt');
 const { User } = require('../db/models');
 
-router.route('/').get(async (req, res) => {
-  res.json({});
-});
+const localCheck = async (req, res) => {
+  try {
+    const user = await User.findOne({ where: { id: req.session.user.id } });
+    return res.json(user);
+  } catch (error) {
+    return res.sendStatus(500);
+  }
+};
+
+// router.route('/').get(async (req, res) => {
+//   res.json({});
+// });
 
 const localSignin = async (req, res) => {
   const { email, password } = req.body;
@@ -13,6 +22,7 @@ const localSignin = async (req, res) => {
       const user = await User.findOne({ where: { email } });
       if (user && (await bycrypt.compare(password, user.password))) {
         req.session.user = { nickname: user.nickname, id: user.id };
+
         return res.json({ nickname: user.nickname, id: user.id });
       }
       return res.sendStatus(401);
@@ -36,6 +46,7 @@ const localSignup = async (req, res) => {
         searchStatus: false,
       });
       req.session.user = { nickname: newUser.nickname, id: newUser.id };
+
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);
@@ -44,22 +55,4 @@ const localSignup = async (req, res) => {
   return res.sendStatus(400);
 };
 
-const localCheck = async (req, res) => {
-  try {
-    const user = await User.findOne({ where: { id: req.session.user.id } });
-
-    return res.json(user);
-  } catch (error) {
-    return res.sendStatus(500);
-  }
-};
-
-const localLogout = (req, res) => {
-  req.session.destroy((err) => {
-    if (err) return res.sendStatus(500);
-    res.clearCookie(req.app.get('sid'));
-    return res.sendStatus(200);
-  });
-};
-
-module.exports = { localSignin, localSignup, localCheck, localLogout };
+module.exports = { localSignin, localSignup, localCheck };

@@ -2,6 +2,7 @@
 
 body {
     margin: 0 auto 0 auto;
+
 }
 
 /*.content-wrapper {*/
@@ -23,7 +24,6 @@ p {
 
 body {
     /*background: #101010*/
-
     background-image: url('http://localhost:3000/media/background.jpg');
     background-size: 300px;
     background-repeat: repeat;

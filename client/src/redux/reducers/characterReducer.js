@@ -1,4 +1,5 @@
-import { DECREMENT_VALUE, INCREMENT_VALUE } from '../types/characterTypes'
+/* eslint-disable no-param-reassign */
+import { DECREMENT_VALUE, INCREMENT_VALUE, GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
 export default function characterReducer(state = [], action) {
   switch (action.type) {
@@ -19,6 +20,9 @@ export default function characterReducer(state = [], action) {
         }
         return el
       })
+
+    case GET_USER_CHARACTERISTICS:
+      return action.payload
 
     default:
       return state
