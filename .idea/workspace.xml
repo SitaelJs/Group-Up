@@ -6,30 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Player/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Player/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/gamesAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/modesAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/modesAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/userAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/userAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/groupsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/groupsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/usersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/types/groupsTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/groupsTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085737-create-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085737-create-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/migrations/20211029085738-create-user-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/migrations/20211029085738-create-user-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/models/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/seeders/20211030145020-service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db/seeders/20211030145507-user-service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/groups.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/groups.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +28,9 @@
     <setting file="file://$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="208rmlNMDUijFml7WoMr1KTj8LX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -103,7 +83,8 @@
       <workItem from="1635518725247" duration="9100000" />
       <workItem from="1635595944817" duration="7480000" />
       <workItem from="1635605932913" duration="48711000" />
-      <workItem from="1635859480648" duration="41974000" />
+      <workItem from="1635859480648" duration="46005000" />
+      <workItem from="1636041259316" duration="3094000" />
     </task>
     <servers />
   </component>

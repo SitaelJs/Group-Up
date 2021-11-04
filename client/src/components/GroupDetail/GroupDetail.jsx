@@ -19,6 +19,7 @@ function GroupDetail() {
   const [link, setLink] = useState(false)
   const [leave, setLeave] = useState(false)
   const text = 'https://discord.gg/Q3c42AmKts'
+
   const copy = async () => {
     await navigator.clipboard.writeText(text)
     setCopied(true)
@@ -36,6 +37,7 @@ function GroupDetail() {
   const users = useSelector((state) => state.users)
   const oneUser = users.find((user) => user.id == group.userId)
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicGroups/gameId=${group?.gameId}ForGroups.png`
+  const command = `!createvoicechannel Group ${group.name}`
 
   useEffect(() => {
     dispatch(getAllGroups())
@@ -109,7 +111,7 @@ function GroupDetail() {
       ) : link ? (
         <>
           {' '}
-          <input readOnly value={text} />
+          <input readOnly value={command} />
           <button
             onClick={copy}
             style={
