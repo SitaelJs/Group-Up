@@ -1,7 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .mainContainer {
     display: flex;
-    width: 200px;
-    height: 200px;
-    margin: 120px auto auto auto;
-    background: black;
+    flex-direction: column;
 }
+
+.title {
+    margin: 200px auto 400px;
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+.h1main h1 {
+    margin: 0;
+    background-image: url(https://c.tenor.com/jdLUsXvpNjcAAAAC/lifting.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 150px;
+    line-height: .75;
+}
+
+.white-mode {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: #122;
+    border-radius: 3px;
+    color: #FFF;
+    transition: .35s ease-in-out;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-family: "Montserrat";
+}
+
+.white-mode:hover {
+    background-color: #FFF;
+    color: #122;
+}
+
+.imgBox {
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    margin: auto auto 200px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+
+}
+
+.imgBox span {
+    position: absolute;
+    padding: 30px 15px 15px 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    color: #ebebeb;
+}
+
+.imgMain1 img {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.imgMain2 img {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.imgMain1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgMain2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.block1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start
+}
+
+.block2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end
+}
+
+.imgBox img {
+    padding: 5px;
+}
+

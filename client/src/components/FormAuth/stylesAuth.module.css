@@ -77,10 +77,6 @@
     animation: letter-flicker 3s linear infinite;
 }
 
-/*.formForAuth button {*/
-/*    visibility: hidden;*/
-/*}*/
-
 @keyframes text-flicker {
     2% {
         color: rgb(230, 0, 120);

@@ -2,11 +2,7 @@
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
-import {
-  changeGroupForUser,
-  getAllGroups,
-  groupDelete,
-} from '../../redux/AC/groupsAC'
+import { changeGroupForUser, getAllGroups, groupDelete } from '../../redux/AC/groupsAC'
 import getAllGames from '../../redux/AC/gamesAC'
 import getAllModes from '../../redux/AC/modesAC'
 import { getAllUsers, getUsersForGroup } from '../../redux/AC/usersAC'
@@ -38,6 +34,7 @@ function GroupDetail() {
   const curModes = allModes?.find((el) => el.id === group?.modeId)
   const oneUser = users.find((user) => user.id === Number(group?.userId))
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicGroups/gameId=${group?.gameId}ForGroups.png`
+  const comment = `!createvoicechannel Group: ${group?.name}`
 
   const onClickJoinGroup = () => {
     dispatch(changeGroupForUser(groupsId))
@@ -59,8 +56,6 @@ function GroupDetail() {
     window.open('http://localhost:3000/groups', '_self')
   }
 
-  console.log(oneUser)
-
   useEffect(() => {
     dispatch(getAllUsers())
     dispatch(getAllGroups())
@@ -79,11 +74,9 @@ function GroupDetail() {
           src={gamePic}
         />
         <div className={styles.gameSet}>
-          <h1>{game?.title}</h1>
-          <h3>
-            Режим игры:
-            {curModes?.name}
-          </h3>
+          <h1>{group?.name}</h1>
+          <h2>{game?.title}</h2>
+          <h3>{curModes?.name}</h3>
         </div>
       </div>
 
@@ -100,66 +93,69 @@ function GroupDetail() {
           />
         ))}
       </div>
-      <div>
-        {showJoin ? (
+
+      <div className={styles.buttonJoinedGroup}>
+        <div>
+          {showJoin ? (
+            <button
+              type="button"
+              onClick={() => {
+                onClickJoinGroup()
+                setShowJoin(!showJoin)
+                setLeave(!leave)
+              }}
+            >
+              JOIN GROUP
+            </button>
+          ) : link ? (
+            <>
+              {' '}
+              <input className={styles.hiddenLink} readOnly value={comment} />
+              <button
+                type="button"
+                onClick={copy}
+                style={
+                  copied
+                    ? { backgroundColor: 'green' }
+                    : { backgroundColor: 'grey' }
+                }
+              >
+                {copied ? 'Copied! отправьте боту!' : 'Copy To Clipboard'}
+              </button>
+            </>
+          ) : (
+            <button type="button" onClick={() => setLink(!link)}>
+              {' '}
+              Ready!
+            </button>
+          )}
+        </div>
+        {leave && (
           <button
-            type="button"
             onClick={() => {
               onClickJoinGroup()
+              showHandler()
               setShowJoin(!showJoin)
               setLeave(!leave)
             }}
+            type="button"
           >
-            JOIN GROUP
+            Выйти из группы
           </button>
-        ) : link ? (
-          <>
-            {' '}
-            <input readOnly value={text} />
+        )}
+        <div className={styles.deleteGroupBut}>
+          {oneUser && (
             <button
               type="button"
-              onClick={copy}
-              style={
-                copied
-                  ? { backgroundColor: 'green' }
-                  : { backgroundColor: 'grey' }
-              }
+              onClick={() => {
+                deleteGroupHandler()
+                moveToGroups()
+              }}
             >
-              {copied ? 'Copied!' : 'Copy To Clipboard'}
+              Delete This Group
             </button>
-          </>
-        ) : (
-          <button type="button" onClick={() => setLink(!link)}>
-            {' '}
-            Ready!
-          </button>
-        )}
-      </div>
-      {leave && (
-        <button
-          onClick={() => {
-            onClickJoinGroup()
-            showHandler()
-            setShowJoin(!showJoin)
-            setLeave(!leave)
-          }}
-          type="button"
-        >
-          Выйти из группы
-        </button>
-      )}
-      <div className={styles.deleteGroupBut}>
-        {oneUser && (
-          <button
-            type="button"
-            onClick={() => {
-              deleteGroupHandler()
-              moveToGroups()
-            }}
-          >
-            Delete This Group
-          </button>
-        )}
+          )}
+        </div>
       </div>
     </div>
   )

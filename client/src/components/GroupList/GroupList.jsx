@@ -41,41 +41,44 @@ function GroupList() {
   return (
     <div className={styles.groupList}>
       <div className={styles.filterForGroups}>
-        <input onChange={(e) => setSearchInput(e.target.value)} type="text" />
-        <select
-          onChange={(e) => {
-            setGameId(e.target.value)
-          }}
-        >
-          {games?.map((game) => (
-            <option value={game.id} key={game.id}>
-              {game.title}
-            </option>
-          ))}
-        </select>
-
-        <form onSubmit={filterGroupsHandler}>
-          <select name="modeId">
-            {gameModes?.modes?.map((mode) => (
-              <option value={mode?.id} key={mode.id}>
-                {mode.name}
+        <div className={styles.filterWindow}>
+          <input onChange={(e) => setSearchInput(e.target.value)} type="text" />
+          <select
+            onChange={(e) => {
+              setGameId(e.target.value)
+            }}
+          >
+            {games?.map((game) => (
+              <option value={game.id} key={game.id}>
+                {game.title}
               </option>
             ))}
           </select>
-          <select name="positionId">
-            {gameModes?.positions?.map((position) => (
-              <option value={position.id} key={position.id}>
-                {position.name}
-              </option>
-            ))}
-          </select>
+          <form onSubmit={filterGroupsHandler}>
+            <select name="modeId">
+              {gameModes?.modes?.map((mode) => (
+                <option value={mode?.id} key={mode.id}>
+                  {mode.name}
+                </option>
+              ))}
+            </select>
+            <select name="positionId">
+              {gameModes?.positions?.map((position) => (
+                <option value={position.id} key={position.id}>
+                  {position.name}
+                </option>
+              ))}
+            </select>
 
-          {groups.map((group) => (
-            <Group key={group.id} group={group} />
-          ))}
-
-          <button type="submit">выбрать</button>
-        </form>
+            <button type="submit">найти</button>
+          </form>
+          {' '}
+        </div>
+      </div>
+      <div className={styles.groupListMain}>
+        {groups?.map((group) => (
+          <Group key={group.id} group={group} />
+        ))}
       </div>
     </div>
   )
