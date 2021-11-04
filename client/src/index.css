@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+
+body {
+    margin: 0 auto 0 auto;
+}
+
+/*.content-wrapper {*/
+/*    width: 100%;*/
+/*    max-width: 1400px;*/
+/*    margin: 0 auto;*/
+/*    padding: 0 20px;*/
+/*}*/
+
+p {
+    margin: 0;
+}
+
+* {
+    font-family: 'Comfortaa', cursive !important;
+    font-variant-caps: all-petite-caps !important;
+    color: #ffffff;
+}
+
+body {
+    /*background: #101010*/
+
+    background-image: url('http://localhost:3000/media/background.jpg');
+    background-size: 300px;
+    background-repeat: repeat;
+}
+
+.stylesHeader_header__2N8kS {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}

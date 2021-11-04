@@ -1,12 +1,7 @@
-import styles from './styles.module.css'
+import styles from './mainStyles.module.css'
 
-const Main = () => (
-
-  <div>
-
-    <img className={styles.wrapper} src="https://i.postimg.cc/J4DLJYWW/background.png" alt="wrapper" />
-
-  </div>
-)
+function Main() {
+  return <div className={styles.mainContainer}>HELLO</div>
+}
 
 export default Main

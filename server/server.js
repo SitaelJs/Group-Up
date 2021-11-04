@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -8,22 +7,21 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
-
 const redisClient = redis.createClient();
-const gamesRouter = require('./src/routes/games.router');
-const groupsRouter = require('./src/routes/groups.router');
-const modesRouter = require('./src/routes/modes.router');
-const userRouter = require('./src/routes/users.router');
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+const gamesRouter = require('./src/routes/games.router');
+const groupsRouter = require('./src/routes/groups.router');
+const modesRouter = require('./src/routes/modes.router');
+const userRouter = require('./src/routes/users.router');
 const authRouter = require('./src/routes/auth.router');
 
 // middleware
 app.use(morgan('dev'));
-app.use(cors());
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -44,12 +42,14 @@ app.use(
     rolling: true,
     saveUninitialized: false,
     cookie: {
-      maxAge: 10 * 60 * 1000,
+      maxAge: 5 * 60 * 100000,
       httpOnly: false,
       secure: false,
     },
   })
 );
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 

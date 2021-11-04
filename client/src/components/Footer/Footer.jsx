@@ -5,34 +5,25 @@ import {
   faTwitch,
   faVk,
 } from '@fortawesome/free-brands-svg-icons'
-import styles from './styles.module.css'
+import styles from './footerStyles.module.css'
 
-const Footer = () => (
-  <footer className={styles.wrapper}>
-    <h3 className={styles.footerH3}>TagTeam 2021</h3>
-    <div className={`${styles.content}`}>
-      <FontAwesomeIcon
-        className={styles.footerFontAwesome}
-        icon={faInstagram}
-        size="2x"
-      />
-      <FontAwesomeIcon
-        className={styles.footerFontAwesome}
-        icon={faFacebook}
-        size="2x"
-      />
-      <FontAwesomeIcon
-        className={styles.footerFontAwesome}
-        icon={faVk}
-        size="2x"
-      />
-      <FontAwesomeIcon
-        className={styles.footerFontAwesome}
-        icon={faTwitch}
-        size="2x"
-      />
+function Footer() {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.tag}>
+        <span>Lynxses 2021</span>
+        <div className={styles.icons}>
+          <FontAwesomeIcon icon={faInstagram} size="1x" />
+
+          <FontAwesomeIcon icon={faFacebook} size="1x" />
+
+          <FontAwesomeIcon icon={faVk} size="1x" />
+
+          <FontAwesomeIcon icon={faTwitch} size="1x" />
+        </div>
+      </div>
     </div>
-  </footer>
-)
+  )
+}
 
 export default Footer

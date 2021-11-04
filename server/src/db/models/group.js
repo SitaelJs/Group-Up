@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate({ User, Game, ChatGroup, Mode, Position }) {
-      this.belongsToMany(User, { through: 'userGroups', foreignKey: 'groupId' });
+      this.belongsToMany(User, { through: 'UserGroups', foreignKey: 'groupId' });
       this.belongsTo(Game, { foreignKey: 'gameId' });
       this.belongsTo(Mode, { foreignKey: 'modeId' });
       this.belongsTo(Position, { foreignKey: 'positionId' });
@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
   Group.init(
     {
       name: DataTypes.STRING,
-      gameId: { type: DataTypes.INTEGER, allowNull: false },
-      positionId: { type: DataTypes.INTEGER, allowNull: false },
-      modeId: { type: DataTypes.INTEGER, allowNull: false },
-      userId: { type: DataTypes.INTEGER, allowNull: false },
+      gameId: { type: DataTypes.INTEGER, allowNull: true },
+      positionId: { type: DataTypes.INTEGER, allowNull: true },
+      modeId: { type: DataTypes.INTEGER, allowNull: true },
+      userId: { type: DataTypes.INTEGER, allowNull: true },
     },
     {
       sequelize,

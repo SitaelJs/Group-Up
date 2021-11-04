@@ -1,0 +1,20 @@
+.game {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: xx-large;
+
+}
+
+.game img {
+    border-radius: 10px;
+    width: 380px;
+    margin: auto;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.71);
+}
+
+.game b {
+    color: #ababab;
+
+}

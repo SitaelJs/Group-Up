@@ -1,0 +1,8 @@
+.groupList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    margin: 120px auto 100px auto;
+    align-items: center;
+    justify-content: space-around;
+}
