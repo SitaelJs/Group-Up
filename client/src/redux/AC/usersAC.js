@@ -1,10 +1,10 @@
 import axios from 'axios'
 import {
   CHANGE_GROUP,
+  CLEAR_USER,
+  GET_ALL_USERS,
   GET_USER_FOR_GROUP,
   SET_USER,
-  GET_ALL_USERS,
-  CLEAR_USER,
 } from '../types/userTypes'
 import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
@@ -27,8 +27,8 @@ export const destroyCookie = () => async (dispatch) => {
   })
   if (response.status === 200) {
     try {
-      dispatch(clearUser())
       window.open(`${clientPuth}/`, '_self')
+      dispatch(clearUser())
     } catch {
       window.open(`${clientPuth}/`, '_self')
     }
@@ -88,9 +88,7 @@ export const changeGroupForUser = (userId, groupId) => async (dispatch) => {
       groupId,
     },
   })
-  const usersForGroup = await axios.get(
-    `${serverPuth}/groups/${groupId}`
-  )
+  const usersForGroup = await axios.get(`${serverPuth}/groups/${groupId}`)
   const data = await usersForGroup.data
   dispatch({
     type: GET_USER_FOR_GROUP,

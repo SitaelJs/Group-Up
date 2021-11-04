@@ -1,8 +1,8 @@
 .header {
     position: fixed;
-    height: 80px;
+    padding: 10px 100px;
+    height: 10%;
     top: 0;
-    width: 100%;
     background: black;
     display: flex;
     box-shadow: 0px 0px 25px rgba(46, 208, 255, 0.20);
@@ -57,11 +57,11 @@
     text-shadow: 0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+    0 0 42px rgba(0, 255, 170, 0.48),
+    0 0 82px rgba(0, 255, 170, 0.47);
+    /*0 0 92px #0fa,*/
+    /*0 0 102px #0fa,*/
+    /*0 0 151px #0fa;*/
     animation: flicker 1.5s infinite alternate;
 }
 
@@ -72,11 +72,11 @@
         text-shadow: 0 0 4px #fff,
         0 0 11px #fff,
         0 0 19px #fff,
-        0 0 40px #0fa,
-        0 0 80px #0fa,
+        0 0 40px rgba(114, 221, 231, 0.66),
+        0 0 80px #7fe5f3,
         0 0 90px #38ffe8,
-        0 0 100px #34ffe8,
-        0 0 150px #00ffea;
+        0 0 100px rgba(52, 255, 232, 0.68),
+        0 0 150px rgba(0, 255, 234, 0.65);
 
     }
 

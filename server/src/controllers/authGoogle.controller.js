@@ -53,6 +53,7 @@ const ifSuccess = (req, res) => {
 };
 
 const authGoogleLogout = (req, res) => {
+  console.log(123);
   req.session = null;
   res.clearCookie('sessionId');
   req.logout();

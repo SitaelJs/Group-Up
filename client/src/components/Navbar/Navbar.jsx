@@ -28,7 +28,9 @@ function Navbar() {
                 <NavLink to="/games">Выбрать игру</NavLink>
               </div>
               <div>
-                <button onClick={() => dispatch(destroyCookie())}>Выйти</button>
+                <button onClick={(e) => dispatch(destroyCookie())}>
+                  Выйти
+                </button>
               </div>
             </>
           ) : (
