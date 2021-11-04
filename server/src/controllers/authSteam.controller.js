@@ -40,7 +40,7 @@ const steamSuccess = async (req, res) => {
       email: user.email,
       steamID: user.steamID,
     };
-    res.redirect(`${URL_FRONT_SERVER}/users/done`);
+    res.redirect(`${URL_FRONT_SERVER}/steam/done`);
   } catch (error) {
     res.sendStatus(500);
   }

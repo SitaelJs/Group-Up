@@ -17,7 +17,6 @@ const localSignin = async (req, res) => {
     try {
       const user = await User.findOne({ where: { email } });
       if (user && (await bycrypt.compare(password, user.password))) {
-<<<<<<< HEAD
         req.session.user = {
           nickname: user.nickname,
           id: user.id,
@@ -30,11 +29,6 @@ const localSignin = async (req, res) => {
           email: user.email,
           steamID: user.steamID,
         });
-=======
-        req.session.user = { nickname: user.nickname, id: user.id };
-
-        return res.json({ nickname: user.nickname, id: user.id });
->>>>>>> 75b87a89a58abd4c21295f4fb67a9c8c83fcbae8
       }
       return res.sendStatus(401);
     } catch (error) {
@@ -57,17 +51,12 @@ const localSignup = async (req, res) => {
         searchStatus: false,
         steamID: 0,
       });
-<<<<<<< HEAD
       req.session.user = {
         id: newUser.id,
         nickname: newUser.nickname,
         email: newUser.email,
         steamID: newUser.steamID,
       };
-=======
-      req.session.user = { nickname: newUser.nickname, id: newUser.id };
-
->>>>>>> 75b87a89a58abd4c21295f4fb67a9c8c83fcbae8
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);

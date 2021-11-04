@@ -15,10 +15,6 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 75b87a89a58abd4c21295f4fb67a9c8c83fcbae8
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
 const modesRouter = require('./src/routes/modes.router');
