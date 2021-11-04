@@ -22,7 +22,7 @@ const Profilelist = () => {
         })
     }
   }, [])
-  console.log('-----> users', users)
+
   return (
     <div>
 

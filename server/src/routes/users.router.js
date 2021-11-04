@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
   const allUsers = await User.findAll();
   setTimeout(() => {
     res.json(allUsers);
-  }, 2e3);
+  }, 1e3);
 });
 
 router.get('/users/characterisitics', async (req, res) => {

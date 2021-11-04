@@ -18,9 +18,9 @@ function Profile() {
   // console.log(user)
   // const { userId } = useParams()
   const character = useSelector((state) => state.characterisitics)
-  console.log('charachter ---->', character)
+
   const charac = character?.find((el) => el.toUserId === Number(userId))
-  console.log('charac----->', charac)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
