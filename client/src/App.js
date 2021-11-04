@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { checkAuthUser } from './redux/AC/usersAC'
+import { checkAuthUser, getUserFromGoogle } from './redux/AC/usersAC'
 import GameList from './components/GameList/GameList'
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
@@ -18,9 +18,12 @@ import PrivateRoute from './components/PrivateRouter/PrivateRouter'
 
 function App() {
   const dispatch = useDispatch()
+  const auth = useSelector((state) => state.auth)
 
   useEffect(() => {
     dispatch(checkAuthUser())
+    dispatch(getUserFromGoogle())
+    console.log(auth, 11111111)
   }, [])
 
   return (
@@ -44,12 +47,12 @@ function App() {
             <Profile />
           </PrivateRoute>
 
-          <Route exact path="/users">
+          <PrivateRoute exact path="/users">
             <Profilelist />
-          </Route>
-          <Route exact path="/users/:userId">
+          </PrivateRoute>
+          <PrivateRoute exact path="/users/:userId">
             <Profile />
-          </Route>
+          </PrivateRoute>
 
           {/* <PrivateRoute exact path="/users">
             <Profilelist />

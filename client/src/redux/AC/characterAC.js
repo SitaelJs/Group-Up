@@ -22,25 +22,39 @@ export const decrement = (id, character) => ({
 
 export const getCharacter = () => async (dispatch) => {
   const response = await axios.get(
-    'http://localhost:3001/users/characterisitics'
+    'http://localhost:3001/users/characterisitics',
+    {
+      withCredentials: true,
+    }
   )
   const data = await response.data
+  console.log(data, '----->data')
   dispatch(setCharacter(data))
 }
 
-export const postIncrement = (id, value, charac) => async (dispatch) => {
+export const postIncrement = (id, value, charac, auth) => async (dispatch) => {
   const result = await axios.post(
     'http://localhost:3001/users/characterisitics/inc',
-    { id, value, charac }
+    {
+      id, value, charac, auth
+    },
+    {
+      withCredentials: true,
+    }
   )
   const character = result.data
   dispatch(increment(id, character))
 }
 
-export const postDecrement = (id, value, charac) => async (dispatch) => {
+export const postDecrement = (id, value, charac, auth) => async (dispatch) => {
   const result = await axios.post(
     'http://localhost:3001/users/characterisitics/dec',
-    { id, value, charac }
+    {
+      id, value, charac, auth
+    },
+    {
+      withCredentials: true,
+    }
   )
   const character = await result.data
   dispatch(decrement(id, character))
