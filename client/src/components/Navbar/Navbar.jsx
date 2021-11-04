@@ -3,6 +3,7 @@ import styles from './stylesHeader.module.css'
 
 const Navbar = () => (
   <header className={styles.header}>
+    {/* <div className="content-wrapper"> */}
     <nav className={styles.nav}>
       <div className={styles.container}>
         <div className={styles.logo}>
@@ -21,6 +22,7 @@ const Navbar = () => (
         </div>
       </div>
     </nav>
+    {/* </div> */}
   </header>
 )
 

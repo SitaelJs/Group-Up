@@ -5,26 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/FormAuth/loginstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/custom/useStateWithStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/AC/characterAC.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/characterReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/types/characterTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/FormSignIn/FormSignIn.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/FormSignIn/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/PrivateRouter/PrivateRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/initState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/authReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/controllers/authLocal.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GameList/GameList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GameSettings/GameSettings.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/detailedGroupStyle.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/detailedGroupStyle.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupList/GroupList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Player/Player.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Player/Player.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Profilelist/Profilelist.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profilelist/Profilelist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TestWebSocket/TestWebSocket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TestWebSocket/TestWebSocket.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/characterAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/characterAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/groupsAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/userAC.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/initStates.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/characterReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/characterReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/userReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/userReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/usersReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/types/characterTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/characterTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/types/types.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/redux/types/userTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/userTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/webSocketHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/webSocketHook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/authGoogle.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/authGoogle.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/routes/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/auth.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/user.router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/users.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/users.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/groups.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/groups.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +92,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="optimize.imports.on.save" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/client/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -95,6 +121,9 @@
       <workItem from="1635518725247" duration="9100000" />
       <workItem from="1635595944817" duration="7480000" />
       <workItem from="1635605932913" duration="48711000" />
+      <workItem from="1635960361826" duration="342000" />
+      <workItem from="1635960720318" duration="2061000" />
+      <workItem from="1635962804119" duration="10845000" />
     </task>
     <servers />
   </component>

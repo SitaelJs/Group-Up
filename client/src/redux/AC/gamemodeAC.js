@@ -9,4 +9,5 @@ const getGameMode = (gameId) => async (dispatch) => {
     payload: response,
   })
 }
+
 export default getGameMode

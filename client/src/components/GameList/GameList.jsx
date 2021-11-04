@@ -7,11 +7,11 @@ import styles from './stylesGameList.module.css'
 export default function GameList() {
   const dispatch = useDispatch()
 
+  const allGames = useSelector((state) => state.games)
+
   useEffect(() => {
     dispatch(getAllGames())
   }, [])
-
-  const allGames = useSelector((state) => state.games)
 
   return (
     <div className={styles.gamelist}>

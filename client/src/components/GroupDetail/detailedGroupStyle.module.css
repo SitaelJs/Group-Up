@@ -30,3 +30,7 @@
 .usersInGroups {
     padding: 15px;
 }
+
+.containerGroupDet button {
+    color: black;
+}

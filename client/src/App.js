@@ -1,5 +1,8 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { checkAuthUser } from './redux/AC/usersAC'
 import GameList from './components/GameList/GameList'
 import Navbar from './components/Navbar/Navbar'
 import Main from './components/Main/Main'
@@ -9,9 +12,17 @@ import GameSettings from './components/GameSettings/GameSettings'
 import GroupList from './components/GroupList/GroupList'
 import GroupDetail from './components/GroupDetail/GroupDetail'
 import Footer from './components/Footer/Footer'
+import FormSignIn from './components/FormSignIn/FormSignIn'
 import Profilelist from './components/Profilelist/Profilelist'
+import PrivateRoute from './components/PrivateRouter/PrivateRouter'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(checkAuthUser())
+  }, [])
+
   return (
     <Router>
       <div>
@@ -21,43 +32,41 @@ function App() {
             <Main />
           </Route>
 
-          <Route exact path="auth/signin">
-            <FormAuth />
-          </Route>
-
           <Route exact path="/auth/signin">
-            <FormAuth />
+            <FormSignIn />
           </Route>
 
           <Route exact path="/auth/signup">
             <FormAuth />
           </Route>
 
-          <Route exact path="/profile">
+          <PrivateRoute exact path="/profile">
             <Profile />
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/users">
+          <PrivateRoute exact path="/users">
             <Profilelist />
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/games">
+          <PrivateRoute exact path="/games">
             <GameList />
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/games/:gamesId">
+          <PrivateRoute exact path="/games/:gamesId">
             <GameSettings />
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path="/groups">
+          <PrivateRoute exact path="/groups">
             <GroupList />
-          </Route>
-          <Route exact path="/users/:userId">
-            <Profile />
-          </Route>
-          <Route exact path="/groups/:groupsId">
+          </PrivateRoute>
+
+          <PrivateRoute exact path="/groups/:groupsId">
             <GroupDetail />
-          </Route>
+          </PrivateRoute>
+
+          <PrivateRoute path="*">
+            <h3>Ой! Кажется, такой страницы не существует ^___^ </h3>
+          </PrivateRoute>
         </Switch>
         <Footer />
       </div>

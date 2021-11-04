@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllUsers } from '../../redux/AC/usersAC'
 
@@ -10,18 +9,13 @@ const Profilelist = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    axios('http://localhost:3001/users')
-      .then((dataFromBack) => dispatch(getAllUsers(dataFromBack.data)))
+    dispatch(getAllUsers())
   }, [])
   console.log(users)
   return (
     <div>
-
       {users?.map((user) => (
-        <Profileitem
-          key={user.id}
-          user={user}
-        />
+        <Profileitem key={user.id} user={user} />
       ))}
     </div>
   )
