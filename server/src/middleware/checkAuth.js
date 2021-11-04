@@ -14,7 +14,12 @@ const initUser = async (req, res, next) => {
     const ourUser = await User.findOne({
       where: { email },
     });
-    req.session.user = { nickname: ourUser.nickname, id: ourUser.id };
+    req.session.user = {
+      id: ourUser.id,
+      nickname: ourUser.nickname,
+      email: ourUser.email,
+      steamID: ourUser.steamID,
+    };
 
     if (ourUser) {
       if (ourUser.roleId === 3 || ourUser.email === process.env.ADMIN) {
@@ -33,8 +38,14 @@ const initUser = async (req, res, next) => {
         roleId: 1,
         searchStatus: false,
         photo: req.session?.passport?.user?.photos[0]?.value,
+        steamID: 0,
       });
-      req.session.user = { nickname: newUser.nickname, id: newUser.id };
+      req.session.user = {
+        id: newUser.id,
+        nickname: newUser.nickname,
+        email: newUser.email,
+        steamID: newUser.steamID,
+      };
     }
   }
 
