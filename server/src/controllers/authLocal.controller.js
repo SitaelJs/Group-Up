@@ -4,17 +4,12 @@ const { User } = require('../db/models');
 
 const localCheck = async (req, res) => {
   try {
-    console.log(req.session.user,'----------------------44444');
     const user = await User.findOne({ where: { id: req.session.user.id } });
     return res.json(user);
   } catch (error) {
     return res.sendStatus(500);
   }
 };
-
-// router.route('/').get(async (req, res) => {
-//   res.json({});
-// });
 
 const localSignin = async (req, res) => {
   const { email, password } = req.body;

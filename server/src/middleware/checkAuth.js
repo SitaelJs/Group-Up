@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const bycrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 const { User } = require('../db/models');
 
@@ -25,16 +25,16 @@ const initUser = async (req, res, next) => {
         return next();
       }
     } else {
+      const pass = await bycrypt.hash(uuidv4(), 10);
       const newUser = await User.create({
         nickname: req.session?.passport?.user?.emails[0]?.value.replace(/@.*/, ''),
         email: req.session?.passport?.user?.emails[0]?.value,
-        password: uuidv4(),
+        password: pass,
         roleId: 1,
         searchStatus: false,
         photo: req.session?.passport?.user?.photos[0]?.value,
       });
       req.session.user = { nickname: newUser.nickname, id: newUser.id };
-      console.log(req.session.user, 'newusers');
     }
   }
 

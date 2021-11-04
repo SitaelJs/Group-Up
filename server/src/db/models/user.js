@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       roleId: { type: DataTypes.INTEGER, allowNull: false },
       searchStatus: { type: DataTypes.BOOLEAN, allowNull: false },
       info: DataTypes.TEXT,
+      steamID: DataTypes.TEXT,
       age: DataTypes.INTEGER,
       photo: DataTypes.TEXT,
     },

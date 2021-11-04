@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -14,7 +15,6 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const { log } = require('console');
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
 const modesRouter = require('./src/routes/modes.router');
@@ -58,7 +58,6 @@ app.use('/auth', authRouter);
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
 app.use('/modes', modesRouter);
-// app.use('/', usersRouter);
 app.use('/users', usersRouter);
 
 app.listen(PORT, () => {

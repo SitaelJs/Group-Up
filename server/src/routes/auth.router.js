@@ -8,12 +8,8 @@ const {
   authGoogleResponse,
 } = require('../controllers/authGoogle.controller');
 
-const {
-  localSignin,
-  localSignup,
-  localCheck,
-  localLogout,
-} = require('../controllers/authLocal.controller');
+const { localSignin, localSignup, localCheck } = require('../controllers/authLocal.controller');
+const { getSteam, returnSteam, steamSuccess } = require('../controllers/authSteam.controller');
 
 const { initUser } = require('../middleware/checkAuth');
 
@@ -29,5 +25,10 @@ authRouter.get('/google/find', authGoogleResponse);
 authRouter.post('/signin', localSignin);
 authRouter.post('/signup', localSignup);
 authRouter.get('/check', localCheck);
+
+// Steam
+authRouter.get('/steam', getSteam);
+authRouter.get('/steam/return', returnSteam);
+authRouter.get('/steam/success', steamSuccess);
 
 module.exports = authRouter;
