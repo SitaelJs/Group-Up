@@ -4,7 +4,6 @@ const { User } = require('../db/models');
 
 const localCheck = async (req, res) => {
   try {
-    console.log(req.session.user,'----------------------44444');
     const user = await User.findOne({ where: { id: req.session.user.id } });
     return res.json(user);
   } catch (error) {
@@ -23,6 +22,7 @@ const localSignin = async (req, res) => {
       const user = await User.findOne({ where: { email } });
       if (user && (await bycrypt.compare(password, user.password))) {
         req.session.user = { nickname: user.nickname, id: user.id };
+
         return res.json({ nickname: user.nickname, id: user.id });
       }
       return res.sendStatus(401);
@@ -46,6 +46,7 @@ const localSignup = async (req, res) => {
         searchStatus: false,
       });
       req.session.user = { nickname: newUser.nickname, id: newUser.id };
+
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);

@@ -42,9 +42,9 @@ export const getUserFromGoogle = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/find`, {
     withCredentials: true,
   })
+
   if (response.status === 200) {
     try {
-      console.log(response.data)
       const googleUser = await response.data
       localStorage.setItem('user', JSON.stringify(response.data))
       dispatch(setUser(googleUser))
@@ -59,6 +59,7 @@ export const getAllUsers = () => async (dispatch) => {
     withCredentials: true,
   })
   const allUsers = await response.data
+
   dispatch({
     type: GET_ALL_USERS,
     payload: allUsers,
@@ -135,7 +136,7 @@ export const checkAuthUser = () => async (dispatch) => {
     })
     if (response.status === 200) {
       const user = await response.data
-      console.log(user)
+
       dispatch(setUser(user))
     }
   } catch (err) {

@@ -3,7 +3,7 @@ import {
   GET_ALL_USERS,
   GET_USER_FOR_GROUP,
 } from '../types/userTypes'
-import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
+// import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
 const usersReducer = (state = [], action) => {
   const { type, payload } = action
@@ -12,8 +12,8 @@ const usersReducer = (state = [], action) => {
     case GET_ALL_USERS:
       return payload
 
-    case GET_USER_CHARACTERISTICS:
-      return payload
+      // case GET_USER_CHARACTERISTICS:
+      //   return payload
 
     case GET_USER_FOR_GROUP:
       return payload

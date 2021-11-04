@@ -6,51 +6,19 @@
     background: black;
     display: flex;
     box-shadow: 0px 0px 25px rgba(46, 208, 255, 0.20);
+    align-items: center;
+    flex-direction: row;
 }
-
 
 .nav {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 35px;
-    margin: auto 35px auto;
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 35px;
-    margin: auto;
     align-items: center;
 }
 
-
-.header a {
-    text-decoration: none;
-}
-
-.mainPages {
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    font-size: x-large;
-}
-
-.authPages {
-    width: 16%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto 0 auto;
-    font-size: x-large;
-}
-
 .logo span {
-    height: 35px;
+    align-items: center;
     margin: auto;
     font-size: xxx-large;
     color: #fff;
@@ -83,4 +51,25 @@
     20%, 24%, 55% {
         text-shadow: none;
     }
+}
+
+.navLinkMain {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.navLinkMain a {
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.navLinkMain button {
+    margin-right: -200px;
+    font-size: large;
+    background-color: black;
+    border: black;
 }

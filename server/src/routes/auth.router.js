@@ -8,12 +8,7 @@ const {
   authGoogleResponse,
 } = require('../controllers/authGoogle.controller');
 
-const {
-  localSignin,
-  localSignup,
-  localCheck,
-  localLogout,
-} = require('../controllers/authLocal.controller');
+const { localSignin, localSignup, localCheck } = require('../controllers/authLocal.controller');
 
 const { initUser } = require('../middleware/checkAuth');
 
