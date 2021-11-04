@@ -19,7 +19,7 @@ function Profile() {
   const character = useSelector((state) => state.characterisitics)
 
   const charac = character?.find((el) => el.toUserId === Number(userId))
-  console.log('---->', charac)
+
   const dispatch = useDispatch()
   const auth = useSelector((state) => state.auth)
 

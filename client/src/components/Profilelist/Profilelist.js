@@ -12,7 +12,6 @@ const Profilelist = () => {
   useEffect(() => {
     axios('http://localhost:3001/users')
       .then((dataFromBack) => {
-        console.log('1234', dataFromBack)
         dispatch(getAllUsers(dataFromBack.data))
       })
   }, [])

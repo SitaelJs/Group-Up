@@ -28,7 +28,7 @@ export const getCharacter = () => async (dispatch) => {
     }
   )
   const data = await response.data
-  console.log(data, '----->data')
+
   dispatch(setCharacter(data))
 }
 

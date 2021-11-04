@@ -59,7 +59,7 @@ export const getAllUsers = () => async (dispatch) => {
     withCredentials: true,
   })
   const allUsers = await response.data
-  console.log(allUsers)
+
   dispatch({
     type: GET_ALL_USERS,
     payload: allUsers,

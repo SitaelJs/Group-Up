@@ -7,14 +7,12 @@ router.get('/', async (req, res, next) => {
   const allUsers = await User.findAll();
   setTimeout(() => {
     res.json(allUsers);
-    console.log('---> fromback', allUsers);
   }, 1e3);
 });
 
 router.get('/characterisitics', async (req, res) => {
   const character = await Characteristic.findAll();
   res.json(character);
-  console.log('from server----->', character);
 });
 
 router.post('/characterisitics/inc', async (req, res) => {
@@ -23,7 +21,7 @@ router.post('/characterisitics/inc', async (req, res) => {
   const character = await Characteristic.findOne({
     where: { userId: auth.id, toUserId: charac.toUserId },
   });
-  console.log('----charac-->,', charac);
+
   if (!character) {
     console.log('in if');
 
@@ -37,8 +35,8 @@ router.post('/characterisitics/inc', async (req, res) => {
       strategy: 0,
     });
     res.json(character);
-  // } else if (character.userId === auth.id) {
-  //   res.sendStatus(304);
+    // } else if (character.userId === auth.id) {
+    //   res.sendStatus(304);
   } else {
     await character.increment(`${value}`, { by: 5 });
     await character.save();
@@ -54,8 +52,6 @@ router.post('/characterisitics/dec', async (req, res) => {
   });
 
   if (!character) {
-    console.log('in if');
-
     await Characteristic.create({
       userId: charac.id,
       toUserId: charac.toUserId,
@@ -65,7 +61,6 @@ router.post('/characterisitics/dec', async (req, res) => {
       leader: charac.leader,
       strategy: charac.strategy,
     });
-    // console.log('----->233', character);
   } else {
     await character.decrement(`${value}`, { by: 5 });
     await character.save();
