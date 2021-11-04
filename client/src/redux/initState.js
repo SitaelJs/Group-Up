@@ -5,7 +5,7 @@ const initStates = {
   modes: [],
   users: [],
   characterisitics: [],
-  auth: {},
+  auth: null,
 }
 
 export default initStates

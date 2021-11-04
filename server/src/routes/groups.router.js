@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { v4 } = require('uuid');
-const axios = require('axios');
 const { Group, User, UserGroup } = require('../db/models');
 
 // axios.defaults.withCredentials = true

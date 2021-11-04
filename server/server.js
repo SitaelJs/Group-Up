@@ -7,16 +7,18 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+
 const redisClient = redis.createClient();
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+const { log } = require('console');
 const gamesRouter = require('./src/routes/games.router');
 const groupsRouter = require('./src/routes/groups.router');
 const modesRouter = require('./src/routes/modes.router');
-const userRouter = require('./src/routes/users.router');
+const usersRouter = require('./src/routes/users.router');
 const authRouter = require('./src/routes/auth.router');
 
 // middleware
@@ -43,12 +45,11 @@ app.use(
     saveUninitialized: false,
     cookie: {
       maxAge: 5 * 60 * 100000,
-      httpOnly: false,
+      httpOnly: true,
       secure: false,
     },
   })
 );
-
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -57,8 +58,8 @@ app.use('/auth', authRouter);
 app.use('/games', gamesRouter);
 app.use('/groups', groupsRouter);
 app.use('/modes', modesRouter);
-app.use('/', userRouter);
-app.use('/users', userRouter);
+// app.use('/', usersRouter);
+app.use('/users', usersRouter);
 
 app.listen(PORT, () => {
   console.log('Server start on port ', PORT);
