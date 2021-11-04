@@ -6,12 +6,17 @@ userRouter.get('/', async (req, res, next) => {
   res.json(allUsers);
 });
 
-userRouter.get('/users/characterisitics', async (req, res) => {
+userRouter.get('/one', async (req, res, next) => {
+  const oneUser = await User.findOne({ where: { id: req.body.id } });
+  res.json(oneUser);
+});
+
+userRouter.get('/characterisitics', async (req, res) => {
   const character = await Characteristic.findAll();
   res.json(character);
 });
 
-userRouter.post('/users/characterisitics/inc', async (req, res) => {
+userRouter.post('/characterisitics/inc', async (req, res) => {
   const { id, value, charac } = req.body;
   const character = await Characteristic.findOne({
     where: { userId: id, toUserId: charac.toUserId },
@@ -33,7 +38,7 @@ userRouter.post('/users/characterisitics/inc', async (req, res) => {
   res.json(character);
 });
 
-userRouter.post('/users/characterisitics/dec', async (req, res) => {
+userRouter.post('/characterisitics/dec', async (req, res) => {
   const { id, value, charac } = req.body;
   const character = await Characteristic.findOne({
     where: { userId: id, toUserId: charac.toUserId },

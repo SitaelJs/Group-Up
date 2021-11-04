@@ -26,18 +26,24 @@ const returnSteam = passport.authenticate('steam', {
 });
 
 const steamSuccess = async (req, res) => {
-  const user = await User.update(
-    { steamID: req.session.passport.user.id },
-    { where: { id: req.session.user.id } }
-  );
-  user.save();
-  req.session.user = {
-    id: user.id,
-    nickname: user.nickname,
-    email: user.email,
-    steamID: user.steamID,
-  };
-  res.redirect(`${URL_FRONT_SERVER}/users/${req.session.user.id}`);
+  try {
+    const user = await User.findOne(
+      { steamID: req.session.passport.user.id },
+      { where: { id: req.session.user.id } }
+    );
+    user.steamID = req.session.passport.user.id;
+
+    await user.save();
+    req.session.user = {
+      id: user.id,
+      nickname: user.nickname,
+      email: user.email,
+      steamID: user.steamID,
+    };
+    res.redirect(`${URL_FRONT_SERVER}/users/done`);
+  } catch (error) {
+    res.sendStatus(500);
+  }
 };
 
 // const test = async (req, res) => {

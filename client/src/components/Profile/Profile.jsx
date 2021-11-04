@@ -4,7 +4,11 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { getAllUsers } from '../../redux/AC/usersAC'
-import { getCharacter, postDecrement, postIncrement } from '../../redux/AC/characterAC'
+import {
+  getCharacter,
+  postDecrement,
+  postIncrement,
+} from '../../redux/AC/characterAC'
 
 function Profile() {
   const { userId } = useParams()
@@ -12,6 +16,10 @@ function Profile() {
   const user = users?.find((el) => el.id === Number(userId))
   const character = useSelector((state) => state.characterisitics)
   const charac = character?.find((el) => el.toUserId === Number(userId))
+  const { REACT_APP_URL_BACK_SERVER } = process.env
+  const steamIco = `${process.env.PUBLIC_URL}/media/icons/steam_47012.png`
+  const thisUser = useSelector((state) => state.auth)
+
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -36,7 +44,10 @@ function Profile() {
     console.log(char)
     dispatch(postDecrement(userId, char, charac))
   }
-
+  const steamSignInClick = (e) => {
+    e.preventDefault()
+    window.open(`${REACT_APP_URL_BACK_SERVER}/auth/steam`, '_self')
+  }
   return (
     // <Link to="/user/:userId">
     <div>
@@ -48,6 +59,17 @@ function Profile() {
       <h4 className="text">{user?.nickname}</h4>
       <h4 className="text">{user?.email}</h4>
       <h4 className="text">{user?.info}</h4>
+      {thisUser.steamID === 0 ? (
+        <div>
+          <button type="button" onClick={(e) => steamSignInClick(e)}>
+            Steam
+          </button>
+        </div>
+      ) : (
+        <div>
+          <img src={steamIco} alt="steam" />
+        </div>
+      )}
       <ul>User Stats</ul>
 
       <img

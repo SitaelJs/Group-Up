@@ -16,12 +16,10 @@ export const setUser = (user) => ({
   payload: user,
 })
 
-export const clearUser = () => (
-  {
-    type: CLEAR_USER,
-    payload: null,
-  }
-)
+export const clearUser = () => ({
+  type: CLEAR_USER,
+  payload: null,
+})
 
 export const destroyCookie = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/logout`, {
@@ -44,7 +42,6 @@ export const getUserFromGoogle = () => async (dispatch) => {
   })
   if (response.status === 200) {
     try {
-      console.log(response.data)
       const googleUser = await response.data
       localStorage.setItem('user', JSON.stringify(response.data))
       dispatch(setUser(googleUser))
@@ -135,7 +132,6 @@ export const checkAuthUser = () => async (dispatch) => {
     })
     if (response.status === 200) {
       const user = await response.data
-      console.log(user)
       dispatch(setUser(user))
     }
   } catch (err) {

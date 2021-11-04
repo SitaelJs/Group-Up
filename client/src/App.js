@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { checkAuthUser, getUserFromGoogle } from './redux/AC/usersAC'
 import GameList from './components/GameList/GameList'
@@ -18,12 +18,10 @@ import PrivateRoute from './components/PrivateRouter/PrivateRouter'
 
 function App() {
   const dispatch = useDispatch()
-  const auth = useSelector((state) => state.auth)
 
   useEffect(() => {
     dispatch(checkAuthUser())
     dispatch(getUserFromGoogle())
-    console.log(auth, 11111111)
   }, [])
 
   return (

@@ -14,14 +14,14 @@ const initUser = async (req, res, next) => {
     const ourUser = await User.findOne({
       where: { email },
     });
-    req.session.user = {
-      id: ourUser.id,
-      nickname: ourUser.nickname,
-      email: ourUser.email,
-      steamID: ourUser.steamID,
-    };
 
     if (ourUser) {
+      req.session.user = {
+        id: ourUser.id,
+        nickname: ourUser.nickname,
+        email: ourUser.email,
+        steamID: ourUser.steamID,
+      };
       if (ourUser.roleId === 3 || ourUser.email === process.env.ADMIN) {
         if (ourUser.email === process.env.ADMIN && ourUser.roleId !== 3) {
           ourUser.roleId = 3;
