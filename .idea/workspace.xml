@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="" />
+    <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/groups.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/groups.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/groupsfilter.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/groupsfilter.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/modes.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/modes.router.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,6 +90,8 @@
       <workItem from="1635962804119" duration="14615000" />
       <workItem from="1636047011066" duration="9301000" />
       <workItem from="1636056352074" duration="3635000" />
+      <workItem from="1636110680730" duration="419000" />
+      <workItem from="1636111247249" duration="1002000" />
     </task>
     <servers />
   </component>
