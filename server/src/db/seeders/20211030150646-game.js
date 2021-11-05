@@ -7,7 +7,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        title: 'Dota2',
+        title: 'Dota 2',
         createdAt: new Date(),
         updatedAt: new Date(),
       },

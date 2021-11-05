@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { changeGroupForUser, getAllGroups, groupDelete } from '../../redux/AC/groupsAC'
 import getAllGames from '../../redux/AC/gamesAC'
 import getAllModes from '../../redux/AC/modesAC'
-import { getAllUsers, getUsersForGroup } from '../../redux/AC/usersAC'
+import { getUsersForGroup } from '../../redux/AC/usersAC'
 import Player from '../Player/Player'
 import styles from './detailedGroupStyle.module.css'
 
@@ -35,6 +35,7 @@ function GroupDetail() {
   const oneUser = users.find((user) => user.id === Number(group?.userId))
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicGroups/gameId=${group?.gameId}ForGroups.png`
   const comment = `!createvoicechannel Group: ${group?.name}`
+  // const usersInGroup =
 
   const onClickJoinGroup = () => {
     dispatch(changeGroupForUser(groupsId))
@@ -57,7 +58,6 @@ function GroupDetail() {
   }
 
   useEffect(() => {
-    dispatch(getAllUsers())
     dispatch(getAllGroups())
     dispatch(getAllGames())
     dispatch(getAllModes())
@@ -111,22 +111,14 @@ function GroupDetail() {
             <>
               {' '}
               <input className={styles.hiddenLink} readOnly value={comment} />
-              <button
-                type="button"
-                onClick={copy}
-                style={
-                  copied
-                    ? { backgroundColor: 'green' }
-                    : { backgroundColor: 'grey' }
-                }
-              >
-                {copied ? 'Copied! отправьте боту!' : 'Copy To Clipboard'}
+              <button type="button" onClick={copy}>
+                {copied ? 'Copied! отправьте боту!' : 'Скопировать'}
               </button>
             </>
           ) : (
             <button type="button" onClick={() => setLink(!link)}>
               {' '}
-              Ready!
+              Го!
             </button>
           )}
         </div>

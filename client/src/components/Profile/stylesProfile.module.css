@@ -1,0 +1,87 @@
+.profileContainer {
+    margin: 150px auto 100px auto;
+    height: auto;
+    width: 500px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px 30px 30px;
+    border-radius: 25px;
+    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+}
+
+.profileContainer img {
+    border-radius: 50%;
+    padding: 40px 10px;
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.profileContainer h1 {
+    font-size: 36px;
+    margin: auto;
+    color: #f349e3;
+    text-shadow: 0 0 7px #ff43c9,
+    0 0 10px rgba(255, 84, 239, 0.45),
+    0 0 21px rgba(255, 118, 231, 0.35);
+}
+
+.profileContainer span {
+    font-size: xx-large;
+    padding-bottom: 30px;
+}
+
+.statString h3 {
+    color: white;
+}
+
+.statString button {
+    font-size: xx-large;
+    border-radius: 5px;
+    height: 45px;
+    width: 18%;
+    color: #ebebeb;
+    background-color: #282828;
+    border: black;
+
+}
+
+.statString {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+
+.statString .butFix {
+    margin-right: 150px;
+    position: relative;
+
+}
+
+.statString h3 {
+    position: relative;
+    width: 100%;
+}
+
+.steamLogo img {
+
+    width: 50px;
+}
+
+.steamButton button {
+    display: flex;
+    margin: 0 auto 30px auto;
+    width: 120px;
+
+    background-color: black;
+    border-color: black;
+    height: 40px;
+    font-size: xx-large;
+}
+
+.steamButton span {
+    color: blueviolet;
+}

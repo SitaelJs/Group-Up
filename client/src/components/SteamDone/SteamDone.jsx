@@ -4,23 +4,9 @@ function SteamDone() {
     window.open(`${REACT_APP_URL_FRONT_SERVER}`, '_self')
   }, 3e3)
   return (
-    <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div>
-        <h3>Steam успешно подключен!</h3>
-      </div>
-    </>
+    <div className="steamMessage">
+      <h3>Steam успешно подключен!</h3>
+    </div>
   )
 }
 
