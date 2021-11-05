@@ -75,7 +75,7 @@ function FormAuth() {
         </div>
 
         <p className={styles.buttonSendAuth}>
-          <button type="button" value="">
+          <button type="submit" value="">
             Отп
             <b className={styles.first}>равит</b>
             ь

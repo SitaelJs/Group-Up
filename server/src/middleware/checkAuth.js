@@ -21,6 +21,7 @@ const initUser = async (req, res, next) => {
         nickname: ourUser.nickname,
         email: ourUser.email,
         steamID: ourUser.steamID,
+        photo: ourUser.photo,
       };
       if (ourUser.roleId === 3 || ourUser.email === process.env.ADMIN) {
         if (ourUser.email === process.env.ADMIN && ourUser.roleId !== 3) {
@@ -45,6 +46,7 @@ const initUser = async (req, res, next) => {
         nickname: newUser.nickname,
         email: newUser.email,
         steamID: newUser.steamID,
+        photo: newUser.photo,
       };
     }
   }

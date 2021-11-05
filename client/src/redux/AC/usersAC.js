@@ -5,6 +5,7 @@ import {
   GET_ALL_USERS,
   GET_USER_FOR_GROUP,
   SET_USER,
+  GET_DATA_FROM_STEAM,
 } from '../types/userTypes'
 import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
@@ -61,6 +62,19 @@ export const getAllUsers = () => async (dispatch) => {
   dispatch({
     type: GET_ALL_USERS,
     payload: allUsers,
+  })
+}
+
+export const getDataFromSteam = (userId) => async (dispatch) => {
+  const dataFromSteam = (
+    await axios(`${serverPuth}/auth/steam/userinfo/${userId}`, {
+      withCredentials: true,
+    })
+  ).data
+  localStorage.setItem('steam', JSON.stringify(dataFromSteam))
+  dispatch({
+    type: GET_DATA_FROM_STEAM,
+    payload: dataFromSteam,
   })
 }
 

@@ -46,14 +46,30 @@ const steamSuccess = async (req, res) => {
   }
 };
 
-const test = async (req, res) => {
-  // steam.getAppList().then((Array) => console.log(Array.name));
-  steam.getUserStats('76561198861157808', '1172470').then((number) => {
-    console.log(number);
-  });
-
-  // 1172470;
+const steamInfo = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const findUser = await User.findOne({ where: { id } });
+    const findUserSteamID = findUser.steamID;
+    if (findUserSteamID !== null) {
+      const getUserLevel = await steam.getUserLevel(`${findUserSteamID}`);
+      const getUserSummary = await steam.getUserSummary(`${findUserSteamID}`);
+      const getUserNickname = getUserSummary.nickname;
+      // console.log(getUserSummary.nickname);
+      const allGamesGetUserStats = await steam.getUserOwnedGames(`${findUserSteamID}`);
+      const sixGames = allGamesGetUserStats.splice(0, 6).map((el) => el.name);
+      // const dotaGetUserStats = allGamesGetUserStats.filter((el) => el.appID === 570);
+      // const csgoGetUserStats = allGamesGetUserStats.filter((el) => el.appID === 730);
+      // console.log(dotaGetUserStats[0].playTime);
+      res.json({ getUserLevel, getUserNickname, sixGames });
+    } else {
+      res.sendStatus(403);
+    }
+  } catch (error) {
+    res.sendStatus(500);
+  }
 };
+
 // steam.resolve('https://steamcommunity.com/id/DmROSs').then((id) => {
 // steam.getUserAchievements(id, app).then((PlayerAchievements) => console.log(PlayerAchievements));
 // res.sendStatus(200);
@@ -68,4 +84,4 @@ const test = async (req, res) => {
 //   }
 // };
 
-module.exports = { returnSteam, getSteam, steamSuccess, test };
+module.exports = { returnSteam, getSteam, steamSuccess, steamInfo };

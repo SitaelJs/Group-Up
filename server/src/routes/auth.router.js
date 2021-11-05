@@ -13,7 +13,7 @@ const {
   getSteam,
   returnSteam,
   steamSuccess,
-  test,
+  steamInfo,
 } = require('../controllers/authSteam.controller');
 
 const { initUser } = require('../middleware/checkAuth');
@@ -35,5 +35,5 @@ authRouter.get('/check', localCheck);
 authRouter.get('/steam', getSteam);
 authRouter.get('/steam/return', returnSteam);
 authRouter.get('/steam/success', steamSuccess);
-authRouter.get('/steam/test', test);
+authRouter.get('/steam/userinfo/:id', steamInfo);
 module.exports = authRouter;

@@ -19,49 +19,55 @@ router.get('/characterisitics', async (req, res) => {
 });
 
 router.post('/characterisitics/inc', async (req, res) => {
-  const { id, value, charac, auth } = req.body;
-
+  const { id, value, auth } = req.body;
   const character = await Characteristic.findOne({
-    where: { userId: auth.id, toUserId: charac.toUserId },
+    where: { userId: auth.id, toUserId: Number(id) },
   });
   if (!character) {
-    await Characteristic.create({
-      userId: id,
-      toUserId: 0,
+    const newCharact = await Characteristic.create({
+      userId: auth.id,
+      toUserId: Number(id),
       toxic: 0,
       friendly: 0,
       teamPlayer: 0,
       leader: 0,
       strategy: 0,
     });
+
+    newCharact.increment(`${value}`, { by: 5 });
+    res.json(character);
+  } else if (character[value] === 0) {
+    const plus = await character.increment(`${value}`, { by: 5 });
+    res.json(plus);
   } else {
-    await character.increment(`${value}`, { by: 5 });
-    await character.save();
     res.json(character);
   }
 });
 
 router.post('/characterisitics/dec', async (req, res) => {
-  const { id, value, charac, auth } = req.body;
-
+  const { id, value, auth } = req.body;
   const character = await Characteristic.findOne({
-    where: { userId: auth.id, toUserId: charac.toUserId },
+    where: { userId: auth.id, toUserId: Number(id) },
   });
   if (!character) {
-    await Characteristic.create({
-      userId: charac.id,
-      toUserId: charac.toUserId,
-      toxic: charac.toxic,
-      friendly: charac.friendly,
-      teamPlayer: charac.teamPlayer,
-      leader: charac.leader,
-      strategy: charac.strategy,
+    const newCharact = await Characteristic.create({
+      userId: auth.id,
+      toUserId: Number(id),
+      toxic: 0,
+      friendly: 0,
+      teamPlayer: 0,
+      leader: 0,
+      strategy: 0,
     });
+
+    newCharact.decrement(`${value}`, { by: 5 });
+    res.json(character);
+  } else if (character[value] !== 0) {
+    const minus = await character.decrement(`${value}`, { by: 5 });
+    res.json(minus);
   } else {
-    await character.decrement(`${value}`, { by: 5 });
-    await character.save();
+    res.json(character);
   }
-  res.json(character);
 });
 
 module.exports = router;

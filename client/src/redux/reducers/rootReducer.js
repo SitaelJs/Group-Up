@@ -6,6 +6,7 @@ import modesReducer from './modesReducer'
 import usersReducer from './usersReducer'
 import characterReducer from './characterReducer'
 import authReducer from './authReducer'
+import dataSteamReducer from './dataSteamReducer'
 
 const rootReducer = combineReducers({
   games: gameReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   modes: modesReducer,
   users: usersReducer,
   auth: authReducer,
+  dataSteam: dataSteamReducer,
 })
 
 export default rootReducer
