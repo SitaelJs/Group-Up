@@ -1,11 +1,12 @@
-// const initStates = {
-//   games: [],
-//   gameMode: {},
-//   groups: [],
-//   modes: [],
-//   users: [],
-//   characterisitics: [],
-//   auth: {},
-// }
-//
-// export default initStates
+const initState = {
+  games: [],
+  gameMode: {},
+  groups: [],
+  modes: [],
+  users: [],
+  characterisitics: [],
+  auth: null,
+  dataFromSteam: {},
+}
+
+export default initState

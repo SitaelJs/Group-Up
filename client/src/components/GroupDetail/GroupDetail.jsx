@@ -2,10 +2,10 @@
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
-import { changeGroupForUser, getAllGroups, groupDelete } from '../../redux/AC/groupsAC'
+import { changeGroupForUser, getAllGroups, groupDelete, getAllUsers } from '../../redux/AC/groupsAC'
 import getAllGames from '../../redux/AC/gamesAC'
 import getAllModes from '../../redux/AC/modesAC'
-import { getAllUsers, getUsersForGroup } from '../../redux/AC/usersAC'
+import { getUsersForGroup } from '../../redux/AC/usersAC'
 import Player from '../Player/Player'
 import styles from './detailedGroupStyle.module.css'
 import { useLoaderContext } from '../../contexts/loaderContext'
@@ -40,6 +40,8 @@ function GroupDetail() {
     dispatch(getAllModes())
     dispatch(getUsersForGroup(groupsId))
   }, [])
+  const comment = `!createvoicechannel Group: ${group?.name}`
+  // const usersInGroup =
 
   const onClickJoinGroup = () => {
     dispatch(changeGroupForUser(groupsId))
@@ -60,6 +62,13 @@ function GroupDetail() {
   const moveToGroups = () => {
     window.open('http://localhost:3000/groups', '_self')
   }
+
+  useEffect(() => {
+    dispatch(getAllGroups())
+    dispatch(getAllGames())
+    dispatch(getAllModes())
+    dispatch(getUsersForGroup(groupsId))
+  }, [])
 
   return (
     <div className={styles.containerGroupDet}>
@@ -104,6 +113,14 @@ function GroupDetail() {
             >
               JOIN GROUP
             </button>
+          ) : link ? (
+            <>
+              {' '}
+              <input className={styles.hiddenLink} readOnly value={comment} />
+              <button type="button" onClick={copy}>
+                {copied ? 'Copied! отправьте боту!' : 'Скопировать'}
+              </button>
+            </>
           ) : (
             <button
               type="button"
@@ -113,7 +130,7 @@ function GroupDetail() {
               }}
             >
               {' '}
-              Ready!
+              Го!
             </button>
           )}
         </div>

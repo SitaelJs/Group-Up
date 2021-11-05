@@ -12,12 +12,13 @@ const getRandomSearchStatus = (min, max) => {
 
 const getRandomAge = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-const users = [...Array(1000)].map((user) => ({
+const users = [...Array(10)].map((user) => ({
   nickname: faker.internet.userName(),
   email: faker.internet.email(),
   password: faker.internet.password(8),
-  roleId: getRandomRole(1, 3),
-  searchStatus: getRandomSearchStatus(1, 3),
+  roleId: 1,
+  // steamID: 0,
+  searchStatus: false,
   info: faker.animal.dog(),
   age: getRandomAge(14, 90),
   photo: faker.image.imageUrl(),

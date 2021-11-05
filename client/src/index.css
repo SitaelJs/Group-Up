@@ -34,3 +34,12 @@ body {
     position: fixed;
     z-index: 999;
 }
+
+.steamMessage {
+    margin: 250px auto auto 50px;
+    font-size: 48px;
+    color: #3bf3ed;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+}

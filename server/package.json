@@ -27,10 +27,13 @@
     "passport-google-oauth2": "^0.2.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.0",
+    "passport-steam": "^1.0.17",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "redis": "^3.1.2",
+    "redux-persist": "^6.0.0",
     "sequelize": "^6.8.0",
+    "steamapi": "^2.2.0",
     "uuid": "^8.3.2",
     "websocket": "^1.0.34",
     "ws": "^8.2.3"

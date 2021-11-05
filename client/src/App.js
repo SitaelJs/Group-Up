@@ -15,10 +15,10 @@ import Footer from './components/Footer/Footer'
 import FormSignIn from './components/FormSignIn/FormSignIn'
 import Profilelist from './components/Profilelist/Profilelist'
 import PrivateRoute from './components/PrivateRouter/PrivateRouter'
+import SteamDone from './components/SteamDone/SteamDone'
 
 function App() {
   const dispatch = useDispatch()
-
   useEffect(() => {
     dispatch(checkAuthUser())
     dispatch(getUserFromGoogle())
@@ -48,13 +48,10 @@ function App() {
           <PrivateRoute exact path="/users">
             <Profilelist />
           </PrivateRoute>
+
           <PrivateRoute exact path="/users/:userId">
             <Profile />
           </PrivateRoute>
-
-          {/* <PrivateRoute exact path="/users">
-            <Profilelist />
-          </PrivateRoute> */}
 
           <PrivateRoute exact path="/games">
             <GameList />
@@ -70,6 +67,10 @@ function App() {
 
           <PrivateRoute exact path="/groups/:groupsId">
             <GroupDetail />
+          </PrivateRoute>
+
+          <PrivateRoute exact path="/steam/done">
+            <SteamDone />
           </PrivateRoute>
 
           <PrivateRoute path="*">

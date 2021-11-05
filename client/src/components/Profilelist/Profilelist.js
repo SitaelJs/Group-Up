@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { getAllUsers } from '../../redux/AC/usersAC'
-
 import Profileitem from '../Profileitem/Profileitem'
 import styles from './stylesProfile.module.css'
 

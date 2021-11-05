@@ -35,4 +35,22 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
     return User;
+  User.init(
+    {
+      nickname: { type: DataTypes.STRING, allowNull: false },
+      email: { type: DataTypes.STRING, allowNull: false, unique: true },
+      password: { type: DataTypes.TEXT, allowNull: false },
+      roleId: { type: DataTypes.INTEGER, allowNull: false },
+      searchStatus: { type: DataTypes.BOOLEAN, allowNull: false },
+      info: DataTypes.TEXT,
+      steamID: DataTypes.TEXT,
+      age: DataTypes.INTEGER,
+      photo: DataTypes.TEXT,
+    },
+    {
+      sequelize,
+      modelName: 'User',
+    }
+  );
+  return User;
 };
