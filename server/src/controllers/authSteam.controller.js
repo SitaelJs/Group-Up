@@ -46,11 +46,17 @@ const steamSuccess = async (req, res) => {
   }
 };
 
-// const test = async (req, res) => {
-//   steam.resolve('https://steamcommunity.com/id/DmROSs').then((id) => {
-//     console.log(id); // 76561198146931523
-//   });
-//   res.sendStatus(200);
+const test = async (req, res) => {
+  // steam.getAppList().then((Array) => console.log(Array.name));
+  steam.getUserStats('76561198861157808', '1172470').then((number) => {
+    console.log(number);
+  });
+
+  // 1172470;
+};
+// steam.resolve('https://steamcommunity.com/id/DmROSs').then((id) => {
+// steam.getUserAchievements(id, app).then((PlayerAchievements) => console.log(PlayerAchievements));
+// res.sendStatus(200);
 // };
 
 // const localCheck = async (req, res) => {
@@ -62,4 +68,4 @@ const steamSuccess = async (req, res) => {
 //   }
 // };
 
-module.exports = { returnSteam, getSteam, steamSuccess };
+module.exports = { returnSteam, getSteam, steamSuccess, test };
