@@ -11,19 +11,24 @@ const localCheck = async (req, res) => {
   }
 };
 
-// router.route('/').get(async (req, res) => {
-//   res.json({});
-// });
-
 const localSignin = async (req, res) => {
   const { email, password } = req.body;
   if ((email, password)) {
     try {
       const user = await User.findOne({ where: { email } });
       if (user && (await bycrypt.compare(password, user.password))) {
-        req.session.user = { nickname: user.nickname, id: user.id };
-
-        return res.json({ nickname: user.nickname, id: user.id });
+        req.session.user = {
+          nickname: user.nickname,
+          id: user.id,
+          email: user.email,
+          steamID: user.steamID,
+        };
+        return res.json({
+          nickname: user.nickname,
+          id: user.id,
+          email: user.email,
+          steamID: user.steamID,
+        });
       }
       return res.sendStatus(401);
     } catch (error) {
@@ -44,9 +49,14 @@ const localSignup = async (req, res) => {
         password: pass,
         roleId: 1,
         searchStatus: false,
+        steamID: 0,
       });
-      req.session.user = { nickname: newUser.nickname, id: newUser.id };
-
+      req.session.user = {
+        id: newUser.id,
+        nickname: newUser.nickname,
+        email: newUser.email,
+        steamID: newUser.steamID,
+      };
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);

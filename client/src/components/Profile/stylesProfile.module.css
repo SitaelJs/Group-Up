@@ -65,3 +65,23 @@
     position: relative;
     width: 100%;
 }
+
+.steamLogo img {
+
+    width: 50px;
+}
+
+.steamButton button {
+    display: flex;
+    margin: 0 auto 30px auto;
+    width: 120px;
+
+    background-color: black;
+    border-color: black;
+    height: 40px;
+    font-size: xx-large;
+}
+
+.steamButton span {
+    color: blueviolet;
+}

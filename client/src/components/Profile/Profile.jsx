@@ -20,15 +20,13 @@ function Profile() {
   const character = useSelector((state) => state.characterisitics)
 
   const charac = character?.find((el) => el.toUserId === Number(userId))
-
-  const dispatch = useDispatch()
+  const { REACT_APP_URL_BACK_SERVER } = process.env
+  const steamIco = `${process.env.PUBLIC_URL}/media/icons/steam_47012.png`
   const auth = useSelector((state) => state.auth)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getCharacter())
-  }, [])
-
-  useEffect(() => {
     dispatch(getAllUsers())
   }, [])
 
@@ -41,13 +39,30 @@ function Profile() {
     e.preventDefault()
     dispatch(postDecrement(userId, char, charac, auth))
   }
-
+  const steamSignInClick = (e) => {
+    e.preventDefault()
+    window.open(`${REACT_APP_URL_BACK_SERVER}/auth/steam`, '_self')
+  }
+  console.log('ЭТО ОН ===>', auth)
+  const steamLocalUser = JSON.parse(localStorage.getItem('user'))
   return (
     <div className={styles.profileContainer}>
       <img src={avaDet} alt="" />
       <h1 className="text">{user?.nickname}</h1>
       <h4 className="text">{user?.info}</h4>
       <h4 className="text">{user?.age}</h4>
+
+      {steamLocalUser.steamID !== '0' ? (
+        <div className={styles.steamLogo}>
+          <img src={steamIco} alt="steam" />
+        </div>
+      ) : (
+        <div className={styles.steamButton}>
+          <button type="button" onClick={(e) => steamSignInClick(e)}>
+            <span>Steam</span>
+          </button>
+        </div>
+      )}
       <span>Статистика пользователя</span>
 
       <div className={styles.statString}>

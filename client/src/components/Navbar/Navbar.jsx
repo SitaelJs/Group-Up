@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom' // import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import styles from './stylesHeader.module.css'
 import { destroyCookie } from '../../redux/AC/usersAC'
@@ -6,9 +6,6 @@ import { destroyCookie } from '../../redux/AC/usersAC'
 function Navbar() {
   const user = useSelector((state) => state.auth)
   const dispatch = useDispatch()
-  // useEffect(() => {
-  //   dispatch(getUserFromGoogle())
-  // }, [])
 
   return (
     <header className={styles.header}>

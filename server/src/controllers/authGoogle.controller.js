@@ -28,10 +28,14 @@ passport.deserializeUser((user, done) => {
 const authGoogleResponse = async (req, res) => {
   try {
     const user = await User.findOne({ where: { id: req.session?.user.id } });
-    const { id, nickname, email } = user;
-    req.session.user = { id: user.id, nickname: user.nickname, email: user.email };
-
-    res.json({ id, nickname, email });
+    const { id, nickname, email, steamID } = user;
+    req.session.user = {
+      id: user.id,
+      nickname: user.nickname,
+      email: user.email,
+      steamID: user.steamID,
+    };
+    res.json({ id, nickname, email, steamID });
   } catch (error) {
     res.sendStatus(500);
   }
