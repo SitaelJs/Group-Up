@@ -1,134 +1,36 @@
-.formForAuth {
-    font-size: x-large;
-    border-radius: 15px;
-    padding: 20px 10px 10px 0;
-    width: 600px;
-    height: 580px;
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.modal.active {
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.modal__content {
+    padding: 30px;
+    border-radius: 12px;
     background-color: black;
-    margin: 150px auto 120px auto;
+    height: 200px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
-    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+    box-shadow: 0px 0px 50px rgba(90, 115, 210, 0.53);
+
 }
 
-.headAuth {
-    padding-top: 35px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 48px;
-    color: #fc39ea;
-    text-shadow: 0 0 7px #ff43c9,
-    0 0 10px rgba(255, 84, 239, 0.45),
-    0 0 21px rgba(255, 118, 231, 0.35);
-}
-
-.inputAuth {
-    margin-top: 15px;
-    padding-bottom: 15px;
-}
-
-.inputAuth input {
-    border-radius: 5px;
-    background-color: rgba(70, 249, 255, 0.07);
-    border: black;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    margin: 10px;
-    height: 35px;
-    width: 300px;
-}
-
-.inputAuth input::placeholder {
-    font-size: medium;
-    color: #7a7a7a;
-}
-
-.socialButton {
-    display: flex !important;
-    justify-content: center !important;
-    margin: 10px auto 20px auto !important;
-    height: 50px !important;
-    background-color: rgba(37, 37, 37, 0) !important;
-    width: 230px !important;
-    border-radius: 6px !important;
-    border: 3px solid rgb(0, 40, 70) !important;
-}
-
-.socialButton:hover {
-    animation: border-flicker 2s linear forwards;
-}
-
-@keyframes border-flicker {
-    2% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    3% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    5% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    6% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    7% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    9% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    13% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    16% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    18% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    22% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    34% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    36% {
-        border: 3px solid rgb(0, 40, 70);
-        box-shadow: none;
-    }
-    54% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-    100% {
-        border: 3px solid rgb(0, 180, 230);
-        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
-        0 0 12px -1px rgb(0, 180, 230) inset;
-    }
-}
-
-
-.buttonSendAuth {
+.btnInModal {
     margin: 10px auto 20px auto;
     width: 230px;
     height: 50px;
@@ -139,13 +41,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
-.buttonSendAuth:hover {
+.btnInModal:hover {
     animation: border-flicker 2s linear forwards;
 }
 
-.buttonSendAuth button {
+.btnInModal button {
     text-decoration: none;
     font-weight: 300;
     font-size: x-large;
@@ -155,15 +58,15 @@
 
 }
 
-.buttonSendAuth button b {
+.btnInModal button b {
     color: rgba(120, 0, 50, .5);
 }
 
-.buttonSendAuth:hover button {
+.btnInModal:hover button {
     animation: text-flicker 2s linear forwards;
 }
 
-.buttonSendAuth:hover .first {
+.btnInModal:hover .first {
     animation: letter-flicker 3s linear infinite;
 }
 
@@ -352,12 +255,6 @@
     }
 }
 
-
-.inputString {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
+.modalTimer{
+    font-size: xx-large;
 }
-

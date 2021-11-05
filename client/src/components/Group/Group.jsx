@@ -9,7 +9,7 @@ function Group({ group }) {
   return (
     <div className={styles.groupItem}>
       <Link to={`/groups/${group?.id}`}>
-        <h1>{group.name}</h1>
+        <h1>{group?.name}</h1>
       </Link>
 
       <h2>{game?.title}</h2>

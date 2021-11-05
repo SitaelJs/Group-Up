@@ -1,7 +1,7 @@
 .playersList {
     margin: 150px auto 100px auto;
-    height: 800px;
-    width: 700px;
+    height: auto;
+    width: 500px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -9,5 +9,6 @@
     border-radius: 25px;
     box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
     25px -25px 60px -25px rgba(46, 208, 255, 0.3);
-}
+    /*align-items: flex-end;*/
 
+}

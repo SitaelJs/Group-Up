@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ChatGroup/ChatGroup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ChatGroup/ChatGroup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/FormAuth/stylesAuth.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FormAuth/stylesAuth.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Game/stylesGame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Game/stylesGame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Group/Group.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GroupDetail/detailedGroupStyle.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GroupDetail/detailedGroupStyle.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Main/mainStyles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Main/mainStyles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar/stylesHeader.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar/stylesHeader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Player/Player.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Player/Player.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Player/stylesPlayers.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Player/stylesPlayers.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Profileitem/Profileitem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profileitem/Profileitem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Profilelist/stylesProfile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profilelist/stylesProfile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TestWebSocket/TestWebSocket.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TestWebSocket/TestWebSocket.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/contexts/loaderContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/contexts/loaderContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/gamemodeAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/webSocketHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/webSocketHook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/websocket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +54,9 @@
     <setting file="file://$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="208rmlNMDUijFml7WoMr1KTj8LX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="format.on.save" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/Modal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Modal" />
       <recent name="$PROJECT_DIR$/server/src/routes" />
       <recent name="$PROJECT_DIR$/client/src/redux/AC" />
       <recent name="$PROJECT_DIR$/client/src/redux/reducers" />
@@ -82,6 +113,8 @@
       <workItem from="1635962804119" duration="14615000" />
       <workItem from="1636047011066" duration="9301000" />
       <workItem from="1636056352074" duration="18211000" />
+      <workItem from="1636076078698" duration="686000" />
+      <workItem from="1636076945596" duration="11100000" />
     </task>
     <servers />
   </component>
@@ -99,7 +132,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/dev" />
+                        <option value="origin/mvp" />
                       </list>
                     </value>
                   </entry>
@@ -117,7 +150,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/src/components/SteamDone/SteamDone.jsx</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -4,6 +4,7 @@ const LoaderContext = createContext()
 
 const LoaderContextWrapper = ({ children }) => {
   const [loader, setLoader] = useState(false)
+  const [active, setActive] = useState(false)
 
   const activate = () => {
     setLoader(true)
@@ -14,7 +15,11 @@ const LoaderContextWrapper = ({ children }) => {
   }
 
   return (
-    <LoaderContext.Provider value={{ loader, activate, deactivate }}>
+    <LoaderContext.Provider
+      value={{
+        loader, activate, deactivate, active, setActive
+      }}
+    >
       {children}
     </LoaderContext.Provider>
   )

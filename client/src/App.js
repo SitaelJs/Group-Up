@@ -19,6 +19,7 @@ import SteamDone from './components/SteamDone/SteamDone'
 
 function App() {
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(checkAuthUser())
     dispatch(getUserFromGoogle())

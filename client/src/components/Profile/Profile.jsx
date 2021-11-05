@@ -144,7 +144,7 @@ function Profile() {
         </button>
       </div>
       <div className={styles.statString}>
-        <h3>Страгет</h3>
+        <h3>Стратег</h3>
         <button
           className={styles.butFix}
           onClick={(e) => {

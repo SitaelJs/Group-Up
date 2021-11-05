@@ -28,24 +28,6 @@
     line-height: .75;
 }
 
-.white-mode {
-    text-decoration: none;
-    padding: 7px 10px;
-    background-color: #122;
-    border-radius: 3px;
-    color: #FFF;
-    transition: .35s ease-in-out;
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
-    font-family: "Montserrat";
-}
-
-.white-mode:hover {
-    background-color: #FFF;
-    color: #122;
-}
-
 .imgBox {
     font-size: xx-large;
     display: flex;
@@ -56,7 +38,6 @@
     border-radius: 20px;
     box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
     25px -25px 60px -25px rgba(46, 208, 255, 0.3);
-
 }
 
 .imgBox span {
@@ -64,26 +45,7 @@
     padding: 30px 15px 15px 30px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
     color: #ebebeb;
-}
-
-.imgMain1 img {
-    width: 500px;
-    margin: 0 auto;
-}
-
-.imgMain2 img {
-    width: 600px;
-    margin: 0 auto;
-}
-
-.imgMain1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.imgMain2 {
-    display: flex;
-    flex-direction: column;
+    z-index: 100;
 }
 
 .block1 {
@@ -98,7 +60,29 @@
     align-items: flex-end
 }
 
-.imgBox img {
-    padding: 5px;
+
+.imgMain1 {
+    width: 520px;
+    display: flex;
+    flex-direction: column;
 }
+
+.imgMain1 img {
+    width: 500px;
+    margin: 5px;
+}
+
+
+.imgMain2 {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgMain2 img {
+
+    width: 600px;
+    margin: 5px;
+}
+
 
