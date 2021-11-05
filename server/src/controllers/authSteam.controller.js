@@ -46,11 +46,30 @@ const steamSuccess = async (req, res) => {
   }
 };
 
-// const test = async (req, res) => {
-//   steam.resolve('https://steamcommunity.com/id/DmROSs').then((id) => {
-//     console.log(id); // 76561198146931523
-//   });
-//   res.sendStatus(200);
+const steamInfo = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const findUser = await User.findOne({ where: { id } });
+    const findUserSteamID = findUser.steamID;
+    if (findUserSteamID !== null) {
+      const getUserLevel = await steam.getUserLevel(`${findUserSteamID}`);
+      const getUserSummary = await steam.getUserSummary(`${findUserSteamID}`);
+      const getUserNickname = getUserSummary.nickname;
+      const allGamesGetUserStats = await steam.getUserOwnedGames(`76561198146931523`);
+      const sixGames = allGamesGetUserStats.splice(0, 6).map((el) => el.name);
+      console.log(allGamesGetUserStats);
+      res.json({ getUserLevel, getUserNickname, sixGames });
+    } else {
+      res.sendStatus(403);
+    }
+  } catch (error) {
+    res.sendStatus(500);
+  }
+};
+
+// steam.resolve('https://steamcommunity.com/id/DmROSs').then((id) => {
+// steam.getUserAchievements(id, app).then((PlayerAchievements) => console.log(PlayerAchievements));
+// res.sendStatus(200);
 // };
 
 // const localCheck = async (req, res) => {
@@ -62,4 +81,4 @@ const steamSuccess = async (req, res) => {
 //   }
 // };
 
-module.exports = { returnSteam, getSteam, steamSuccess };
+module.exports = { returnSteam, getSteam, steamSuccess, steamInfo };

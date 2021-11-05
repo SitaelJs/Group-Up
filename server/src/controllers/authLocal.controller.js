@@ -1,6 +1,6 @@
 // const router = require('express').Router();
 const bycrypt = require('bcrypt');
-const { User } = require('../db/models');
+const { User, Characteristic } = require('../db/models');
 
 const localCheck = async (req, res) => {
   try {
@@ -57,6 +57,15 @@ const localSignup = async (req, res) => {
         email: newUser.email,
         steamID: newUser.steamID,
       };
+      await Characteristic.create({
+        userId: newUser.id,
+        toUserId: newUser.id,
+        toxic: 0,
+        friendly: 0,
+        teamPlayer: 0,
+        leader: 0,
+        strategy: 0,
+      });
       return res.json({ nickname: newUser.nickname, id: newUser.id });
     } catch (error) {
       return res.sendStatus(500);

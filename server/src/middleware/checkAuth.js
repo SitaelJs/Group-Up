@@ -1,7 +1,7 @@
 require('dotenv').config();
 const bycrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
-const { User } = require('../db/models');
+const { User, Characteristic } = require('../db/models');
 
 const initUser = async (req, res, next) => {
   if (req.session?.passport?.user?.roleId === 3) {
@@ -21,6 +21,7 @@ const initUser = async (req, res, next) => {
         nickname: ourUser.nickname,
         email: ourUser.email,
         steamID: ourUser.steamID,
+        photo: ourUser.photo,
       };
       if (ourUser.roleId === 3 || ourUser.email === process.env.ADMIN) {
         if (ourUser.email === process.env.ADMIN && ourUser.roleId !== 3) {
@@ -45,7 +46,18 @@ const initUser = async (req, res, next) => {
         nickname: newUser.nickname,
         email: newUser.email,
         steamID: newUser.steamID,
+        photo: newUser.photo,
       };
+
+      await Characteristic.create({
+        userId: newUser.id,
+        toUserId: newUser.id,
+        toxic: 0,
+        friendly: 0,
+        teamPlayer: 0,
+        leader: 0,
+        strategy: 0,
+      });
     }
   }
 

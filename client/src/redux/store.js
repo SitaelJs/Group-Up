@@ -3,20 +3,11 @@ import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 import rootReducer from './reducers/rootReducer'
-import initStates from './initState'
-// const initStates = {
-//   games: [],
-//   gameMode: {},
-//   groups: [],
-//   modes: [],
-//   users: [],
-//   characterisitics: [],
-//   auth: null,
-// }
+import initState from './initState'
 
 const store = createStore(
   rootReducer,
-  initStates,
+  initState,
   composeWithDevTools(applyMiddleware(thunk))
 )
 
