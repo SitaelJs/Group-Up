@@ -9,10 +9,14 @@ import {
 import styles from './footerStyles.module.css'
 
 function Footer() {
+  const logoFooter = `${process.env.PUBLIC_URL}/media/logoFooter/groupapp.jpg`
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.tag}>
-        <span>Lynxses 2021</span>
+        {/* <span> */}
+        <img src={logoFooter} alt="logo" />
+        {/* </span> */}
 
         <div className={styles.discordIcon} />
         <div className={styles.icons}>

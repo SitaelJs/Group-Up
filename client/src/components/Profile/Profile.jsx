@@ -29,7 +29,7 @@ function Profile() {
   // const [disable4, setDisable4] = useState(false)
   // const [disable1, setDisable1] = useState(false)
 
-  const charac = character?.find((el) => el.toUserId === Number(userId))
+  const charac = character?.find((el) => el?.toUserId === Number(userId))
   const { REACT_APP_URL_BACK_SERVER } = process.env
   const steamIco = `${process.env.PUBLIC_URL}/media/icons/steam_47012.png`
   // const dataFromSteam = useSelector((state) => state.dataFromSteam)
@@ -38,6 +38,7 @@ function Profile() {
   useEffect(() => {
     dispatch(getCharacter())
     dispatch(getAllUsers())
+    localStorage.removeItem('steam')
     dispatch(getDataFromSteam(Number(userId)))
   }, [])
 
@@ -76,7 +77,7 @@ function Profile() {
           </button>
         </div>
       )}
-      {user?.steamID !== steamDataLocal?.getUserSteamID ? (
+      {user?.steamID !== '0' ? (
         <div>
           <h4 className="text">
             Nickname Steam:
