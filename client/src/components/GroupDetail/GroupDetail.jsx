@@ -31,6 +31,7 @@ function GroupDetail() {
   const curModes = allModes?.find((el) => el.id === group?.modeId)
   const oneUser = users.find((user) => user.id === Number(group?.userId))
   const gamePic = `${process.env.PUBLIC_URL}/media/gamesPicGroups/gameId=${group?.gameId}ForGroups.png`
+  console.log(users)
 
   useEffect(() => {
     dispatch(getAllUsers())
@@ -103,7 +104,7 @@ function GroupDetail() {
             >
               JOIN GROUP
             </button>
-          ) : link ? null : (
+          ) : (
             <button
               type="button"
               onClick={() => {

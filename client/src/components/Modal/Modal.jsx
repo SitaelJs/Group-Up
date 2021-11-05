@@ -6,6 +6,7 @@ import styles from '../GroupDetail/detailedGroupStyle.module.css'
 const Modal = ({ group }) => {
   const { setActive, active } = useLoaderContext()
   const [seconds, setSeconds] = useState(5)
+  const [counter, setCounter] = useState(false)
   // const [copied, setCopied] = useState(false)
   const comment = `!createvoicechannel Group: ${group?.name}`
   const copy = async () => {
@@ -15,7 +16,9 @@ const Modal = ({ group }) => {
 
   const redirectFunc = () => setTimeout(() => {
     window.open('https://discord.gg/Q3c42AmKts')
+    setCounter(false)
     setActive(false)
+    setSeconds(5)
     clearInterval(foo)
   }, 5000)
 
@@ -25,6 +28,7 @@ const Modal = ({ group }) => {
 
   const countdawnTimer = () => {
     foo = setInterval(() => {
+      setCounter(true)
       countUpdateSec()
     }, 1000)
   }
@@ -50,7 +54,7 @@ const Modal = ({ group }) => {
         className={active ? 'modal__content active' : 'modal__content'}
         onClick={(event) => event.stopPropagation()}
       >
-        {seconds}
+        {counter && seconds}
         <button
           onClick={() => {
             countdawnTimer()
@@ -61,7 +65,6 @@ const Modal = ({ group }) => {
           GOOGOGOGO
         </button>
         <input className={styles.hiddenLink} readOnly value={comment} />
-        <p style={{ color: 'black' }}>search</p>
       </div>
     </div>
   )
