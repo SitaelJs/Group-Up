@@ -76,27 +76,32 @@ function Profile() {
           </button>
         </div>
       )}
-      <div>
-        <h4 className="text">
-          Nickname Steam:
-          {' '}
-          {steamDataLocal?.getUserNickname}
-        </h4>
-        <h4 className="text">
-          Уровень Steam:
-          {' '}
-          {steamDataLocal?.getUserLevel}
-        </h4>
-        <h4 className="text">Последние игры:</h4>
-        <ul>
-          <li>{steamDataLocal?.sixGames[0]}</li>
-          <li>{steamDataLocal?.sixGames[1]}</li>
-          <li>{steamDataLocal?.sixGames[2]}</li>
-          <li>{steamDataLocal?.sixGames[3]}</li>
-          <li>{steamDataLocal?.sixGames[4]}</li>
-          <li>{steamDataLocal?.sixGames[5]}</li>
-        </ul>
-      </div>
+      {user?.steamID !== steamDataLocal?.getUserSteamID ? (
+        <div>
+          <h4 className="text">
+            Nickname Steam:
+            {' '}
+            {steamDataLocal?.getUserNickname}
+          </h4>
+          <h4 className="text">
+            Уровень Steam:
+            {' '}
+            {steamDataLocal?.getUserLevel}
+          </h4>
+          <h4 className="text">Последние игры:</h4>
+          <ul>
+            <li>{steamDataLocal?.sixGames[0]}</li>
+            <li>{steamDataLocal?.sixGames[1]}</li>
+            <li>{steamDataLocal?.sixGames[2]}</li>
+            <li>{steamDataLocal?.sixGames[3]}</li>
+            <li>{steamDataLocal?.sixGames[4]}</li>
+            <li>{steamDataLocal?.sixGames[5]}</li>
+          </ul>
+        </div>
+      ) : (
+        <></>
+      )}
+
       <span>Статистика пользователя</span>
       <div className={styles.statString}>
         <h3>Токсичность</h3>

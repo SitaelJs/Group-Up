@@ -55,12 +55,9 @@ const steamInfo = async (req, res) => {
       const getUserLevel = await steam.getUserLevel(`${findUserSteamID}`);
       const getUserSummary = await steam.getUserSummary(`${findUserSteamID}`);
       const getUserNickname = getUserSummary.nickname;
-      // console.log(getUserSummary.nickname);
-      const allGamesGetUserStats = await steam.getUserOwnedGames(`${findUserSteamID}`);
+      const allGamesGetUserStats = await steam.getUserOwnedGames(`76561198146931523`);
       const sixGames = allGamesGetUserStats.splice(0, 6).map((el) => el.name);
-      // const dotaGetUserStats = allGamesGetUserStats.filter((el) => el.appID === 570);
-      // const csgoGetUserStats = allGamesGetUserStats.filter((el) => el.appID === 730);
-      // console.log(dotaGetUserStats[0].playTime);
+      console.log(allGamesGetUserStats);
       res.json({ getUserLevel, getUserNickname, sixGames });
     } else {
       res.sendStatus(403);

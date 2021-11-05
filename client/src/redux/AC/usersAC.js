@@ -6,6 +6,7 @@ import {
   GET_USER_FOR_GROUP,
   SET_USER,
   GET_DATA_FROM_STEAM,
+  // GET_ONE_USER,
 } from '../types/userTypes'
 import { GET_USER_CHARACTERISTICS } from '../types/characterTypes'
 
@@ -64,6 +65,18 @@ export const getAllUsers = () => async (dispatch) => {
     payload: allUsers,
   })
 }
+
+// export const getOneUser = () => async (dispatch) => {
+//   const response = await axios(`${serverPuth}/users/oneuser/:id`, {
+//     withCredentials: true,
+//   })
+//   const oneUser = await response.data
+
+//   dispatch({
+//     type: GET_ONE_USER,
+//     payload: oneUser,
+//   })
+// }
 
 export const getDataFromSteam = (userId) => async (dispatch) => {
   const dataFromSteam = (

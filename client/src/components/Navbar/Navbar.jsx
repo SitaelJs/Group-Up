@@ -8,6 +8,10 @@ function Navbar() {
   console.log(user)
   const dispatch = useDispatch()
 
+  const destroyHandler = () => {
+    dispatch(destroyCookie())
+  }
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -22,7 +26,7 @@ function Navbar() {
             <NavLink to="/users">Игроки</NavLink>
             <NavLink to="/groups">Группы</NavLink>
             <NavLink to="/games">Выбрать игру</NavLink>
-            <button type="button" onClick={() => dispatch(destroyCookie())}>
+            <button type="button" onClick={() => destroyHandler}>
               Выйти
             </button>
           </div>
