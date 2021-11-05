@@ -1,0 +1,71 @@
+.gameSet {
+    border-radius: 15px;
+    margin: 120px auto 100px auto;
+    width: 400px;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+}
+
+.gameSetTitle {
+    font-size: 36px;
+    padding-bottom: 20px;
+    color: #50fdef;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+    padding-bottom: 20px;
+}
+
+.gameSet img {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.formGameSet {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+}
+
+.selectMode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.selectPosition {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttonCreateGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.formGameSet select {
+    background-color: black;
+    border: black;
+}
+
+.buttonCreateGroup button {
+    font-size: 16px;
+    background-color: #181818;
+    border: black;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+}

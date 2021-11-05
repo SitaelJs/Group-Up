@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import styles from './stylesGroup.module.css'
 
 function Group({ group }) {
+  const allGames = useSelector((state) => state.games)
+  const game = allGames.find((item) => item.id === group.gameId)
+
   return (
-    <div>
+    <div className={styles.groupItem}>
       <Link to={`/groups/${group?.id}`}>
         <h1>{group.id}</h1>
       </Link>
-      <h2>game</h2>
 
-      <div>
-        <h3>
-          Клеточки по кол-ву игроков в режиме(в пустых - свободные места с
-          `&quot;`)
-        </h3>
-      </div>
-      <hr />
+      <h2>{game?.title}</h2>
+
+      <p>Lorem ipsum</p>
     </div>
   )
 }

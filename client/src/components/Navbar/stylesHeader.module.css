@@ -1,0 +1,75 @@
+.header {
+    position: fixed;
+    padding: 10px 100px;
+    height: 10%;
+    top: 0;
+    background: black;
+    display: flex;
+    box-shadow: 0px 0px 25px rgba(46, 208, 255, 0.20);
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo span {
+    align-items: center;
+    margin: auto;
+    font-size: xxx-large;
+    color: #fff;
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgba(0, 255, 170, 0.48),
+    0 0 82px rgba(0, 255, 170, 0.47);
+    /*0 0 92px #0fa,*/
+    /*0 0 102px #0fa,*/
+    /*0 0 151px #0fa;*/
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgba(114, 221, 231, 0.66),
+        0 0 80px #7fe5f3,
+        0 0 90px #38ffe8,
+        0 0 100px rgba(52, 255, 232, 0.68),
+        0 0 150px rgba(0, 255, 234, 0.65);
+
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.navLinkMain {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.navLinkMain a {
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.navLinkMain button {
+    margin-right: -200px;
+    font-size: large;
+    background-color: black;
+    border: black;
+}

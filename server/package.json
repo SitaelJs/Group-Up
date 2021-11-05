@@ -20,6 +20,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "express-ws": "^5.0.2",
     "faker": "^5.5.3",
     "jsonwebtoken": "^8.5.1",
     "passport": "^0.5.0",
@@ -31,7 +32,8 @@
     "redis": "^3.1.2",
     "sequelize": "^6.8.0",
     "uuid": "^8.3.2",
-    "websocket": "^1.0.34"
+    "websocket": "^1.0.34",
+    "ws": "^8.2.3"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

@@ -1,3 +1,4 @@
 export const ADD_NEW_GROUP = 'ADD_NEW_GROUP'
 export const GET_ALL_GROUPS = 'GET_ALL_GROUPS'
 export const FILTER_GROUPS = 'FILTER_GROUPS'
+export const FILTER_ALL_GROUPS = 'FILTER_ALL_GROUPS'

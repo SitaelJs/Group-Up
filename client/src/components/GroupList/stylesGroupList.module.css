@@ -1,0 +1,150 @@
+.groupList {
+    display: flex;
+    width: 1500px;
+    margin: 120px auto 100px auto;
+    flex-direction: column;
+}
+
+.filterForGroups {
+    display: flex;
+    flex-direction: row;
+    padding: 0 100px;
+    justify-content: center;
+
+}
+
+
+.groupListMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 80px;
+    justify-content: center;
+}
+
+.filterWindow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 1100px;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 3px solid rgb(0, 40, 70);
+    box-shadow: 0px 0px 10px 5px rgba(46, 208, 255, 0.3);
+
+}
+
+.filterWindow:hover {
+    animation: border-flicker 2s linear forwards;
+}
+
+@keyframes border-flicker {
+    2% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    3% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    5% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    6% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    7% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    9% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    13% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    16% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    18% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    22% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    34% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    36% {
+        border: 3px solid rgb(0, 40, 70);
+        box-shadow: none;
+    }
+    54% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+    100% {
+        border: 3px solid rgb(0, 180, 230);
+        box-shadow: 0 0 15px -1px rgb(0, 180, 230),
+        0 0 12px -1px rgb(0, 180, 230) inset;
+    }
+}
+
+
+.filterWindow input {
+    font-size: medium;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(70, 249, 255, 0.07);
+    border: 0px solid rgb(0, 0, 0);
+    align-items: center;
+}
+
+.filterWindow select {
+    font-size: x-large;
+    height: 50px;
+    color: #ffffff;
+    background-color: black;
+    border: rgb(0, 0, 0);
+    padding: 10px;
+    align-items: center;
+}
+
+.filterWindow button {
+    font-size: large;
+    height: 38px;
+    width: 80px;
+    color: #ffffff;
+    background-color: black;
+    border: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.filterWindow form {
+    font-size: x-large;
+    height: 50px;
+    color: #ffffff;
+    background-color: black;
+    border: rgb(0, 0, 0);
+    align-items: center;
+}
+

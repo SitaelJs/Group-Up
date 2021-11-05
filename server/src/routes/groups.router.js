@@ -1,17 +1,21 @@
 const router = require('express').Router();
 const { v4 } = require('uuid');
-const axios = require('axios');
 const { Group, User, UserGroup } = require('../db/models');
 
 // axios.defaults.withCredentials = true
 
 router.post('/', async (req, res, next) => {
+  const user = await User.findOne({ where: { email: req.user.email } });
   const newGroup = await Group.create({
     name: v4(),
     gameId: req.body.gameId,
     modeId: req.body.modeId,
     positionId: req.body.positionId,
-    userId: 2,
+    userId: user.id,
+  });
+  await UserGroup.create({
+    userId: user.id,
+    groupId: newGroup.id,
   });
   res.json(newGroup);
 });
@@ -27,13 +31,15 @@ router.get('/', async (req, res, next) => {
 
   res.json(result);
 });
+
 router.get('/:groupId', async (req, res, next) => {
   const { groupId } = req.params;
-  const userForGroup = await User.findAll({
+  const allUsersInGroup = await User.findAll({
     include: [{ model: Group, as: 'Groups', where: { id: groupId } }],
   });
-  res.json(userForGroup);
+  res.json(allUsersInGroup);
 });
+
 router.get('/change/:groupId', async (req, res, next) => {
   const { groupId } = req.params;
   const { email } = req.user;
@@ -52,11 +58,11 @@ router.get('/change/:groupId', async (req, res, next) => {
 
 router.delete('/delete/:groupId', async (req, res) => {
   const { email } = req.user;
-  console.log(email);
+  const id = req.params;
+  console.log(id);
   const currentUser = await User.findOne({ where: { email } });
-  console.log(currentUser);
-  await UserGroup.destroy({ where: { userId: currentUser.id } });
-  await Group.destroy({ where: { userId: currentUser.id } });
+  await UserGroup.destroy({ where: { userId: currentUser.id, groupId: id.groupId } });
+  await Group.destroy({ where: { id: id.groupId, userId: currentUser.id } });
 });
 
 module.exports = router;

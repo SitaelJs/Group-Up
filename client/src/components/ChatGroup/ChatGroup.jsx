@@ -1,28 +1,71 @@
-const ChatGroup = () => (
-  <div>
+import { useEffect, useRef, useState } from 'react'
+import useWebSocketLite from '../../webSocketHook'
+
+const ChatGroup = () => {
+  const [messagesList, setMessagesList] = useState([
+    <span>Messages will be displayed here</span>,
+  ])
+  const sendTag = (message) => (
+    <span>
+      &#11014;:
+      {message}
+    </span>
+  )
+  const receiveTag = (message) => (
+    <span>
+      &#11015;:
+      {message}
+    </span>
+  )
+  const txtRef = useRef()
+
+  // use our hook
+  const ws = useWebSocketLite({
+    socketUrl: 'ws://localhost:3001',
+  })
+
+  // receive messages
+  useEffect(() => {
+    if (ws.data) {
+      const { message } = ws.data
+      console.log(message)
+      setMessagesList((messagesList) => [].concat(receiveTag(message), messagesList))
+    }
+  }, [ws.data])
+
+  // send messages
+  const sendData = () => {
+    const message = txtRef.current.value || ''
+    if (message) {
+      setMessagesList((messagesList) => [].concat(sendTag(message), messagesList))
+      ws.send(message)
+    }
+  }
+  console.log(txtRef?.current?.value)
+
+  // a simple form
+  return (
     <div>
       <div>
-        <div>
-          <p>ИГРОК 1 говорит: Привет! Ищу пати!</p>
-          <p>ИГРОК 7 говорит: ГГ ВП</p>
-        </div>
+        Connection State:
+        {ws.readyState ? 'Open' : 'Closed'}
       </div>
+
       <div>
         <form>
-          <input
-            type="text"
-            id="message-text"
-            className="chat-form__input"
-            placeholder="Введите сообщение"
-          />
-          <button type="submit" value="">
-            Отправить
-          </button>
+          <label>Message (string or json)</label>
+          <textarea name="message" rows={4} ref={txtRef} />
+          <input type="button" onClick={sendData} value="Send" />
         </form>
       </div>
+
+      <div style={{ maxHeight: 300, overflowY: 'scroll' }}>
+        {messagesList.map((Tag, i) => (
+          <div key={i}>{Tag}</div>
+        ))}
+      </div>
     </div>
-    <hr />
-  </div>
-)
+  )
+}
 
 export default ChatGroup
