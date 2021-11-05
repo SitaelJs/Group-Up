@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 const router = require('express').Router();
 const { User, Characteristic } = require('../db/models');
 
@@ -8,6 +6,11 @@ router.get('/', async (req, res, next) => {
   setTimeout(() => {
     res.json(allUsers);
   }, 1e3);
+});
+
+router.get('/one', async (req, res, next) => {
+  const oneUser = await User.findOne({ where: { id: req.body.id } });
+  res.json(oneUser);
 });
 
 router.get('/characterisitics', async (req, res) => {
@@ -21,10 +24,7 @@ router.post('/characterisitics/inc', async (req, res) => {
   const character = await Characteristic.findOne({
     where: { userId: auth.id, toUserId: charac.toUserId },
   });
-
   if (!character) {
-    console.log('in if');
-
     await Characteristic.create({
       userId: id,
       toUserId: 0,
@@ -34,9 +34,6 @@ router.post('/characterisitics/inc', async (req, res) => {
       leader: 0,
       strategy: 0,
     });
-    res.json(character);
-    // } else if (character.userId === auth.id) {
-    //   res.sendStatus(304);
   } else {
     await character.increment(`${value}`, { by: 5 });
     await character.save();
@@ -50,7 +47,6 @@ router.post('/characterisitics/dec', async (req, res) => {
   const character = await Characteristic.findOne({
     where: { userId: auth.id, toUserId: charac.toUserId },
   });
-
   if (!character) {
     await Characteristic.create({
       userId: charac.id,

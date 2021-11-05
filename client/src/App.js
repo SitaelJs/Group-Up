@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { checkAuthUser, getUserFromGoogle } from './redux/AC/usersAC'
 import GameList from './components/GameList/GameList'
@@ -15,15 +15,13 @@ import Footer from './components/Footer/Footer'
 import FormSignIn from './components/FormSignIn/FormSignIn'
 import Profilelist from './components/Profilelist/Profilelist'
 import PrivateRoute from './components/PrivateRouter/PrivateRouter'
+import SteamDone from './components/SteamDone/SteamDone'
 
 function App() {
   const dispatch = useDispatch()
-  const auth = useSelector((state) => state.auth)
-
   useEffect(() => {
     dispatch(checkAuthUser())
     dispatch(getUserFromGoogle())
-    console.log(auth, 11111111)
   }, [])
 
   return (
@@ -50,13 +48,10 @@ function App() {
           <PrivateRoute exact path="/users">
             <Profilelist />
           </PrivateRoute>
+
           <PrivateRoute exact path="/users/:userId">
             <Profile />
           </PrivateRoute>
-
-          {/* <PrivateRoute exact path="/users">
-            <Profilelist />
-          </PrivateRoute> */}
 
           <PrivateRoute exact path="/games">
             <GameList />
@@ -72,6 +67,10 @@ function App() {
 
           <PrivateRoute exact path="/groups/:groupsId">
             <GroupDetail />
+          </PrivateRoute>
+
+          <PrivateRoute exact path="/steam/done">
+            <SteamDone />
           </PrivateRoute>
 
           <PrivateRoute path="*">

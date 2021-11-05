@@ -8,6 +8,7 @@ const authReducer = (state = null, action) => {
       return payload
     case CLEAR_USER:
       return payload
+
     default:
       return state
   }

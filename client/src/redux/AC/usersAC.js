@@ -16,12 +16,10 @@ export const setUser = (user) => ({
   payload: user,
 })
 
-export const clearUser = () => (
-  {
-    type: CLEAR_USER,
-    payload: null,
-  }
-)
+export const clearUser = () => ({
+  type: CLEAR_USER,
+  payload: null,
+})
 
 export const destroyCookie = () => async (dispatch) => {
   const response = await axios(`${serverPuth}/auth/google/logout`, {
@@ -136,7 +134,6 @@ export const checkAuthUser = () => async (dispatch) => {
     })
     if (response.status === 200) {
       const user = await response.data
-
       dispatch(setUser(user))
     }
   } catch (err) {
