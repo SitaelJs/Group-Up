@@ -10,3 +10,19 @@
 
 
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.08.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.24.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.45.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.06.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.23.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.41.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.08.png)
+
+![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.47.png)
+
+
