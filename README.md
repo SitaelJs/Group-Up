@@ -8,21 +8,33 @@
 
 Поэтому мы решили сделать приложение, которые бы позволило игрокам найти команду под свои требования, с рейтингом и кармой других юзеров, с возможностью сразу же подключаться в дискорд. Представляем вам GROUP UP
 
-
+<h3>Для начала вам нужно зарегистрироваться в нашем приложении, регистрация выполнена с помощью сессий и как альтернатива использовался google token</h3>
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.08.png)
 
+<h3>Далее вы попадаете на главную страницу на которой доступен подбор группы по ролям и играм, а так же список зарегистриорваных пользователей</h3>
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.24.png)
 
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.45.png)
 
+<h3>Можно выбрать игру которая вам по вкусу</h3>
+
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.06.png)
+
+<h3>Отсортировать группы по ролям, играм и желаемому формату</h3>
 
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.23.png)
 
+<h3>В меню группы видны все игроки которые к вам присоеденились</h3>
+
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.41.png)
+
+<h3>При нажатии на кнопку ГО! откроется модальное окно, с подтверждением готовности, как только вы будете готовы, начнется отсчет, и вас перекинет в дискорд сервер, а к вам в буфер обмена будет скопирована команда для бота, отправив в чат которую, для вашей группы будет создан отдельный канал и предоставлена прямая ссылка на него. Вам не обязательно ждать всех игроков в группе, вы можете начать общаться сразу!</h3>
 
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.08.png)
 
+<h3>Так же в нашем приложении есть возможность поставить оценку пользователю в зависимости от ваших впечатлений игры с ним. Так же реализовано подключение к  steam.api, в профиле пользователя отображаются данные из стим аккаунта</h3>
+
 ![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.47.png)
 
+<h3> Желаем вам приятной игры и отличных тиммейтов!</h3> 
 
