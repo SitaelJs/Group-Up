@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/dataSteamReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/FormAuth/FormAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/GameList/stylesGameList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/GameList/stylesGameList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/stylesProfile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/stylesProfile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/AC/usersAC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/initState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/initState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/types/userTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/types/userTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/authGoogle.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/authGoogle.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/authLocal.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/authLocal.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/authSteam.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/authSteam.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/middleware/checkAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/middleware/checkAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/auth.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/users.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/users.router.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/src/components/GroupDetail/GroupDetail.jsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="208rmlNMDUijFml7WoMr1KTj8LX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="format.on.save" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/Modal" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="optimize.imports.on.save" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/client/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Modal" />
+      <recent name="$PROJECT_DIR$/server/src/routes" />
+      <recent name="$PROJECT_DIR$/client/src/redux/AC" />
+      <recent name="$PROJECT_DIR$/client/src/redux/reducers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/public/media/main_page" />
+      <recent name="$PROJECT_DIR$/client/public/media" />
+      <recent name="$PROJECT_DIR$/client/src/components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8e15e37-659f-470d-b30f-0badca78e2ac" name="Changes" comment="" />
+      <created>1635437217990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635437217990</updated>
+      <workItem from="1635437222065" duration="19209000" />
+      <workItem from="1635518725247" duration="9100000" />
+      <workItem from="1635595944817" duration="7480000" />
+      <workItem from="1635605932913" duration="48711000" />
+      <workItem from="1635960361826" duration="342000" />
+      <workItem from="1635960720318" duration="2061000" />
+      <workItem from="1635962804119" duration="14615000" />
+      <workItem from="1636047011066" duration="9301000" />
+      <workItem from="1636056352074" duration="18211000" />
+      <workItem from="1636076078698" duration="686000" />
+      <workItem from="1636076945596" duration="14172000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/mvp" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/src/components/SteamDone/SteamDone.jsx</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,114 @@
+.containerGroupDet {
+    margin: 150px auto 100px auto;
+    height: 730px;
+    width: 1200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: -25px 25px 60px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 60px -25px rgba(46, 208, 255, 0.3);
+    flex-wrap: wrap;
+}
+
+.headGroup {
+    padding: 30px 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    padding-bottom: 50px;
+}
+
+.imgGameGroup {
+    border-radius: 50%;
+    border: 5px inset rgba(255, 255, 255, 0.82);
+
+}
+
+.usersInGroups {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.usersInGroups h1 {
+    padding: 8px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.usersInGroups p {
+    padding: 8px;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.containerGroupDet button {
+    color: black;
+}
+
+
+.gameSet {
+    text-align: end;
+}
+
+.gameSet h1 {
+    font-size: 48px;
+    color: #50ddfd;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+    padding-bottom: 20px;
+
+}
+
+.gameSet h2 {
+
+    padding-bottom: 20px;
+}
+
+.buttonJoinedGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.buttonJoinedGroup button {
+    margin: auto 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+    height: 50px;
+    width: 200px;
+    color: rgb(162, 162, 162);
+    background-color: rgb(16, 16, 16);
+    border: rgb(0, 0, 0);
+    align-items: center;
+    border-radius: 10px;
+}
+
+.hiddenLink {
+    /*width: 150px;*/
+    font-size: large;
+    background-color: black;
+    color: #ffffff;
+    border: rgb(0, 0, 0);
+}
+
+.buttonJoinedGroup input {
+    position: absolute;
+    width: 500px;
+    margin-top: 65px;
+    margin-left: -130px;
+}

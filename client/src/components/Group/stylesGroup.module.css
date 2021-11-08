@@ -1,0 +1,43 @@
+.groupItem {
+    border-radius: 15px;
+    width: 300px;
+    background-color: black;
+    margin: 20px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: -25px 25px 30px -25px rgba(255, 0, 191, 0.30),
+    25px -25px 30px -25px rgba(46, 208, 255, 0.3);
+
+}
+
+.groupItem a {
+    text-decoration: none;
+}
+
+.groupName {
+    text-align: center;
+    color: #72ffd4;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+}
+
+.groupItem h1 {
+    font-size: xx-large;
+    text-align: center;
+    color: #50ddfd;
+    text-shadow: 0 0 7px #5fffec,
+    0 0 10px rgba(95, 255, 255, 0.45),
+    0 0 21px rgba(0, 255, 255, 0.35);
+    padding: 10px 10px;
+}
+
+.groupItem h2 {
+    font-size: x-large;
+    text-align: center;
+    color: #fc39ea;
+    text-shadow: 0 0 7px #ff43c9,
+    0 0 10px rgba(255, 84, 239, 0.45),
+    0 0 21px rgba(255, 118, 231, 0.35);
+    padding: 10px 10px;
+}

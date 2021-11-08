@@ -1,0 +1,8 @@
+export const SET_USER = 'SET_USER'
+export const CLEAR_USER = 'CLEAR_USER'
+export const GET_ALL_USERS = 'GET_ALL_USERS'
+export const CHANGE_GROUP = 'CHANGE_GROUP'
+export const GET_USER_FOR_GROUP = 'GET_USER_FOR_GROUP'
+export const GET_USER_STEAM = 'GET_USER_STEAM'
+export const GET_ONE_USER = 'GET_ONE_USER'
+export const GET_DATA_FROM_STEAM = 'GET_DATA_FROM_STEAM'

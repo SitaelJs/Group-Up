@@ -1,0 +1,29 @@
+.playerItem {
+    margin: auto;
+    border-radius: 15px;
+    background-color: rgba(186, 160, 208, 0.13);
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding: 10px;
+}
+
+.playerItem p {
+
+    margin: 3px;
+    font-size: x-large;
+}
+
+.playerItem a {
+    text-decoration: none;
+}
+.playerItem h1 {
+    margin: 3px;
+    text-align: center;
+    color: #fc39ea;
+    text-shadow: 0 0 7px #ff43c9,
+    0 0 10px rgba(255, 84, 239, 0.45),
+    0 0 21px rgba(255, 118, 231, 0.35);
+    padding: 10px 10px;
+
+}
