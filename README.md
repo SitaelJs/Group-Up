@@ -19,36 +19,36 @@
 
 <h4>Для начала вам нужно зарегистрироваться. Это возможно сделать с помощью сессий или используя сервисы Google.</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.08.png)
+![auth](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.08.png)
 
 <hr>
 <br>
 
 <h4>Далее вы попадаете на главную страницу на которой доступен подбор группы по ролям и играм, а так же список зарегистриорваных пользователей</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.24.png)
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.45.png)
+![homepage](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.24.png)
+![homepage](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.52.45.png)
 
 <hr>
 <br>
 
 <h4>Можно выбрать интересующую вас игру</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.06.png)
+![games](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.06.png)
 
 <hr>
 <br>
 
 <h4>Отсортировать группы по ролям, играм и желаемому формату</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.23.png)
+![groups](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.23.png)
 
 <hr>
 <br>
 
 <h4>В меню группы видны все игроки которые к вам присоеденились</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.41.png)
+![groups](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.53.41.png)
 
 <hr>
 <br>
@@ -57,7 +57,7 @@
 Отправив в чат ранее полученную команду, для вашей группы будет создан отдельный канал и предоставлена прямая ссылка на него. 
 Ждать всех игроков в группе не обязательно, вы можете начать общаться сразу!</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.08.png)
+![groupdone](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.08.png)
 
 <hr>
 <br>
@@ -65,7 +65,7 @@
 <h4>В приложении есть возможность поставить оценку пользователю в зависимости впечатлений, оставшихся после игры с ним.
 Так же, в приложении реализовано подключение к  Steam. В профиле пользователя отображаются данные из steam аккаунта.</h4>
 
-![enter image description here](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.47.png)
+![profile](https://github.com/SitaelJs/Group-Up/blob/main/client/public/media/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-11-08%20%D0%B2%2016.54.47.png)
 
 <hr>
 <br>
